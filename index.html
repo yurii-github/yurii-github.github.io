@@ -1,10 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- https://yurii-github.github.io/ -->
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>PHP Frameworks and CMS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style type="text/css">
+        body {
+            font-size: 0.9rem;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+            background: #DDD;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin-right: auto;
+            margin-left: auto;
+            border-collapse:collapse;
+            width:95%;
+        }
+
+        th {
+            font-weight: normal;
+            background: #DDD;
+            padding: 0.5rem;
+            border: 1px solid #fff;
+            border-width:0 1px 1px 0;
+        }
+
+        tbody th {
+            text-align: left;
+        }
+
+        tbody td,
+        tfoot td {
+            text-align:center;
+            padding: 0 0.2rem;
+        }
+
+        td {
+            border: 1px dashed white;
+            white-space: nowrap;
+        }
+
+        tfoot th, tfoot td {
+            background: #d7e1c5;
+            font-weight:bold;
+        }
+
+        .mt {
+            font-family: 'Material Icons';
+            color: orangered;
+
+        }
+        tr:hover{
+            background-color: yellow;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        a:hover {
+            color: orangered;
+        }
+
+        #disclamer {
+            font-size: smaller;
+            margin-right: auto;
+            margin-left: auto;
+            width: 55%;
+            border: 1px  dashed;
+            padding: 0.5rem;
+            color: gray;
+            box-shadow: 0.2rem 0.2rem 0.5rem #888888;
+        }
+        #disclaimer-title {
+            float: left;
+            display: inline-block;
+            height: 100px;
+            line-height: 3.5rem;
+            padding-right: 1rem;
+            position: relative;
+            font-weight: bolder;
+        }
+    </style>
 </head>
 <body>
-asdasd
+
+<header>
+</header>
+
+<h1>Comparison of PHP Frameworks and CMS</h1>
+
+<p id="disclamer">
+    <span id="disclaimer-title">Disclaimer</span>
+    These are my subjective views on the field.
+    <br>I have added t o companies ones I consider make significant influence on project's life.
+    <br>Company profits are not really valid, because I took numbers from internet at untrusted sources or I did wrong totals or roundings.
+</p>
+
+<table id="main-table" summary="Contains comparison of PHP Frameworks and CMS">
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2"><strong>Projects</strong></th>
+            <th scope="col" colspan="3"><strong>General</strong></th>
+            <th scope="col" colspan="4"><strong>Finances</strong></th>
+            <th scope="col" colspan="6"><strong>Development</strong></th>
+            <th scope="col" colspan="1"><strong>Comment</strong></th>
+        </tr>
+        <tr id="positions-tr">
+            <th scope="col">Type</th>
+            <th scope="col">Popularity </th>
+            <th scope="col">License</th>
+
+            <th scope="col">Company behind</th>
+            <th scope="col">Market Share</th>
+            <th scope="col">Total Value</th>
+
+            <th scope="col">Learning curve</th>
+            <th scope="col">Template</th>
+            <th scope="col">Speed</th>
+            <th scope="col">Code Structure</th>
+            <th scope="col">Architecture</th>
+            <th scope="col">Extensions</th>
+            <th scope="col">Extension Type</th>
+
+            <th scope="col">Conclusion</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot></tfoot>
+</table>
+
+<div id="hypercomments_widget"></div>
+<script type="text/javascript">
+    _hcwp = window._hcwp || [];
+    _hcwp.push({widget:"Stream", widget_id: 91700});
+    (function() {
+        if("HC_LOAD_INIT" in window)return;
+        HC_LOAD_INIT = true;
+        //var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+        var lang = 'en';
+        var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+        hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/91700/"+lang+"/widget.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hcc, s.nextSibling);
+    })();
+</script>
+<a href="http://hypercomments.com" rel = "nofollow" class="hc-link" title="comments widget">comments powered by HyperComments</a>
+
+
+<script src="data.js"></script>
+<script>
+    var mainTable = document.getElementById('main-table');
+    var mainTableBody = mainTable.getElementsByTagName('tbody')[0];
+    var fields = mainTable.getElementsByTagName('td');
+    var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
+    var maxStarts = 5;
+
+    data.forEach(function(item, i){
+        var tr = document.createElement('tr');
+        var th = document.createElement('th');
+        th.innerHTML = item.title;
+        if (item['link'] !== undefined) {
+            th.innerHTML = '<a target="_blank" rel="nofollow" href="'+item['link']+'">'+th.innerHTML+'</a>';
+        }
+        tr.appendChild(th);
+
+        [
+            'type', 'popularity', 'licence',
+            'company', 'market_share', 'total_value',
+            'curve', 'template', 'speed', 'code_structure', 'architecture', 'extensions',
+            'extension_type', 'conclusion'
+        ].forEach(function(key){
+            var td = document.createElement('td');
+            td.innerHTML = item[key] === undefined ? '?' : item[key];
+
+            if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) {
+                td.innerHTML = '<a target="_blank" rel="nofollow" href="'+item['company_link']+'">'+td.innerHTML+'</a>';
+            }
+            tr.appendChild(td);
+        });
+
+        mainTableBody.appendChild(tr);
+    });
+
+    // replace rating with stars
+    [].forEach.call(fields, function (el, i){
+        var val = parseInt(el.innerHTML, 10);
+        if (!isNaN(val)) {
+            var rating = '';
+            for (var i = 1; i <= val; i++) {
+                rating += star.full;
+            }
+            for (var i = 0; i < maxStarts - val; i++) {
+                rating += star.empty;
+            }
+            el.innerHTML = rating;
+        }
+
+    });
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-65730589-2', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
 </html>
