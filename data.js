@@ -1,3 +1,23 @@
+var positions = [
+    {key: 'type', title: 'Type'},
+    {key: 'popularity', title: 'popularity'},
+    {key: 'license', title: 'License'},
+    //
+    {key: 'company', title: 'Company'},
+    {key: 'market_share', title: 'Market Share'},
+    {key: 'total_value', title: 'Total Value'},
+    //
+    {key: 'curve', title: 'Learning Curve'},
+    {key: 'template', title: 'Template'},
+    {key: 'speed', title: 'Speed'},
+    {key: 'code_structure', title: 'Code Structure'},
+    {key: 'architecture', title: 'Architecture'},
+    {key: 'extensions', title: 'Extensions'},
+    {key: 'extension_type', title: 'Extension Type'},
+    //
+    {key: 'conclusion', title: 'Conclusion'}
+];
+
 var data = [
     {
         title: 'Drupal 7',

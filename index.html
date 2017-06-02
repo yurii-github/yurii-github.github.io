@@ -103,6 +103,13 @@
             border: 1px dashed;
             box-shadow: 0.2rem 0.2rem 0.5rem #888888;
         }
+
+        #positions-tr th {
+            cursor: pointer;
+        }
+        #positions-tr th:hover {
+            background-color: orangered;
+        }
     </style>
 
 
@@ -117,8 +124,8 @@
         <p id="disclamer">
             <span id="disclaimer-title">Disclaimer</span>
             These are my subjective views on the field.
-            <br>I have added t o companies ones I consider make significant influence on project's life.
-            <br>Company profits are not really valid, because I took numbers from internet at untrusted sources or I did wrong totals or roundings.
+            <br>I have added to companies ones I consider make significant influence on project's life.
+            <br>Company values are not really valid, because I took numbers from internet at untrusted sources or I did wrong totals or roundings.
         </p>
     </aside>
 
@@ -135,25 +142,7 @@
                 <th scope="col" colspan="6"><strong>Development</strong></th>
                 <th scope="col" colspan="1"><strong>Comment</strong></th>
             </tr>
-            <tr id="positions-tr">
-                <th scope="col">Type</th>
-                <th scope="col">Popularity </th>
-                <th scope="col">License</th>
-
-                <th scope="col">Company behind</th>
-                <th scope="col">Market Share</th>
-                <th scope="col">Total Value</th>
-
-                <th scope="col">Learning curve</th>
-                <th scope="col">Template</th>
-                <th scope="col">Speed</th>
-                <th scope="col">Code Structure</th>
-                <th scope="col">Architecture</th>
-                <th scope="col">Extensions</th>
-                <th scope="col">Extension Type</th>
-
-                <th scope="col">Conclusion</th>
-            </tr>
+            <tr id="positions-tr"></tr>
         </thead>
         <tbody></tbody>
         <tfoot></tfoot>
@@ -167,54 +156,118 @@
 
 <script src="data.js"></script>
 <script>
-    var mainTable = document.getElementById('main-table');
-    var mainTableBody = mainTable.getElementsByTagName('tbody')[0];
-    var fields = mainTable.getElementsByTagName('td');
-    var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
-    var maxStarts = 5;
 
-    data.forEach(function(item, i){
-        var tr = document.createElement('tr');
-        var th = document.createElement('th');
-        th.innerHTML = item.title;
-        if (item['link'] !== undefined) {
-            th.innerHTML = '<a target="_blank" rel="nofollow" href="'+item['link']+'">'+th.innerHTML+'</a>';
-        }
-        tr.appendChild(th);
-
-        [
-            'type', 'popularity', 'licence',
-            'company', 'market_share', 'total_value',
-            'curve', 'template', 'speed', 'code_structure', 'architecture', 'extensions',
-            'extension_type', 'conclusion'
-        ].forEach(function(key){
-            var td = document.createElement('td');
-            td.innerHTML = item[key] === undefined ? '?' : item[key];
-
-            if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) {
-                td.innerHTML = '<a target="_blank" rel="nofollow" href="'+item['company_link']+'">'+td.innerHTML+'</a>';
+    function sorting(data, dir, key)
+    {
+        return data.sort(function(a, b){
+            console.log('sort');
+            var _dir = dir == 'ASC' ? 1 : -1;
+            if (typeof a[key] == 'string') {
+                return _dir*a[key].localeCompare(b[key]);
             }
-            tr.appendChild(td);
+            return _dir*(a[key] - b[key]);
+        });
+    }
+
+    function bindSorting(position_tr, positions)
+    {
+        var order = {key: null, dir: null};
+        var headers = position_tr.getElementsByTagName('th');
+
+        //TODO: move outside
+        [].forEach.call(headers, function(el, i){
+           console.log(el);
+            el.addEventListener('click', function(e){
+                console.log(positions[i]);
+                var _key = positions[i]['key'];
+                console.log(_key);
+                if (order.key == _key) {
+                    order.dir = order.dir == 'ASC' ? 'DESC' : 'ASC';
+                } else {
+                    order.key = _key;
+                    order.dir = 'DESC';
+                }
+                console.log(order);
+                var _data = sorting(data, order.dir, order.key);
+                renderData(mainTable, _data);
+            });
+        });
+    }
+
+    function renderPositions(position_tr, positions) {
+        positions.forEach(function(pos){
+            var th = document.createElement('th');
+            th.innerHTML = pos.title;
+            th.setAttribute('scope', 'col');
+            position_tr.appendChild(th);
+        });
+    }
+
+
+    function renderData(mainTable, data)
+    {
+        var mainTableBody = document.createElement('tbody');
+        mainTable.removeChild(mainTable.getElementsByTagName('tbody')[0]);
+        mainTable.appendChild(mainTableBody);
+        var fields = mainTable.getElementsByTagName('td');
+        var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
+        var maxStarts = 5;
+
+        data.forEach(function(item, i){
+            var tr = document.createElement('tr');
+            var th = document.createElement('th');
+            th.innerHTML = item.title;
+            if (item['link'] !== undefined) {
+                th.innerHTML = '<a target="_blank" rel="nofollow" href="'+item['link']+'">'+th.innerHTML+'</a>';
+            }
+            tr.appendChild(th);
+
+            [
+                'type', 'popularity', 'licence',
+                'company', 'market_share', 'total_value',
+                'curve', 'template', 'speed', 'code_structure', 'architecture', 'extensions',
+                'extension_type', 'conclusion'
+            ].forEach(function(key){
+                var td = document.createElement('td');
+                td.innerHTML = item[key] === undefined ? '?' : item[key];
+
+                if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) {
+                    td.innerHTML = '<a target="_blank" rel="nofollow" href="'+item['company_link']+'">'+td.innerHTML+'</a>';
+                }
+                tr.appendChild(td);
+            });
+
+            mainTableBody.appendChild(tr);
         });
 
-        mainTableBody.appendChild(tr);
-    });
-
-    // replace rating with stars
-    [].forEach.call(fields, function (el, i){
-        var val = parseInt(el.innerHTML, 10);
-        if (!isNaN(val)) {
-            var rating = '';
-            for (var i = 1; i <= val; i++) {
-                rating += star.full;
+        // replace rating with stars
+        [].forEach.call(fields, function (el, i){
+            var val = parseInt(el.innerHTML, 10);
+            if (!isNaN(val)) {
+                var rating = '';
+                for (var i = 1; i <= val; i++) {
+                    rating += star.full;
+                }
+                for (var i = 0; i < maxStarts - val; i++) {
+                    rating += star.empty;
+                }
+                el.innerHTML = rating;
             }
-            for (var i = 0; i < maxStarts - val; i++) {
-                rating += star.empty;
-            }
-            el.innerHTML = rating;
-        }
 
-    });
+        });
+    }
+
+
+    //
+    // INIT
+    //
+    var mainTable = document.getElementById('main-table');
+    var position_tr = document.getElementById('positions-tr');
+
+    data = sorting(data, 'ASC', 'type');
+    renderPositions(position_tr, positions);
+    renderData(mainTable, data);
+    bindSorting(position_tr, positions);
 </script>
 
 <div id="hypercomments_widget"></div>
