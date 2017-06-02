@@ -160,7 +160,6 @@
     function sorting(data, dir, key)
     {
         return data.sort(function(a, b){
-            console.log('sort');
             var _dir = dir == 'ASC' ? 1 : -1;
             if (typeof a[key] == 'string') {
                 return _dir*a[key].localeCompare(b[key]);
@@ -174,9 +173,7 @@
         var order = {key: null, dir: null};
         var headers = position_tr.getElementsByTagName('th');
 
-        //TODO: move outside
         [].forEach.call(headers, function(el, i){
-           console.log(el);
             el.addEventListener('click', function(e){
                 console.log(positions[i]);
                 var _key = positions[i]['key'];
@@ -187,7 +184,6 @@
                     order.key = _key;
                     order.dir = 'DESC';
                 }
-                console.log(order);
                 var _data = sorting(data, order.dir, order.key);
                 renderData(mainTable, _data);
             });
