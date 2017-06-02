@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style type="text/css">
+        /* GENERIC ---> */
         body {
             font-size: 0.9rem;
             font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
@@ -16,6 +17,26 @@
         h1 {
             text-align: center;
         }
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        a:hover {
+            color: orangered;
+        }
+
+        .mt {
+            font-family: 'Material Icons';
+            color: orangered;
+            direction: ltr;
+        }
+
+        .adsbygoogle {
+            border: 1px dashed;
+            box-shadow: 0.2rem 0.2rem 0.5rem #888888;
+        }
+        /* GENERIC <--- */
+
 
         table {
             margin-right: auto;
@@ -54,21 +75,9 @@
             font-weight:bold;
         }
 
-        .mt {
-            font-family: 'Material Icons';
-            color: orangered;
 
-        }
         tr:hover{
             background-color: yellow;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: inherit;
-        }
-        a:hover {
-            color: orangered;
         }
 
         #disclamer {
@@ -91,7 +100,6 @@
             font-weight: bolder;
         }
 
-
         h3 {
             text-align: center;
             margin: 0.5rem;
@@ -99,20 +107,17 @@
             font-weight: normal;
         }
 
-        .adsbygoogle {
-            border: 1px dashed;
-            box-shadow: 0.2rem 0.2rem 0.5rem #888888;
-        }
+
 
         #positions-tr th {
             cursor: pointer;
+            font-style: italic;
+            user-select: none;
         }
         #positions-tr th:hover {
             background-color: orangered;
         }
     </style>
-
-
 </head>
 <body>
 
@@ -126,6 +131,8 @@
             These are my subjective views on the field.
             <br>I have added to companies ones I consider make significant influence on project's life.
             <br>Company values are not really valid, because I took numbers from internet at untrusted sources or I did wrong totals or roundings.
+            <br>Any comments are welcome. If you agree or not, maybe you have some intel that can change this pivot table etc.
+            <br><i><a href="about.html">Yurii</a></i>
         </p>
     </aside>
 
@@ -206,7 +213,7 @@
         mainTable.removeChild(mainTable.getElementsByTagName('tbody')[0]);
         mainTable.appendChild(mainTableBody);
         var fields = mainTable.getElementsByTagName('td');
-        var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
+
         var maxStarts = 5;
 
         data.forEach(function(item, i){
@@ -257,6 +264,7 @@
     //
     // INIT
     //
+    var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
     var mainTable = document.getElementById('main-table');
     var position_tr = document.getElementById('positions-tr');
 
@@ -267,7 +275,6 @@
 </script>
 
 <div id="hypercomments_widget"></div>
-
 <script type="text/javascript">
     _hcwp = window._hcwp || [];
     _hcwp.push({widget:"Stream", widget_id: 91700});
