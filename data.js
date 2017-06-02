@@ -3,7 +3,7 @@ var positions = [
     {key: 'popularity', title: 'popularity'},
     {key: 'license', title: 'License'},
     //
-    {key: 'company', title: 'Company'},
+    {key: 'company', title: 'Company behind'},
     {key: 'market_share', title: 'Market Share'},
     {key: 'total_value', title: 'Total Value'},
     //
