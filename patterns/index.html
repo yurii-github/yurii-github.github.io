@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+// construction  (creational)
+// structure
+// behavior
+
+    var patterns = [
+        {
+            name: "Factory",
+            type: "construction",
+            problem: "code deduplication on initiating objects <br> custom new objects configuration",
+            solution: "provide function that will return new object with pre-defined constructor settings"
+        },
+        {
+            name: "Abstract Factory",
+            type: "construction",
+            problem: "code deduplication on intiating of object family, like 'wheels' and 'doors'",
+            solution: "provide interface for future factory"
+        },
+        {
+            name: "Builder",
+            type: "construction",
+            problem: "code deduplication on initiating objects with complex custom configurations",
+            solution: "provide functions that can be chained with granular options for new object"
+        },
+        //Factory Method
+        //Object Pool
+        // Prototype
+        {
+            name: "Singleton",
+            type: "construction",
+            problem: "have a single instance of object to save resources <br> must exist on request",
+            solution: "forbid object construction, get new single instance via getter function",
+            drawbacks: "UnitTesting has problems"
+        },
+        {
+            name: "Multiton",
+            aliases: ["Registry of Singletons"],
+            type: "construction",
+            problem: "deduplication of code for acheving single object per class",
+            solution: "provide base class that will act as registry or hashmap for storing array of single class objects"
+        },
+
+
+        {
+            name: "Object Value",
+            type: "structure",
+            problem: "operate with complex values like currency as single object",
+            solution: "produce immutable objects via getter/setter function, basically by clonning objects or creating new"
+        },
+        {
+            name: "Registry",
+            type: "structure",
+            problem: "organization of global variables and setting rules for their access",
+            solution: "static variables combined into class accessible via getters and setters"
+        },
+        {
+            name: "Proxy",
+            aliases: ["Handle Body"],
+            type: "structure",
+            problem: "hide direct access to object, provide lazy loading",
+            solution: "initiate object of interest internally in proxy object on request and wrap its functionality without behavior modification"
+        },
+        {
+            name: "Decorator",
+            aliases: ["Handle Body"],
+            type: "structure",
+            problem: "extend object\'s functionality multiple times without additional subclassing",
+            solution: "pass object of interest as dependency to our decorator class and extend object\'s functionality"
+        },
+        {
+            name: "Adapter",
+            aliases: ["Handle Body"],
+            type: "structure",
+            problem: "avoid total code rewrite due to changed object\'s functionality and interface",
+            solution: "pass object of interest as dependency to our adapter class and make it compatible with our existing interface"
+        },
+        {
+            name: "Composite",
+            type: "structure",
+            problem: "reduce complexity of object due to big amount of internal properties\' interactions",
+            solution: "provide interface(s) for similar properties\' operations organazing them into hierarchical tree"
+        },
+        {
+            name: "Dependency Injection",
+            type: "structure",
+            problem: "ability to pass object as parameter of particular class",
+            solution: "use basic rule of OOP and pass required object of required class via constructor or setter function"
+        },
+        {
+            name: "Dependency Inversion",
+            type: "structure",
+            problem: "ability to pass object as parameter of particular class family",
+            solution: "create interface and use basic rule of OOP and pass required object of required interface via constructor or setter function"
+        },
+        //Bridge
+        //Facade
+        //Flyweight
+        //Private Class Data
+        //
+
+
+        {
+            name: "Domain Model",
+            type: "storage",
+            problem: "extend data object with business logic",
+            solution: "create single object with data and logic as functions",
+            drawbacks: ""
+        },
+        {
+            name: "Active Record",
+            type: "storage",
+            problem: "ability to save particular object to database",
+            solution: "combine data to store, business logic and database operations in the same particular object",
+            drawbacks: "break OOP principle of single responsibility"
+        },
+        {
+            name: "Table Data Gateway",
+            type: "storage",
+            problem: "ability to save particular object to database but with separation of database operations outside",
+            solution: "introduce data layer object that will hold database operations with table granularity"
+        },
+        {
+            name: "Data Mapper",
+            type: "storage",
+            problem: "ability to save particular object to database but with separation of database operations and its property names",
+            solution: "introduce data layer object that holds data object property names binding to data storage properties etc.",
+            drawbacks: ""
+        },
+        {
+            name: "Observer",
+            aliases: ["Events", "Subscriber/Listener", "Pushing"],
+            type: "behavior",
+            problem: "notification of other objects about particular object\'s state updates",
+            solution: "introduce event interface that will be recognised by observer <br> introduce listener interface that will be recognised by observer <br> introduce main observer that will monitor states of registered objects as listeners and events",
+            drawbacks: ""
+        },
+
+        {
+            name: "Specification",
+            type: "structure",
+            problem: "reduce complexity of different requirements based on object\'s properties",
+            solution: "introduce specification class that holds compaarition requirements",
+            drawbacks: ""
+        },
+        {
+            name: "Chain",
+            type: "access",
+            problem: "reduce frequency of using object name when calling several functions of the same object",
+            solution: "function returns 'this'",
+            drawbacks: ""
+        },
+        // Chain of responsibility
+        //Mediator
+        //Memento
+        // Null Object
+        //State
+        // Template Method
+        // Visitor
+        //Interpreter
+        {
+            name: "Iterator",
+            type: "access",
+            problem: "custom access of array of objects or any other data as list",
+            solution: "implement Iterator interface for custom behavior",
+            drawbacks: ""
+        },
+        {
+            name: "Strategy",
+            aliases: ["Policy"],
+            type: "behavior",
+            problem: "ability to change object behavior at runtime",
+            solution: "introduce strategy interface and add to object of interest variable that will hold new strategy and will use it in its functions",
+            drawbacks: ""
+        },
+        {
+            name: "Application Controller",
+            type: "access",
+            problem: "controlling of application execution, navigation, etc",
+            solution: "introduce controller object that executes checks at runtime",
+            drawbacks: ""
+        },
+        {
+            name: "Command",
+            type: "behavior",
+            problem: "bigger control and abstraction on requested command or instruction",
+            solution: "encapsulate command into object by providing interface for it",
+            drawbacks: ""
+        },
+
+        {
+            name: "Front Controller",
+            type: "access",
+            problem: "deduplication access code",
+            solution: "introduce main controller object that will delegate executing on lower controller(s)",
+            drawbacks: ""
+        },
+        {
+            name: "Model View Controller (MVC)",
+            type: "access",
+            problem: "separation between business logic, presentation and application flow",
+            solution: "introduce interfaces for controller, view and model",
+            drawbacks: ""
+        },
+        {
+            name: "Data Transfer Object (DTO)",
+            type: "structure",
+            problem: "avoid passing too many parameters to functions",
+            solution: "define class without business logic that will hold required properties",
+            drawbacks: ""
+        },
+        {
+            name: "",
+            type: "storage",
+            problem: "",
+            solution: "",
+            drawbacks: ""
+        },
+        {
+            name: "",
+            type: "storage",
+            problem: "",
+            solution: "",
+            drawbacks: ""
+        },
+    ];
+
+
+
+</script>
+Agile
+Scrum
+XP (extreme programing) , Kent Beck
+
+
+Prinsiples: SOLID, KISS, DIE,
+DRY (Dont'r reapeat yourself) , Dave Thomas and Andy Hunt
+... ? <-- hypsters nonsense
+--
+SRP (single responsibility principle)
+DIP (dependency injection principle)
+TDD (test driven development)
+BDD (behavior driven development)
+--
+Boy Scout Rule - leave code more clean
+
+
+
+Special Case Object
+Wrapper
+God Like
+
+
+State
+Mock Object
+
+
+Repository
+Entity
+
+View
+Visitor
+
+
+
+</body>
+</html>
