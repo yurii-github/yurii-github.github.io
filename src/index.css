@@ -97,14 +97,14 @@ h3 {
   font-weight: normal;
 }
 
-menu {
+nav {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
   color: orangered;
 }
 
-menu a {
+nav a {
   display: inline-block;
   margin: 0.2rem;
   vertical-align: middle;
