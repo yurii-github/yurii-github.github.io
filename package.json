@@ -11,6 +11,7 @@
     "react-scripts": "1.0.7"
   },
   "scripts": {
+    "deploy": "deploy.sh",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

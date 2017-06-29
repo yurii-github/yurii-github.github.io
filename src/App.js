@@ -15,28 +15,25 @@ export default class App extends Component {
             <BrowserRouter id="UA-65730589-2">
 
                 <div className="app">
-                    <GoogleAds
-                        client="ca-pub-1647951743023830"
-                        slot="1838502239"
-                        style={{ display:'block', width:'728px', height:'90px',
-                            marginLeft: 'auto', marginRight: 'auto', }}
-                    />
+
 
                     <nav>
                         <Link className="mt" to="/">home</Link>
                         <Link to="/about">About</Link>
                     </nav>
 
+
+
                     <Route exact path="/" component={Frameworks}/>
                     <Route exact path="/about" component={About}/>
 
-
                     <GoogleAds
+                        id="bottom"
                         client="ca-pub-1647951743023830"
                         slot="1838502239"
-                        style={{ display:'block', width:'728px', height:'90px',
-                            marginLeft: 'auto', marginRight: 'auto', }}
+                        style={{ display:'block', width:'728px', height:'90px',  marginLeft: 'auto', marginRight: 'auto', }}
                     />
+
                 </div>
 
             </BrowserRouter>

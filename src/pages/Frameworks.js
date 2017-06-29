@@ -1,11 +1,10 @@
 import React from 'react';
 import Axios from 'axios';
 
-//import getData from './data/frameworks.js';
-
 // Phpixie  Fat-Free
 
-
+import HyperComments from './../Components/HyperComments';
+import GoogleAds from "../Components/GoogleAds";
 
 const positions = [
     {key: 'type', title: 'Type'},
@@ -46,9 +45,9 @@ class Frameworks extends React.Component {
 
         [].forEach.call(headers, (el, i) => {
             el.addEventListener('click', (e) => {
-                console.log(positions[i]);
+                //console.log(positions[i]);
                 var _key = positions[i]['key'];
-                console.log(_key);
+                //console.log(_key);
                 if (order.key == _key) {
                     order.dir = order.dir == 'ASC' ? 'DESC' : 'ASC';
                 } else {
@@ -133,7 +132,8 @@ class Frameworks extends React.Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount')
+
+        console.log('componentDidMount: Frameworks')
 
         if (this.state.loaded) {
             return;
@@ -149,7 +149,7 @@ class Frameworks extends React.Component {
         this.mainTable = mainTable;
         this.star = star;
 
-        console.log(mainTable);
+        // console.log(mainTable);
 
         Axios.get('/data/frameworks.json').then( (response) => {
             this.data = response.data;
@@ -186,7 +186,12 @@ class Frameworks extends React.Component {
                     </p>
                 </aside>
 
-                ADS HERE
+                <GoogleAds
+                    id="top"
+                    client="ca-pub-1647951743023830"
+                    slot="1838502239"
+                    style={{ display:'block', width:'728px', height:'90px',  marginLeft: 'auto', marginRight: 'auto', }}
+                />
 
                 <table id="main-table" summary="Contains comparison of PHP Frameworks and CMS">
                     <thead>
@@ -203,9 +208,10 @@ class Frameworks extends React.Component {
                     <tfoot></tfoot>
                 </table>
 
-                ADS HERE
 
             </article>
+
+
         );
     }
 }

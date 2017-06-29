@@ -1,5 +1,8 @@
 import React from 'react';
+import HyperComments from "../Components/HyperComments";
 //import Axios from 'axios';
+
+import GoogleAds from "../Components/GoogleAds";
 
 const skills = [
     {title: '<b>Storages</b>'},
@@ -120,6 +123,15 @@ export default class About extends React.Component {
         return (
             <div className="container">
                 <h1>About Me</h1>
+
+                <GoogleAds
+                    id="top"
+                    client="ca-pub-1647951743023830"
+                    slot="1838502239"
+                    style={{ display:'block', width:'728px', height:'90px',  marginLeft: 'auto', marginRight: 'auto', }}
+                />
+
+
                 <article>
                     <p> Hello.</p>
                     <p>I'm Yurii. That's all you should really know about me.</p>

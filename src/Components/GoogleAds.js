@@ -1,46 +1,43 @@
 import React from 'react';
 
-// copy paste from https://github.com/wonism/react-google-ads
+import AntiReact from './../Helpers/AntiReact';
+
+var adsbygoogle = {}; // React is sh1t
 
 export default class GoogleAds extends React.Component {
 
     constructor(props) {
         super(props);
-
-
+        this.state = {loaded: false};
     }
-    componentDidMount() {
-        this.forceUpdate();
-/*
-        ((d, s, id, cb) => {
-            console.log(d,s,id,cb)
-            const element = d.getElementsByTagName(s)[0];
-            const fjs = element;
-            let js = element;
 
-            js = d.createElement(s);
-            js.id = id;
-            js.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-            fjs.parentNode.insertBefore(js, fjs);
-            js.onload = cb;
-            js.async = "async";
-        })(document, 'script', 'google-ads-sdk', () => {
-           // (adsbygoogle = window.adsbygoogle || []).push({});
-        });*/
+    componentWillUnmount() {
+        console.log('componentWillUnmount: GoogleAds');
+        document.getElementById(this.props.id).remove();
+    }
+
+    componentDidMount() {
+        console.log('componentDidMount: GoogleAds');
+
+        var script = AntiReact.scriptJS(this.props.id, "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
+        script.onload = (e) => {
+            this.state.loaded = true;
+            console.log('LOADED :'+this.props.id);
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        };
+        document.body.appendChild(script);
     }
 
     render() {
         return (
-        <div>
-            <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins
-                className={"adsbygoogle"}
-                data-ad-client={this.props.client}
-                data-ad-slot={this.props.slot}
-                style={this.props.style}
-            />
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
+            <div>
+                <ins
+                    style={this.props.style}
+                    className="adsbygoogle"
+                    data-ad-client={this.props.client}
+                    data-ad-slot={this.props.slot}
+                />
+            </div>
         );
     }
 }
