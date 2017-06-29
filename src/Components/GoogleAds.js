@@ -18,12 +18,15 @@ export default class GoogleAds extends React.Component {
     componentDidMount() {
         console.log('GoogleAds: componentDidMount');
 
-        var script = AntiReact.scriptJS(this.props.id, "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
-        script.onload = (e) => {
-            this.setState({loaded: true});
-            console.log('GoogleAds:LOADED: '+this.props.id);
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        };
+        var script = AntiReact.scriptJS(
+            this.props.id,
+            "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+            (e) => {
+                this.setState({loaded: true});
+                console.log('GoogleAds:LOADED: ' + this.props.id);
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        );
     }
 
     render() {

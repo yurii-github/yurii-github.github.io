@@ -133,7 +133,7 @@ class Frameworks extends React.Component {
 
     componentDidMount() {
 
-        console.log('componentDidMount: Frameworks')
+        console.log('Frameworks: componentDidMount')
 
         if (this.state.loaded) {
             return;
@@ -208,7 +208,7 @@ class Frameworks extends React.Component {
                     <tfoot></tfoot>
                 </table>
 
-
+                <HyperComments id="hypercomments_script"/>
             </article>
 
 
