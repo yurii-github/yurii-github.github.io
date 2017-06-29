@@ -165,8 +165,9 @@ class Frameworks extends React.Component {
 
 
     render() {
-        return (
+        document.title = 'PHP Frameworks and CMS';
 
+        return (
             <article>
                 <h1>Comparison of PHP Frameworks and CMS</h1>
                 <h3>Last update:

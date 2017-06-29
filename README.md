@@ -1,3 +1,14 @@
+
+
+npm install ga react-router-dom
+
+ga: https://github.com/react-ga/react-ga
+
+https://github.com/seeden/react-g-analytics
+react-g-analytics
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

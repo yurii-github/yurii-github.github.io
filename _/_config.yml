@@ -1,6 +1,0 @@
-safe: true
-timezone: 'Europe/Kiev'
-incremental: true
-profile: true
-strict_front_matter: true
-encoding: 'utf-8'

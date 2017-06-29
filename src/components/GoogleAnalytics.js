@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//TODO: IMPLEMENT!!! use 3rd party for now
 class GoogleAnalytics extends React.Component {
 
     constructor(props) {
