@@ -1,0 +1,39 @@
+/*** ABOUT ***/
+.container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+@media screen and (min-width: 924px) {
+    article {
+        float: right;
+        width: 600px;
+    }
+
+    aside {
+        float: left;  width: 270px;
+    }
+}
+
+dt, dd {
+    float: left;
+}
+
+dt {
+    min-width: 5rem;
+    clear: both;
+}
+
+dt b {
+    display: block;
+    border: 1px dashed;
+    min-width: 16rem;
+    padding: 0.2rem;
+}
+
+.clear-both {
+    clear: both;
+}
