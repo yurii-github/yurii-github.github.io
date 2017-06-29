@@ -8,6 +8,9 @@ import About from './pages/About.js';
 
 import GoogleAds from './Components/GoogleAds';
 
+import HyperComments from './Components/HyperComments';
+
+
 export default class App extends Component {
 
     render() {
@@ -33,6 +36,8 @@ export default class App extends Component {
                         slot="1838502239"
                         style={{ display:'block', width:'728px', height:'90px',  marginLeft: 'auto', marginRight: 'auto', }}
                     />
+
+                    <HyperComments id="hypercomments_script"/>
 
                 </div>
 

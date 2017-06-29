@@ -3,7 +3,6 @@ import Axios from 'axios';
 
 // Phpixie  Fat-Free
 
-import HyperComments from './../Components/HyperComments';
 import GoogleAds from "../Components/GoogleAds";
 
 const positions = [
@@ -208,7 +207,7 @@ class Frameworks extends React.Component {
                     <tfoot></tfoot>
                 </table>
 
-                <HyperComments id="hypercomments_script"/>
+
             </article>
 
 
