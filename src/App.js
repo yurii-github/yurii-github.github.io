@@ -37,7 +37,7 @@ export default class App extends Component {
                         style={{ display:'block', width:'728px', height:'90px',  marginLeft: 'auto', marginRight: 'auto', }}
                     />
 
-                    <HyperComments id="hypercomments_script"/>
+                    <HyperComments id="hypercomments_script" widget={{ widget: 'Stream', widget_id: 91700 }} />
 
                 </div>
 
