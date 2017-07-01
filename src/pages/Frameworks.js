@@ -30,8 +30,8 @@ class Frameworks extends React.Component {
 
     sorting(data, dir, key) {
         return data.sort(function (a, b) {
-            var _dir = dir == 'ASC' ? 1 : -1;
-            if (typeof a[key] == 'string') {
+            var _dir = dir == 'ASC' ? 1 : -1; // eslint-disable-line
+            if (typeof a[key] == 'string') { // eslint-disable-line
                 return _dir * a[key].localeCompare(b[key]);
             }
             return _dir * (a[key] - b[key]);
@@ -47,8 +47,8 @@ class Frameworks extends React.Component {
                 //console.log(positions[i]);
                 var _key = positions[i]['key'];
                 //console.log(_key);
-                if (order.key == _key) {
-                    order.dir = order.dir == 'ASC' ? 'DESC' : 'ASC';
+                if (order.key == _key) { // eslint-disable-line
+                    order.dir = order.dir == 'ASC' ? 'DESC' : 'ASC'; // eslint-disable-line
                 } else {
                     order.key = _key;
                     order.dir = 'DESC';
@@ -95,7 +95,7 @@ class Frameworks extends React.Component {
                 var td = document.createElement('td');
                 td.innerHTML = item[key] === undefined ? '?' : item[key];
 
-                if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) {
+                if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) { // eslint-disable-line
                     td.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['company_link'] + '">' + td.innerHTML + '</a>';
                 }
                 tr.appendChild(td);

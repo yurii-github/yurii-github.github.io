@@ -1,7 +1,4 @@
 import React from 'react';
-import HyperComments from "../Components/HyperComments";
-//import Axios from 'axios';
-
 import GoogleAds from "../Components/GoogleAds";
 
 const skills = [
@@ -70,10 +67,10 @@ export default class About extends React.Component {
             var skillsW = 270;
 
             if(effectiveW >= 770) {
-                var articleW = effectiveW - skillsW;
+                let articleW = effectiveW - skillsW;
                 articleEl.style['width'] = articleW+'px';
             } else {
-                var articleW = effectiveW;
+                let articleW = effectiveW;
                 articleEl.style['width'] = articleW+'px';
             }
         });

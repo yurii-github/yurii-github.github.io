@@ -1,8 +1,6 @@
 import React from 'react';
 import AntiReact from './../Helpers/AntiReact';
 
-var adsbygoogle = {}; // React is sh1t
-
 export default class GoogleAds extends React.Component {
 
     constructor(props) {
@@ -18,13 +16,13 @@ export default class GoogleAds extends React.Component {
     componentDidMount() {
         console.log('GoogleAds: componentDidMount');
 
-        var script = AntiReact.scriptJS(
+        AntiReact.scriptJS(
             this.props.id,
             "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
             (e) => {
                 this.setState({loaded: true});
                 console.log('GoogleAds:LOADED: ' + this.props.id);
-                (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.adsbygoogle || []).push({}); // eslint-disable-line
             }
         );
     }
