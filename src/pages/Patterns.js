@@ -1,32 +1,17 @@
 import React from 'react';
 import Axios from 'axios';
 
-// Phpixie  Fat-Free
-
 import GoogleAds from "../Components/GoogleAds";
 
 const positions = [
     {key: 'type', title: 'Type'},
-    {key: 'popularity', title: 'popularity'},
-    {key: 'license', title: 'License'},
+    {key: 'aliases', title: 'Aliases'},
     //
-    {key: 'company', title: 'Company behind'},
-    {key: 'market_share', title: 'Market Share'},
-    {key: 'total_value', title: 'Total Value'},
-    //
-    {key: 'curve', title: 'Learning Curve'},
-    {key: 'template', title: 'Template'},
-    {key: 'speed', title: 'Speed'},
-    {key: 'code_structure', title: 'Code Structure'},
-    {key: 'architecture', title: 'Architecture'},
-    {key: 'extensions', title: 'Extensions'},
-    {key: 'extension_type', title: 'Extension Type'},
-    //
-    {key: 'conclusion', title: 'Conclusion'}
+    {key: 'problem', title: 'Problem'},
+    {key: 'solution', title: 'Solution'},
 ];
 
-class Frameworks extends React.Component {
-
+export default class Patterns extends React.Component {
 
     sorting(data, dir, key) {
         return data.sort(function (a, b) {
@@ -80,24 +65,30 @@ class Frameworks extends React.Component {
         data.forEach(function (item, i) {
             var tr = document.createElement('tr');
             var th = document.createElement('th');
-            th.innerHTML = item.title;
+            th.innerHTML = item.name;
             if (item['link'] !== undefined) {
                 th.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['link'] + '">' + th.innerHTML + '</a>';
             }
             tr.appendChild(th);
 
             [
-                'type', 'popularity', 'licence',
-                'company', 'market_share', 'total_value',
-                'curve', 'template', 'speed', 'code_structure', 'architecture', 'extensions',
-                'extension_type', 'conclusion'
+                'type', 'aliases',
+                'problem', 'solution',
             ].forEach(function (key) {
                 var td = document.createElement('td');
-                td.innerHTML = item[key] === undefined ? '?' : item[key];
 
-                if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) { // eslint-disable-line
-                    td.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['company_link'] + '">' + td.innerHTML + '</a>';
+                console.log(item[key])
+                if (Array.isArray(item[key])) {
+                    td.innerHTML = item[key].join("<br>");
+                } else {
+                    td.innerHTML = item[key] === undefined ? '' : item[key];
+
                 }
+
+                if(['problem','solution'].includes(key)) {
+                    td.style = 'text-align: left';
+                }
+
                 tr.appendChild(td);
             });
 
@@ -131,8 +122,7 @@ class Frameworks extends React.Component {
     }
 
     componentDidMount() {
-
-        console.log('Frameworks: componentDidMount')
+        console.log('Patterns: componentDidMount')
 
         if (this.state.loaded) {
             return;
@@ -142,17 +132,15 @@ class Frameworks extends React.Component {
         // INIT
         //
         var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
-        var mainTable = document.getElementById('main-table');
+        var mainTable = document.getElementById('main-table-patterns');
         var position_tr = document.getElementById('positions-tr');
 
         this.mainTable = mainTable;
         this.star = star;
 
-        // console.log(mainTable);
-
-        Axios.get('/data/frameworks.json').then( (response) => {
+        Axios.get('/data/patterns.json').then( (response) => {
             this.data = response.data;
-            this.data = this.sorting(this.data, 'ASC', 'type');
+            this.data = this.sorting(this.data, 'ASC', 'name');
             this.renderPositions(position_tr, positions);
             this.renderData(mainTable, this.data);
             this.bindSorting(position_tr, positions);
@@ -164,11 +152,11 @@ class Frameworks extends React.Component {
 
 
     render() {
-        document.title = 'PHP Frameworks and CMS';
+        document.title = 'Patterns';
 
         return (
             <article>
-                <h1>Comparison of PHP Frameworks and CMS</h1>
+                <h1>Patterns</h1>
 
                 <GoogleAds
                     id="top"
@@ -178,17 +166,15 @@ class Frameworks extends React.Component {
                 />
 
                 <h3>Last update:
-                    <time>2017-06-02</time>
+                    <time>2017-07-02</time>
                 </h3>
 
-                <table id="main-table" summary="Contains comparison of PHP Frameworks and CMS">
+                <table id="main-table-patterns" summary="Contains comparison of Patterns">
                     <thead>
                     <tr>
-                        <th scope="col" rowSpan={2}><strong>Projects</strong></th>
-                        <th scope="col" colSpan={3}><strong>General</strong></th>
-                        <th scope="col" colSpan={4}><strong>Finances</strong></th>
-                        <th scope="col" colSpan={6}><strong>Development</strong></th>
-                        <th scope="col" colSpan={1}><strong>Comment</strong></th>
+                        <th scope="col" rowSpan={2}><strong>Patterns</strong></th>
+                        <th scope="col" colSpan={2}><strong>General</strong></th>
+                        <th scope="col" colSpan={2}><strong>Mission</strong></th>
                     </tr>
                     <tr id="positions-tr"></tr>
                     </thead>
@@ -203,5 +189,3 @@ class Frameworks extends React.Component {
         );
     }
 }
-
-export default Frameworks;
