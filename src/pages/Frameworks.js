@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import BasePage from './BasePage';
 
 // Phpixie  Fat-Free
 
@@ -25,8 +26,7 @@ const positions = [
     {key: 'conclusion', title: 'Conclusion'}
 ];
 
-class Frameworks extends React.Component {
-
+export default class Frameworks extends BasePage {
 
     sorting(data, dir, key) {
         return data.sort(function (a, b) {
@@ -164,11 +164,11 @@ class Frameworks extends React.Component {
 
 
     render() {
-        document.title = 'PHP Frameworks and CMS';
+        document.title = this.props.title;
 
         return (
             <article>
-                <h1>Comparison of PHP Frameworks and CMS</h1>
+                <h1>{this.props.title}</h1>
 
                 <GoogleAds
                     id="top"
@@ -204,4 +204,6 @@ class Frameworks extends React.Component {
     }
 }
 
-export default Frameworks;
+Frameworks.defaultProps = {
+    title: "Comparison of PHP Frameworks and CMS"
+};

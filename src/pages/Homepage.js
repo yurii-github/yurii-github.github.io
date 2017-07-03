@@ -1,5 +1,5 @@
 import React from 'react';
-import GoogleAds from "../Components/GoogleAds";
+import BasePage from './BasePage';
 
 const skills = [
     {title: '<b>Storages</b>'},
@@ -8,19 +8,20 @@ const skills = [
     {title: 'Sqlite', rating: 5},
     {title: 'Oracle ', rating: 0},
     {title: 'postreSQL', rating: 1},
-    {title: 'Redis', rating: 1},
     {title: 'MSSQL', rating: 1},
     {title: '<b>Languages &amp; Markups</b>'},
     {title: 'ASP .NET', rating: 4},
-    {title: 'PHP', rating: 10},
-    {title: 'Ruby Rails', rating: 0},
-    {title: 'Python', rating: 0},
     {title: 'Bash', rating: 5},
     {title: 'CSS', rating: 8},
     {title: 'Javascript', rating: 9},
+    {title: 'PHP', rating: 10},
+    {title: 'Python', rating: 0},
     {title: 'SOAP/XML', rating: 5},
-    {title: 'RESTful', rating: 8},
+    {title: 'React', rating: 4},
+    {title: 'Redis', rating: 1},
     {title: 'RegExp', rating: 8},
+    {title: 'RESTful', rating: 8},
+    {title: 'Ruby Rails', rating: 0},
     {title: '<b>Collaboration</b>'},
     {title: 'Mantis', rating: 0},
     {title: 'JIRA', rating: 10},
@@ -39,10 +40,19 @@ const skills = [
 ];
 
 
-export default class Homepage extends React.Component {
+export default class Homepage extends BasePage {
+
+    componentWillUnmount() {
+        console.log('Homepage: componentWillUnmount');
+        // CSS
+        let link = document.getElementById('homepage_css');
+        if(link) {
+            link.remove();
+        }
+    }
 
     componentDidMount() {
-        console.log('componentDidMount');
+        console.log('Homepage: componentDidMount');
 
         var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
         var maxStarts = 10;
@@ -81,6 +91,7 @@ export default class Homepage extends React.Component {
         (function(){
             var styles = document.createElement('link');
             styles.rel = 'stylesheet';
+            styles.id = "homepage_css";
             styles.type = 'text/css';
             styles.media = 'screen';
             styles.href = '/about.css';
@@ -91,14 +102,6 @@ export default class Homepage extends React.Component {
 
     }
 
-
-    componentWillUnmount() {
-        console.log('componentWillUnmount');
-        // CSS
-        var links = document.querySelectorAll('head > link');
-        links[links.length-1].remove();
-        //a[a.length-1].remove();
-    }
 
     rating(star, rate, maxStarts) {
         var val = parseInt(rate, 10);
@@ -116,10 +119,12 @@ export default class Homepage extends React.Component {
 
 
     render() {
-        document.title = 'About Me';
+        document.title = this.props.title;
         return (
+        <div>
+            <h1>{this.props.title}</h1>
             <div className="container">
-                <h1>Homepage</h1>
+
 
                 <article>
                     <p> Hello.</p>
@@ -147,8 +152,13 @@ export default class Homepage extends React.Component {
                 <div className="clear-both"></div>
 
             </div>
+        </div>
         );
     }
 
 
 }
+
+Homepage.defaultProps = {
+    title: "Homepage"
+};

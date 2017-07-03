@@ -76,8 +76,6 @@ export default class Patterns extends React.Component {
                 'problem', 'solution',
             ].forEach(function (key) {
                 var td = document.createElement('td');
-
-                console.log(item[key])
                 if (Array.isArray(item[key])) {
                     td.innerHTML = item[key].join("<br>");
                 } else {

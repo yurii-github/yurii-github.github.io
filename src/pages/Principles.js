@@ -9,6 +9,13 @@ export default class Principles extends React.Component {
             <div className="container">
                 <h1>Principles</h1>
 
+                <GoogleAds
+                    id="top"
+                    client="ca-pub-1647951743023830"
+                    slot="1838502239"
+                    style={{ display:'block', width:'728px', height:'90px',  marginLeft: 'auto', marginRight: 'auto', }}
+                />
+
                 <article>
                     <p>Another list of retarded names that came from hipsters or simply retards:</p>
                     <p><b>SRP</b> (single responsibility principle)</p>
