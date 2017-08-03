@@ -135,7 +135,7 @@ export default class Homepage extends BasePage {
                     <p>I do track some of PHP frameworks and CMS. I provide them with my comments in comparision table</p>
 
                     <h2>Patterns</h2>
-                    <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of useless hipster names.</p>
+                    <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of useless names.</p>
                     <p>To simplify things I provide aliases for patterns like 'Wrapper', because most of those patterns are simply basic or a bit complex wrappers over other objects or classes.</p>
                     <p>I've added to patterns so-called by hipsters 'antipatterns' because they still are patterns and are valid in many cases.</p>
 
