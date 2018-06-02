@@ -32,44 +32,7 @@ $title = 'Homepage';
 </div>
 
 <script>
-    const skills = [
-        {title: '<b>Storages</b>'},
-        {title: 'MySQL', rating: 6},
-        {title: 'mongoDB', rating: 0},
-        {title: 'Sqlite', rating: 5},
-        {title: 'Oracle ', rating: 0},
-        {title: 'postreSQL', rating: 1},
-        {title: 'MSSQL', rating: 1},
-        {title: '<b>Languages &amp; Markups</b>'},
-        {title: 'ASP .NET', rating: 4},
-        {title: 'Bash', rating: 5},
-        {title: 'C/C++/C#', rating: 2},
-        {title: 'CSS', rating: 8},
-        {title: 'Javascript', rating: 9},
-        {title: 'PHP', rating: 10},
-        {title: 'Python', rating: 0},
-        {title: 'SOAP/XML', rating: 5},
-        {title: 'React', rating: 4},
-        {title: 'Redis', rating: 1},
-        {title: 'RegExp', rating: 8},
-        {title: 'RESTful', rating: 8},
-        {title: 'Ruby Rails', rating: 0},
-        {title: '<b>Collaboration</b>'},
-        {title: 'Mantis', rating: 0},
-        {title: 'JIRA', rating: 10},
-        {title: 'Redmine', rating: 4},
-        {title: 'Bugzilla', rating: 0},
-        {title: 'Git', rating: 10},
-        {title: 'SVN', rating: 7},
-        {title: '<b>Technologies</b>'},
-        {title: 'RabbitMQ', rating: 1},
-        {title: 'PHPUnit', rating: 7},
-        {title: 'Bootstrap', rating: 7},
-        {title: 'Docker', rating: 7},
-        {title: 'TravisCI', rating: 7},
-        {title: 'Jenkins', rating: 3},
-        {title: 'SVN', rating: 7},
-    ];
+    let skills = <?php echo require 'data/skills.php';?>;
 
     function rating(star, rate, maxStarts)
     {

@@ -1,0 +1,46 @@
+<?php
+
+return
+    <<<JSON
+[
+        {title: '<b>Storages</b>'},
+        {title: 'MySQL', rating: 8},
+        {title: 'mongoDB', rating: 1},
+        {title: 'Sqlite', rating: 4},
+        {title: 'Oracle ', rating: 0},
+        {title: 'postreSQL', rating: 1},
+        {title: 'MSSQL', rating: 1},
+        {title: '<b>Languages &amp; Markups</b>'},
+        {title: 'ASP .NET', rating: 2},
+        {title: 'Bash', rating: 5},
+        {title: 'C/C++/C#', rating: 2},
+        {title: 'CSS', rating: 7},
+        {title: 'Javascript', rating: 8},
+        {title: 'PHP', rating: 10},
+        {title: 'Python', rating: 1},
+        {title: 'SOAP/XML', rating: 5},
+        {title: 'React', rating: 2},
+        {title: 'Redis', rating: 1},
+        {title: 'RegExp', rating: 7},
+        {title: 'RESTful', rating: 7},
+        {title: 'Ruby Rails', rating: 0},
+        {title: '<b>Collaboration</b>'},
+        {title: 'Mantis', rating: 1},
+        {title: 'JIRA', rating: 10},
+        {title: 'Redmine', rating: 2},
+        {title: 'Bugzilla', rating: 1},
+        {title: 'Git', rating: 10},
+        {title: 'SVN', rating: 5},
+        {title: 'Github', rating: 8},
+        {title: 'Gitlab', rating: 7},
+        {title: 'Bitbucket', rating: 7}, 
+        {title: 'TravisCI', rating: 6}, 
+        {title: '<b>Technologies</b>'},
+        {title: 'RabbitMQ', rating: 3},
+        {title: 'PHPUnit', rating: 8},
+        {title: 'Bootstrap', rating: 7},
+        {title: 'Docker', rating: 6},        
+        {title: 'Jenkins', rating: 2},
+    ]
+JSON
+    ;
