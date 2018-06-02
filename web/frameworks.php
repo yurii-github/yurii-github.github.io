@@ -491,6 +491,6 @@ $title = 'Comparison of PHP Frameworks and CMS';
         renderData(mainTable, data);
         bindSorting(position_tr, positions);
     </script>
-<?php $content = ob_get_clean(); ?>
-
-<?php require_once '_layout.php';
+<?php
+$content = ob_get_clean();
+require '_layout.php';

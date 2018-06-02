@@ -23,6 +23,6 @@ $title = 'Principles';
             <p><b>RUP</b> (Rational Unified Process) - true iterative development process created by professionals, not someone's project on milking money on useless certifications.</p>
         </article>
     </div>
-<?php $content = ob_get_clean(); ?>
-
-<?php require_once '_layout.php';
+<?php
+$content = ob_get_clean();
+require '_layout.php';

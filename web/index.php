@@ -123,6 +123,7 @@ $title = "Homepage";
     }
     drawStars();
 </script>
-<?php $content = ob_get_clean(); ?>
+<?php
+$content = ob_get_clean();
 
-<?php require_once '_layout.php';
+require '_layout.php';

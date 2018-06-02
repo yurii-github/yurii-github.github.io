@@ -11,18 +11,15 @@
     <link rel="icon" type="image/png" href="why.png"/>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-<nav>
-    <a class="mt" href="/">home</a>
-    <a href="frameworks.php">Frameworks</a>
-    <a href="patterns.php">Patterns</a>
-    <a href="principles.php">Principles</a>
-</nav>
-<?php echo $content; ?>
+    <nav>
+        <a class="mt" href="/">home</a>
+        <a href="frameworks.php">Frameworks</a>
+        <a href="patterns.php">Patterns</a>
+        <a href="principles.php">Principles</a>
+    </nav>
 
-<div id="root">
+    <?php echo $content; ?>
 
-
-</div>
 </body>
