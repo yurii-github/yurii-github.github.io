@@ -2,7 +2,9 @@
 #
 #
 # https://unix.stackexchange.com/a/153863
+# https://askubuntu.com/a/259386
 shopt -s extglob
+shopt -s dotglob
 
 rm -rf ./build
 mkdir ./build
