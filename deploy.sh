@@ -1,25 +1,16 @@
 #!/bin/bash
-npm run build
+#
+#
 
-dir="$(pwd)"
-parentDir="$(dirname "$dir")"
+php build-pages.php
+git add .
+git commit -m "created build `date '+%Y-%m-%d %H:%M:%S'`"
+exit;
+git co master
+rm -rf . -- !(.idea)
+git co Php -- build
+mv build/* .
+rmdir build
+git add .
+git commit -m "added build `date '+%Y-%m-%d %H:%M:%S'`"
 
-buildDir="$dir/build"
-deployDir="$parentDir/yurii-github.github.io-build"
-
-echo "$dir | $parentDir"
-echo "$buildDir | $deployDir";
-
-
-# clear after last deploy
-rm -fr "$deployDir/static/"
-
-cp -a "$buildDir/."  $deployDir
-
-
-# commit
-cd $deployDir
-git add . --all
-git commit -m "deployed"
-git push
-cd $dir
