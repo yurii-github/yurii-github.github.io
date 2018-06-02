@@ -4,7 +4,7 @@ $title = 'Principles';
 ?>
 <?php ob_start(); ?>
     <div class="container">
-        <h1><?php echo $title;?></h1>
+        <h1><?php echo $title; ?></h1>
         <article>
             <p>Another list of retarded names that came from hipsters or simply retards:</p>
             <p><b>SRP</b> (single responsibility principle)</p>

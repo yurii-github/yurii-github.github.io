@@ -22,7 +22,7 @@ return PhpCsFixer\Config::create()
         'final_internal_class' => true,
         'fully_qualified_strict_types' => true,
         'function_to_constant' => ['functions' => ['get_class', 'get_called_class', 'php_sapi_name', 'phpversion', 'pi']],
-        'header_comment' => ['header' => $header],
+        //'header_comment' => ['header' => $header],
         'heredoc_to_nowdoc' => true,
         'list_syntax' => ['syntax' => 'long'],
         'method_argument_space' => ['ensure_fully_multiline' => true],

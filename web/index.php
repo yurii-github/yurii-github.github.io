@@ -1,10 +1,10 @@
 <?php
-$title = "Homepage";
+$title = 'Homepage';
 
 ?>
 <?php ob_start(); ?>
 <div>
-    <h1><?php echo $title;?></h1>
+    <h1><?php echo $title; ?></h1>
     <div class="container page-about">
         <article>
             <p> Hello.</p>
