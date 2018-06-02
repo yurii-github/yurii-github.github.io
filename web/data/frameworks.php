@@ -18,7 +18,7 @@ return <<<JSON
                 "extensions": "2",
                 "extension_type": "Component",
                 "market_share": "2",
-                "total_value": "$0",
+                "total_value": "$10M",
                 "conclusion": "popular in Russia"
             },
             {
