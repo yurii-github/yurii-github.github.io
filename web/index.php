@@ -8,10 +8,21 @@ $title = 'Homepage';
     <h3>Last update: <time><?php echo date('Y-m-d H:i', filemtime(__FILE__)); ?></time></h3>
     <div class="container page-about">
         <article>
-            <p>Hello. I'm Yurii. That's all you should really know about me. All info here is my subject view on the field</p>
+            <h2>About Me</h2>
+            <p>Hello. I'm Yurii. That's all you should really know about me.</p>
+            <p>But here are some more things to clarify:
+            <ol>
+                <li>All info here is my subjective view on the field.</li>
+                <li>Those are my current skills I keep updated</li>
+                <li>I'm not fond of naming errors like 'bugs' etc. I do not follow human stupidity.</li>
+                <li>Hypes and other nonsense don't work for me.</li>
+                <li>I'm not able to read minds. Luckily.</li>
+            </ol>
+            </p>
+            <p></p>
 
             <h2>PHP Frameworks</h2>
-            <p>I do track some of PHP frameworks and CMS. I provide them with my comments in comparision table</p>
+            <p>When I have time and will I do track some PHP frameworks and CMS.</p>
             <h2>Patterns</h2>
             <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of useless names.</p>
             <p>To simplify things I provide aliases for patterns like 'Wrapper', because most of those patterns are simply basic or a bit complex wrappers over other objects or classes.</p>
