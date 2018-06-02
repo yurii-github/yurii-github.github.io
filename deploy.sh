@@ -12,6 +12,7 @@ mkdir ./build
 cp ./.gitignore ./build/.gitignore
 cp ./web/style.css ./build/style.css
 cp ./web/why.png ./build/why.png
+cp ./web/tools ./build
 
 php build-pages.php
 
