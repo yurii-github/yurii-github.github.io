@@ -1,6 +1,8 @@
 #!/bin/bash
 #
 #
+# https://unix.stackexchange.com/a/153863
+shopt -s extglob
 
 php build-pages.php
 git add .
