@@ -10,6 +10,7 @@ return
         {title: 'Oracle ', rating: 0},
         {title: 'postreSQL', rating: 1},
         {title: 'MSSQL', rating: 1},
+        {title: 'Redis', rating: 1},
         {title: '<b>Languages &amp; Markups</b>'},
         {title: 'ASP .NET', rating: 2},
         {title: 'Bash', rating: 5},
@@ -20,10 +21,21 @@ return
         {title: 'Python', rating: 1},
         {title: 'SOAP/XML', rating: 5},
         {title: 'React', rating: 2},
-        {title: 'Redis', rating: 1},
         {title: 'RegExp', rating: 7},
         {title: 'RESTful', rating: 7},
         {title: 'Ruby Rails', rating: 0},
+        {title: 'Go', rating: 0},
+        
+        {title: '<b>PHP Frameworks</b>'},
+        {title: 'Yii 2', rating: 8},
+        {title: 'Symfony 2', rating: 2},
+        {title: 'Symfony 3', rating: 4},
+        {title: 'Symfony 4', rating: 1},
+        {title: 'Laravel 5', rating: 1},
+        {title: 'Joomla 3', rating: 1},
+        {title: 'PHPUnit', rating: 8},
+        {title: 'Codeception', rating: 6},
+        
         {title: '<b>Collaboration</b>'},
         {title: 'Mantis', rating: 1},
         {title: 'JIRA', rating: 10},
@@ -37,10 +49,10 @@ return
         {title: 'TravisCI', rating: 6}, 
         {title: '<b>Technologies</b>'},
         {title: 'RabbitMQ', rating: 3},
-        {title: 'PHPUnit', rating: 8},
         {title: 'Bootstrap', rating: 7},
         {title: 'Docker', rating: 6},        
         {title: 'Jenkins', rating: 2},
+        {title: 'Gearman', rating: 0},
     ]
 JSON
     ;

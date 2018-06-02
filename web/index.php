@@ -4,16 +4,14 @@ $title = 'Homepage';
 ?>
 <?php ob_start(); ?>
 <div>
-    <h1><?php echo $title; ?></h1>
+    <h1><img src="1f418.png" alt="elephant emoji"/></h1>
+    <h3>Last update: <time><?php echo date('Y-m-d H:i', filemtime(__FILE__)); ?></time></h3>
     <div class="container page-about">
         <article>
-            <p> Hello.</p>
-            <p>I'm Yurii. That's all you should really know about me.</p>
-            <p>All info here is my subject view on the field. Any comments are welcome. If you agree or not, maybe you have some intel that can change my view on things.</p>
+            <p>Hello. I'm Yurii. That's all you should really know about me. All info here is my subject view on the field</p>
 
             <h2>PHP Frameworks</h2>
             <p>I do track some of PHP frameworks and CMS. I provide them with my comments in comparision table</p>
-
             <h2>Patterns</h2>
             <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of useless names.</p>
             <p>To simplify things I provide aliases for patterns like 'Wrapper', because most of those patterns are simply basic or a bit complex wrappers over other objects or classes.</p>

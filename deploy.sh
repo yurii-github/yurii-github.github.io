@@ -10,8 +10,8 @@ rm -rf ./build
 mkdir ./build
 
 cp ./.gitignore ./build/.gitignore
-cp ./web/style.css ./build/style.css
-cp ./web/why.png ./build/why.png
+cp ./web/style.css ./build
+cp ./web/1f418.png ./build
 cp -rf ./web/tools ./build
 
 php build-pages.php
