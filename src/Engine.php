@@ -87,7 +87,7 @@ class Engine implements EngineInterface
 
         // clean root from project dirs
         $finder = new Finder();
-        $finder->directories()->in(dirname(__DIR__))->exclude(['.idea', '.git']);
+        $finder->directories()->in(dirname(__DIR__))->exclude(['.idea', '.git', 'vendor']);
         foreach ($finder as $file) {
             $this->fs->remove($file->getPathname());
         }
