@@ -8,6 +8,7 @@
 namespace App;
 
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Finder\Finder;
 
 class Engine implements EngineInterface
 {
@@ -75,26 +76,43 @@ class Engine implements EngineInterface
 
     public function deploy()
     {
+        $branch = 'dumb';
+        $finder = new Finder();
+        $finder->in(dirname(__DIR__))->exclude(['.idea', '.git']);
+
+        foreach ($finder as $file) {
+            var_dump($file);
+        }
+        die;
         $date = date('Y-md H:i:s');
         $this->build();
-//        exec('git add .');
-//        exec('git commit -m "created build '.$date.'"');
-//        exec('git checkout master');
-//        exec('rm -rf . -- !(.idea|.git)');
-//        exec('git checkout php -- build');
-        $this->fs->copy($this->buildDir, dirname(__DIR__));
+        exec('git add .');
+        exec('git commit -m "created build '.$date.'"');
+        exec('git checkout master');
+
+
+        die;
+        exec('rm -rf . -- !(.idea|.git)');
+
+
+        exec("git checkout $branch -- build");
+
+        // make build dir as root
+        $finder = new Finder();
+        $finder->files()->in($this->buildDir);
+        foreach ($finder as $file) {
+            $this->fs->copy($file->getPathname(), dirname(__DIR__).'/'.$file->getRelativePathname());
+        }
+        $this->fs->remove($this->buildDir);
+
+        exec('git add .');
+        exec('git commit -m "added build '.$date.'"');
+        exec("git checkout $branch");
+
+        exec("git push origin $branch");
+        exec("git push origin master");
     }
-/* .
-git checkout php -- build
-mv build/* .
-rmdir build
-git add .
-git commit -m "added build `date '+%Y-%m-%d %H:%M:%S'`"
 
-git checkout php
-
-git push origin php
-git push origin master
 
     /**
      * @inheritdoc
