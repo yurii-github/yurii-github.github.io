@@ -77,7 +77,7 @@ class Engine implements EngineInterface
     public function deploy()
     {
         $branch = 'dumb';
-        $date = date('Y-md H:i:s');
+        $date = date('Y-m-d H:i:s');
         $baseDir = dirname(__DIR__);
 
         $this->build();
@@ -104,7 +104,7 @@ class Engine implements EngineInterface
 //        }
 
         exec("git checkout $branch -- build");
-        clearstatcache();
+       // clearstatcache();
 
         echo "make build dir as root...\n";
         $finder = new Finder();
@@ -118,7 +118,7 @@ class Engine implements EngineInterface
         exec('git commit -m "added build '.$date.'"');
 
         exec("git checkout $branch");
-        clearstatcache();
+      //  clearstatcache();
 
         exec("git push origin $branch");
         exec("git push origin master");
