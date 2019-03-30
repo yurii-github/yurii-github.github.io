@@ -85,23 +85,23 @@ class Engine implements EngineInterface
         exec('git add .');
         exec('git commit -m "created build '.$date.'"');
         exec('git checkout master');
-        sleep(2);
-        clearstatcache();
-
-        echo "clean root from project dirs...\n";
-        glob($baseDir);
-        $finder = new Finder();
-        $finder->directories()->in($baseDir)->exclude(['.idea', '.git', 'vendor']);
-        foreach ($finder as $file) {
-            $this->fs->remove($file->getPathname());
-        }
-
-        echo "clean root from project files...\n";
-        $finder = new Finder();
-        $finder->directories()->in($baseDir)->exclude(['.gitignore']);
-        foreach ($finder as $file) {
-            $this->fs->remove($file->getPathname());
-        }
+//        sleep(2);
+//        clearstatcache();
+//
+//        echo "clean root from project dirs...\n";
+//        glob($baseDir);
+//        $finder = new Finder();
+//        $finder->directories()->in($baseDir)->exclude(['.idea', '.git', 'vendor']);
+//        foreach ($finder as $file) {
+//            $this->fs->remove($file->getPathname());
+//        }
+//
+//        echo "clean root from project files...\n";
+//        $finder = new Finder();
+//        $finder->directories()->in($baseDir)->exclude(['.gitignore']);
+//        foreach ($finder as $file) {
+//            $this->fs->remove($file->getPathname());
+//        }
 
         exec("git checkout $branch -- build");
         clearstatcache();
