@@ -85,6 +85,7 @@ class Engine implements EngineInterface
         exec('git add .');
         exec('git commit -m "created build '.$date.'"');
         exec('git checkout master');
+        sleep(2);
         clearstatcache();
 
         echo "clean root from project dirs...\n";
