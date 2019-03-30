@@ -104,6 +104,7 @@ class Engine implements EngineInterface
         clearstatcache();
 
         // make build dir as root
+        echo "make build dir as root...\n";
         $finder = new Finder();
         $finder->files()->in($this->buildDir);
         foreach ($finder as $file) {
