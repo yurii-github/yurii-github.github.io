@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
@@ -23,14 +23,14 @@
     <link rel="icon" type="image/png" href="<?php $this->asset('elephant.png') ?>"/>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
+
 
 <nav>
     <a class="mt" href="/">home</a>
-    <a href="/frameworks">Frameworks</a>
-    <a href="/patterns">Patterns</a>
-    <a href="/principles">Principles</a>
-    <a href="/tools/prefix">Prefix</a>
+    <a href="<?php echo $this->action('frameworks') ?>">Frameworks</a>
+    <a href="<?php echo $this->action('patterns') ?>">Patterns</a>
+    <a href="<?php echo $this->action('principles') ?>">Principles</a>
+    <a href="<?php echo $this->action('tools/prefix') ?>">Prefix</a>
 </nav>
 
 <?php echo $content; ?>

@@ -22,6 +22,7 @@ $title = 'Add Prefix';
 <article>
     <h1>Add Prefix/Suffix into Each Line></h1>
 
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <textarea id="input" style="width:100%; margin:7px 0px 4px 0px;" rows="10"></textarea>
     <input class="btn" type="text" id="prefix" value="     * " placeholder="Enter prefix here."/>

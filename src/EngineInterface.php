@@ -17,6 +17,15 @@ interface EngineInterface
     public function handle();
 
     /**
+     * Returns proper action link
+     *
+     * @param string $pageName
+     *
+     * @return string
+     */
+    public function action(string $pageName);
+
+    /**
      * Returns proper asset web location
      *
      * @param string $path

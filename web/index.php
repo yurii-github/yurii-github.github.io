@@ -7,4 +7,11 @@
 
 require_once dirname(__DIR__) .'/vendor/autoload.php';
 
-(new \App\Engine())->handle();
+
+$fs = new \Symfony\Component\Filesystem\Filesystem();
+
+if (in_array('--build', $argv)) {
+    (new \App\Engine($fs))->build();
+} else {
+    (new \App\Engine($fs))->handle();
+}

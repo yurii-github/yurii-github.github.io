@@ -27,4 +27,22 @@ final class Helper
 
         echo $output;
     }
+
+    /**
+     * create file with content, and create folder structure if doesn't exist
+     * @param String $filepath
+     * @param String $data
+     */
+    public static function filePutContents($filepath, $data)
+    {
+        $isInFolder = preg_match("/^(.*)\/([^\/]+)$/", $filepath, $filepathMatches);
+        if ($isInFolder) {
+            $folderName = $filepathMatches[1];
+            $fileName = $filepathMatches[2];
+            if (!is_dir($folderName)) {
+                mkdir($folderName, 0777, true);
+            }
+        }
+        file_put_contents($filepath, $data);
+    }
 }

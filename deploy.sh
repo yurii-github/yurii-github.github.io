@@ -1,20 +1,7 @@
 #!/bin/bash
 #
 #
-# https://unix.stackexchange.com/a/153863
-# https://askubuntu.com/a/259386
-shopt -s extglob
-shopt -s dotglob
 
-rm -rf ./build
-mkdir ./build
-
-cp ./.gitignore ./build/.gitignore
-cp ./web/style.css ./build
-cp ./web/1f418.png ./build
-cp -rf ./web/tools ./build
-
-php build-pages.php
 
 git add .
 git commit -m "created build `date '+%Y-%m-%d %H:%M:%S'`"

@@ -7,14 +7,24 @@
 
 namespace App;
 
+use Symfony\Component\Filesystem\Filesystem;
+
 class Engine implements EngineInterface
 {
     protected $baseUrl;
     protected $url;
 
+    protected $fs;
+
+    public function __construct(Filesystem $filesystem)
+    {
+        $this->fs = $filesystem;
+    }
+
     protected function pageMap()
     {
         return [
+            // url => page name
             '/' => 'index',
             '/frameworks' => 'frameworks',
             '/patterns' => 'patterns',
@@ -31,6 +41,55 @@ class Engine implements EngineInterface
     protected function getBaseUrl()
     {
         return $this->baseUrl;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function action(string $pageName)
+    {
+        $url = array_flip($this->pageMap())[$pageName];
+        $url = ($url == '/' ? 'index' : $url) . '.html';
+
+        return $url;
+    }
+
+    public function build()
+    {
+        $buildDir = dirname(__DIR__) . '/build2';
+        $this->fs->remove($buildDir);
+
+        foreach ($this->pageMap() as $page) {
+            $_SERVER['REQUEST_URI'] = $this->action($page);
+            ob_start();
+            echo $this->page($page);
+            $content = ob_get_clean();
+
+            $this->fs->dumpFile($buildDir . '/' . $_SERVER['REQUEST_URI'], $content);
+        }
+        $this->fs->copy(dirname(__DIR__).'/web/style.css', $buildDir.'/style.css');
+        $this->fs->copy(dirname(__DIR__).'/web/elephant.png', $buildDir.'/elephant.png');
+    }
+
+    public function deploy()
+    {
+        $date = date('Y-md H:i:s');
+        $this->build();
+        exec('git add .');
+        exec('git commit -m "created build '.$date.'"');
+        exec('git checkout master');
+        exec('rm -rf . -- !(.idea|.git)');
+        exec('git checkout php -- build');
+        $this->fs->rename()
+mv build/* .
+rmdir build
+git add .
+git commit -m "added build `date '+%Y-%m-%d %H:%M:%S'`"
+
+git checkout php
+
+git push origin php
+git push origin master
     }
 
     /**
@@ -65,7 +124,8 @@ class Engine implements EngineInterface
      */
     public function asset(string $path)
     {
-        echo $this->getBaseUrl() . '/' . $path;
+        echo '/' . $path;
+        //echo $this->getBaseUrl() . '/' . $path;
     }
 
     /**
