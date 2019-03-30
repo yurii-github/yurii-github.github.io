@@ -1,5 +1,6 @@
 <?php
 
+//          "friendsofphp/php-cs-fixer": "*"
 
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
