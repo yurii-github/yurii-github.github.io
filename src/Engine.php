@@ -86,14 +86,14 @@ class Engine implements EngineInterface
         exec('git checkout master');
         clearstatcache();
 
-        // clean root from project dirs
+        echo "clean root from project dirs...\n";
         $finder = new Finder();
         $finder->directories()->in(dirname(__DIR__))->exclude(['.idea', '.git', 'vendor']);
         foreach ($finder as $file) {
             $this->fs->remove($file->getPathname());
         }
 
-        // clean root from project files
+        echo "clean root from project files...\n";
         $finder = new Finder();
         $finder->directories()->in(dirname(__DIR__))->exclude(['.gitignore']);
         foreach ($finder as $file) {
@@ -103,7 +103,6 @@ class Engine implements EngineInterface
         exec("git checkout $branch -- build");
         clearstatcache();
 
-        // make build dir as root
         echo "make build dir as root...\n";
         $finder = new Finder();
         $finder->files()->in($this->buildDir);
