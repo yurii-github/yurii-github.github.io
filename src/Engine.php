@@ -56,7 +56,7 @@ class Engine implements EngineInterface
 
     public function build()
     {
-        $buildDir = dirname(__DIR__) . '/build2';
+        $buildDir = dirname(__DIR__) . '/build';
         $this->fs->remove($buildDir);
 
         foreach ($this->pageMap() as $page) {
