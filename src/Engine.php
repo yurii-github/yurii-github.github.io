@@ -89,6 +89,7 @@ class Engine implements EngineInterface
         clearstatcache();
 
         echo "clean root from project dirs...\n";
+        glob($baseDir);
         $finder = new Finder();
         $finder->directories()->in($baseDir)->exclude(['.idea', '.git', 'vendor']);
         foreach ($finder as $file) {
