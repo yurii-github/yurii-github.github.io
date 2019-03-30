@@ -4,14 +4,38 @@
  *
  * 2017 - 2019 (c) Yurii K.
  */
+/**
+ * @var \App\EngineInterface $this
+ * @var string $content
+ * @var string $title
+ */
 
 $title = 'Homepage';
+
+$skills = $this->getData('skills');
+$maxStars = 10;
+
+$drawStars = function ($stars) use ($maxStars) {
+    if ($stars === null) {
+        return;
+    }
+
+    $output = '';
+    $stars = (int)$stars;
+    for ($i = 1; $i <= $maxStars; $i++) {
+        if ($stars >= $i) {
+            $output .= '<span class="mt">star</span>';
+        } else {
+            $output .= '<span class="mt">star_border</span>';
+        }
+    }
+    echo $output;
+};
+
 ?>
 <div>
-    <h1><img src="1f418.png" alt="elephant emoji"/></h1>
-    <h3>Last update:
-        <time><?php echo date('Y-m-d H:i', filemtime(__FILE__)); ?></time>
-    </h3>
+    <h1><img src="<?php $this->asset('elephant.png') ?>" alt="elephant emoji"/></h1>
+    <?php $this->mtime(__FILE__) ?>
     <div class="container page-about">
         <article>
             <h2>About Me</h2>
@@ -42,7 +66,12 @@ $title = 'Homepage';
         </article>
 
         <aside>
-            <dl id="skills"></dl>
+            <dl id="skills">
+                <?php foreach ($skills as $skill): ?>
+                <dt><?php echo $skill->title ?></dt>
+                <dd><?php $drawStars(isset($skill->rating) ? $skill->rating : null) ?></dd>
+                <?php endforeach; ?>
+            </dl>
             <div class="clear-both"></div>
         </aside>
         <div class="clear-both"></div>
@@ -50,56 +79,19 @@ $title = 'Homepage';
 </div>
 
 <script>
-    let skills = <?php echo require 'data/skills.php';?>;
+    window.addEventListener('resize', function (e) {
+        //TODO: cont width 80%
+        var articleEl = document.getElementsByTagName('article')[0];
+        var effectiveW = Math.round(window.innerWidth * 0.8) - 40;
+        var skillsW = 270;
 
-    function rating(star, rate, maxStarts) {
-        var val = parseInt(rate, 10);
-        var rating = '';
-        if (!isNaN(val)) {
-            for (let i = 1; i <= val; i++) {
-                rating += star.full;
-            }
-            for (let i = 0; i < maxStarts - val; i++) {
-                rating += star.empty;
-            }
+        if (effectiveW >= 770) {
+            let articleW = effectiveW - skillsW;
+            articleEl.style['width'] = articleW + 'px';
+        } else {
+            articleEl.style['width'] = effectiveW + 'px';
         }
-        return rating;
-    }
+    });
 
-    function drawStars() {
-        console.log('Homepage: componentDidMount');
-
-        var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
-        var maxStarts = 10;
-        var dl = document.getElementById('skills');
-
-        skills.forEach((skill) => {
-            var _dt = document.createElement('dt');
-            _dt.innerHTML = skill.title;
-            var _dd = document.createElement('dd');
-            _dd.innerHTML = rating(star, skill.rating, maxStarts);
-            dl.appendChild(_dt);
-            dl.appendChild(_dd);
-        });
-
-        // RESIZE
-        window.addEventListener('resize', function (e) {
-            //TODO: cont width 80%
-            var articleEl = document.getElementsByTagName('article')[0];
-            var effectiveW = Math.round(window.innerWidth * 0.8) - 40;
-            var skillsW = 270;
-
-            if (effectiveW >= 770) {
-                let articleW = effectiveW - skillsW;
-                articleEl.style['width'] = articleW + 'px';
-            } else {
-                let articleW = effectiveW;
-                articleEl.style['width'] = articleW + 'px';
-            }
-        });
-
-        window.dispatchEvent(new Event('resize'));
-    }
-
-    drawStars();
+    window.dispatchEvent(new Event('resize'));
 </script>

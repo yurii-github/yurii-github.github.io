@@ -4,16 +4,18 @@
  *
  * 2017 - 1029 (c) Yurii K.
  */
+/**
+ * @var \App\EngineInterface $this
+ * @var string $content
+ * @var string $title
+ */
 
 $title = 'Patterns';
 
 ?>
 <article>
-    <h1><?php echo $title; ?></h1>
-
-    <h3>Last update:
-        <time>2017-07-02</time>
-    </h3>
+    <h1>Patterns</h1>
+    <?php $this->mtime(__FILE__) ?>
 
     <table id="main-table-patterns" summary="Contains comparison of Patterns">
         <thead>

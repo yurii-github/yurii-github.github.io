@@ -4,6 +4,11 @@
  *
  * 2017 - 1029 (c) Yurii K.
  */
+/**
+ * @var \App\EngineInterface $this
+ * @var string $content
+ * @var string $title
+ */
 
 $title = 'Add Prefix';
 ?>

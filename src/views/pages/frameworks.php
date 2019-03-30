@@ -4,15 +4,17 @@
  *
  * 2017 - 1029 (c) Yurii K.
  */
+/**
+ * @var \App\EngineInterface $this
+ * @var string $content
+ * @var string $title
+ */
 
 $title = 'Comparison of PHP Frameworks and CMS';
 ?>
 <article>
-    <h1><?php echo $title; ?></h1>
-    <h3>Last update:
-        <time><?php echo date('Y-m-d H:i', filemtime(__FILE__)); ?></time>
-        <p><b>Please note, these are my subjective views!</b></p>
-    </h3>
+    <h1>Comparison of PHP Frameworks and CMS</h1>
+    <?php $this->mtime(__FILE__) ?>
     <table id="main-table" summary="Contains comparison of PHP Frameworks and CMS">
         <thead>
         <tr>

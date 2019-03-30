@@ -20,7 +20,7 @@
     <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="<?php $this->asset('style.css') ?>"/>
-    <link rel="icon" type="image/png" href="<?php $this->asset('1f418.png') ?>"/>
+    <link rel="icon" type="image/png" href="<?php $this->asset('elephant.png') ?>"/>
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>

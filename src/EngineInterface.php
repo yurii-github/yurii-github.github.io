@@ -24,4 +24,22 @@ interface EngineInterface
      * @return string
      */
     public function asset(string $path);
+
+    /**
+     * Returns data by its name
+     *
+     * @param string $name
+     *
+     * @return \stdClass[]
+     */
+    public function getData(string $name);
+
+    /**
+     * Returns last update time
+     *
+     * @param string $filename
+     *
+     * @return string
+     */
+    public function mtime(string $filename);
 }

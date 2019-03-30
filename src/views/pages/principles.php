@@ -4,12 +4,19 @@
  *
  * 2017 - 1029 (c) Yurii K.
  */
+/**
+ * @var \App\EngineInterface $this
+ * @var string $content
+ * @var string $title
+ */
 
 $title = 'Principles';
 
 ?>
 <div class="container">
-    <h1><?php echo $title; ?></h1>
+    <h1>Principles</h1>
+    <?php $this->mtime(__FILE__) ?>
+
     <article>
         <p>List of principles (or mostly retarded names that came from hipsters or just retards):</p>
         <p><b>SRP</b> (single responsibility principle)</p>
