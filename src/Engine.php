@@ -84,6 +84,7 @@ class Engine implements EngineInterface
         exec('git add .');
         exec('git commit -m "created build '.$date.'"');
         exec('git checkout master');
+        clearstatcache();
 
         // clean root from project dirs
         $finder = new Finder();
@@ -100,6 +101,7 @@ class Engine implements EngineInterface
         }
 
         exec("git checkout $branch -- build");
+        clearstatcache();
 
         // make build dir as root
         $finder = new Finder();
@@ -111,7 +113,9 @@ class Engine implements EngineInterface
 
         exec('git add .');
         exec('git commit -m "added build '.$date.'"');
+
         exec("git checkout $branch");
+        clearstatcache();
 
         exec("git push origin $branch");
         exec("git push origin master");
