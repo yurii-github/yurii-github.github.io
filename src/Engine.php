@@ -78,6 +78,7 @@ class Engine implements EngineInterface
     {
         $branch = 'dumb';
         $date = date('Y-md H:i:s');
+        $baseDir = dirname(__DIR__);
 
         $this->build();
 
@@ -88,14 +89,14 @@ class Engine implements EngineInterface
 
         echo "clean root from project dirs...\n";
         $finder = new Finder();
-        $finder->directories()->in(dirname(__DIR__))->exclude(['.idea', '.git', 'vendor']);
+        $finder->directories()->in($baseDir)->exclude(['.idea', '.git', 'vendor']);
         foreach ($finder as $file) {
             $this->fs->remove($file->getPathname());
         }
 
         echo "clean root from project files...\n";
         $finder = new Finder();
-        $finder->directories()->in(dirname(__DIR__))->exclude(['.gitignore']);
+        $finder->directories()->in($baseDir)->exclude(['.gitignore']);
         foreach ($finder as $file) {
             $this->fs->remove($file->getPathname());
         }
@@ -107,7 +108,7 @@ class Engine implements EngineInterface
         $finder = new Finder();
         $finder->files()->in($this->buildDir);
         foreach ($finder as $file) {
-            $this->fs->copy($file->getPathname(), dirname(__DIR__).'/'.$file->getRelativePathname());
+            $this->fs->copy($file->getPathname(), $baseDir.'/'.$file->getRelativePathname());
         }
         $this->fs->remove($this->buildDir);
 
