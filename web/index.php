@@ -12,6 +12,8 @@ $fs = new \Symfony\Component\Filesystem\Filesystem();
 
 if (in_array('--build', $argv)) {
     (new \App\Engine($fs))->build();
+} elseif(in_array('--deploy', $argv)) {
+    (new \App\Engine($fs))->deploy();
 } else {
     (new \App\Engine($fs))->handle();
 }

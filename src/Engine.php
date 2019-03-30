@@ -15,10 +15,12 @@ class Engine implements EngineInterface
     protected $url;
 
     protected $fs;
+    protected $buildDir;
 
     public function __construct(Filesystem $filesystem)
     {
         $this->fs = $filesystem;
+        $this->buildDir = $buildDir = dirname(__DIR__) . '/build';
     }
 
     protected function pageMap()
@@ -56,7 +58,7 @@ class Engine implements EngineInterface
 
     public function build()
     {
-        $buildDir = dirname(__DIR__) . '/build';
+        $buildDir = $this->buildDir;
         $this->fs->remove($buildDir);
 
         foreach ($this->pageMap() as $page) {
@@ -75,12 +77,15 @@ class Engine implements EngineInterface
     {
         $date = date('Y-md H:i:s');
         $this->build();
-        exec('git add .');
-        exec('git commit -m "created build '.$date.'"');
-        exec('git checkout master');
-        exec('rm -rf . -- !(.idea|.git)');
-        exec('git checkout php -- build');
-        $this->fs->rename()
+//        exec('git add .');
+//        exec('git commit -m "created build '.$date.'"');
+//        exec('git checkout master');
+//        exec('rm -rf . -- !(.idea|.git)');
+//        exec('git checkout php -- build');
+        $this->fs->copy($this->buildDir, dirname(__DIR__));
+    }
+/* .
+git checkout php -- build
 mv build/* .
 rmdir build
 git add .
@@ -90,7 +95,6 @@ git checkout php
 
 git push origin php
 git push origin master
-    }
 
     /**
      * @inheritdoc
