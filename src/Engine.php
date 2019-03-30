@@ -77,23 +77,27 @@ class Engine implements EngineInterface
     public function deploy()
     {
         $branch = 'dumb';
-        $finder = new Finder();
-        $finder->in(dirname(__DIR__))->exclude(['.idea', '.git']);
-
-        foreach ($finder as $file) {
-            var_dump($file);
-        }
-        die;
         $date = date('Y-md H:i:s');
+
         $this->build();
+
         exec('git add .');
         exec('git commit -m "created build '.$date.'"');
         exec('git checkout master');
 
+        // clean root from project dirs
+        $finder = new Finder();
+        $finder->directories()->in(dirname(__DIR__))->exclude(['.idea', '.git']);
+        foreach ($finder as $file) {
+            $this->fs->remove($file->getPathname());
+        }
 
-        die;
-        exec('rm -rf . -- !(.idea|.git)');
-
+        // clean root from project files
+        $finder = new Finder();
+        $finder->directories()->in(dirname(__DIR__))->exclude(['.gitignore']);
+        foreach ($finder as $file) {
+            $this->fs->remove($file->getPathname());
+        }
 
         exec("git checkout $branch -- build");
 
