@@ -12,25 +12,8 @@
 
 $title = 'Homepage';
 
-$skills = $this->getData('skills');
+$skills = \App\models\Skill::all();
 $maxStars = 10;
-
-$drawStars = function ($stars) use ($maxStars) {
-    if ($stars === null) {
-        return;
-    }
-
-    $output = '';
-    $stars = (int)$stars;
-    for ($i = 1; $i <= $maxStars; $i++) {
-        if ($stars >= $i) {
-            $output .= '<span class="mt">star</span>';
-        } else {
-            $output .= '<span class="mt">star_border</span>';
-        }
-    }
-    echo $output;
-};
 
 ?>
 <div>
@@ -69,7 +52,7 @@ $drawStars = function ($stars) use ($maxStars) {
             <dl id="skills">
                 <?php foreach ($skills as $skill): ?>
                 <dt><?php echo $skill->title ?></dt>
-                <dd><?php $drawStars(isset($skill->rating) ? $skill->rating : null) ?></dd>
+                <dd><?php \App\Helper::drawStars($skill->rating) ?></dd>
                 <?php endforeach; ?>
             </dl>
             <div class="clear-both"></div>

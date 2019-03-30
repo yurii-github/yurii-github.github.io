@@ -63,14 +63,6 @@ class Engine implements EngineInterface
     /**
      * @inheritdoc
      */
-    public function getData(string $name)
-    {
-        return json_decode(file_get_contents(__DIR__."/data/$name.json"));
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function asset(string $path)
     {
         echo $this->getBaseUrl() . '/' . $path;
