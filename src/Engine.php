@@ -14,26 +14,16 @@ class Engine implements EngineInterface
 {
     protected $baseUrl;
     protected $url;
+    protected $routes;
 
-    protected $fs;
-    protected $buildDir;
-
-    public function __construct(Filesystem $filesystem)
+    public function __construct()
     {
-        $this->fs = $filesystem;
-        $this->buildDir = $buildDir = dirname(__DIR__) . '/build';
+        $this->routes = require dirname(__DIR__). '/routes.php';
     }
 
-    protected function pageMap()
+    public function routes()
     {
-        return [
-            // url => page name
-            '/' => 'index',
-            '/frameworks' => 'frameworks',
-            '/patterns' => 'patterns',
-            '/principles' => 'principles',
-            '/tools/prefix' => 'tools/prefix'
-        ];
+        return $this->routes;
     }
 
     protected function url()
@@ -51,79 +41,8 @@ class Engine implements EngineInterface
      */
     public function action(string $pageName)
     {
-        $url = array_flip($this->pageMap())[$pageName];
-        $url = ($url == '/' ? 'index' : $url) . '.html';
-
-        return $url;
+        return array_flip($this->routes)[$pageName];
     }
-
-    public function build()
-    {
-        $buildDir = $this->buildDir;
-        $this->fs->remove($buildDir);
-
-        foreach ($this->pageMap() as $page) {
-            $_SERVER['REQUEST_URI'] = $this->action($page);
-            ob_start();
-            echo $this->page($page);
-            $content = ob_get_clean();
-
-            $this->fs->dumpFile($buildDir . '/' . $_SERVER['REQUEST_URI'], $content);
-        }
-        $this->fs->copy(dirname(__DIR__).'/web/style.css', $buildDir.'/style.css');
-        $this->fs->copy(dirname(__DIR__).'/web/elephant.png', $buildDir.'/elephant.png');
-    }
-
-    public function deploy()
-    {
-        $branch = 'dumb';
-        $date = date('Y-m-d H:i:s');
-        $baseDir = dirname(__DIR__);
-
-        $this->build();
-
-        exec('git add .');
-        exec('git commit -m "created build '.$date.'"');
-        exec('git checkout master');
-//        sleep(2);
-//        clearstatcache();
-//
-//        echo "clean root from project dirs...\n";
-//        glob($baseDir);
-//        $finder = new Finder();
-//        $finder->directories()->in($baseDir)->exclude(['.idea', '.git', 'vendor']);
-//        foreach ($finder as $file) {
-//            $this->fs->remove($file->getPathname());
-//        }
-//
-//        echo "clean root from project files...\n";
-//        $finder = new Finder();
-//        $finder->directories()->in($baseDir)->exclude(['.gitignore']);
-//        foreach ($finder as $file) {
-//            $this->fs->remove($file->getPathname());
-//        }
-
-        exec("git checkout $branch -- build");
-       // clearstatcache();
-
-        echo "make build dir as root...\n";
-        $finder = new Finder();
-        $finder->files()->in($this->buildDir);
-        foreach ($finder as $file) {
-            $this->fs->copy($file->getPathname(), $baseDir.'/'.$file->getRelativePathname());
-        }
-        $this->fs->remove($this->buildDir);
-
-        exec('git add .');
-        exec('git commit -m "added build '.$date.'"');
-
-        exec("git checkout $branch");
-      //  clearstatcache();
-
-        exec("git push origin $branch");
-        exec("git push origin master");
-    }
-
 
     /**
      * @inheritdoc
@@ -134,13 +53,13 @@ class Engine implements EngineInterface
         $this->baseUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
         $this->url = $this->baseUrl . $_SERVER['REQUEST_URI'];
 
-        $page = $this->pageMap()[$_SERVER['REQUEST_URI']] ?? null;
+        $view = $this->routes[$_SERVER['REQUEST_URI']] ?? null;
 
-        if (!$page) {
+        if (!$view) {
             throw new \Exception('Unknown page');
         }
 
-        echo $this->page($page);
+        echo $this->view($view);
     }
 
     /**
@@ -158,22 +77,17 @@ class Engine implements EngineInterface
     public function asset(string $path)
     {
         echo '/' . $path;
-        //echo $this->getBaseUrl() . '/' . $path;
     }
 
     /**
-     * Renders page
-     *
-     * @param string $name page name
-     *
-     * @return string
+     * @inheritdoc
      */
-    protected function page(string $name, $params = [])
+    public function view(string $name, array $params = [])
     {
         extract($params);
 
         ob_start();
-        require "views/pages/$name.php";
+        require "views/$name.php";
         $content = ob_get_clean();
 
         ob_start();

@@ -42,4 +42,21 @@ interface EngineInterface
      * @return string
      */
     public function mtime(string $filename);
+
+    /**
+     * Returns routes as [url => view]
+     *
+     * @return array
+     */
+    public function routes();
+
+    /**
+     * Renders view
+     *
+     * @param string $name view name
+     * @param array $params
+     *
+     * @return string
+     */
+    public function view(string $name, array $params = []);
 }

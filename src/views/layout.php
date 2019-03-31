@@ -27,10 +27,10 @@
 
 <nav>
     <a class="mt" href="/">home</a>
-    <a href="<?php echo $this->action('frameworks') ?>">Frameworks</a>
-    <a href="<?php echo $this->action('patterns') ?>">Patterns</a>
-    <a href="<?php echo $this->action('principles') ?>">Principles</a>
-    <a href="<?php echo $this->action('tools/prefix') ?>">Prefix</a>
+    <a href="<?php echo $this->action('pages/frameworks') ?>">Frameworks</a>
+    <a href="<?php echo $this->action('pages/patterns') ?>">Patterns</a>
+    <a href="<?php echo $this->action('pages/principles') ?>">Principles</a>
+    <a href="<?php echo $this->action('pages/tools/prefix') ?>">Prefix</a>
 </nav>
 
 <?php echo $content; ?>
