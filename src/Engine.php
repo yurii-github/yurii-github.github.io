@@ -39,9 +39,9 @@ class Engine implements EngineInterface
     /**
      * @inheritdoc
      */
-    public function action(string $pageName)
+    public function action(string $view)
     {
-        return array_flip($this->routes)[$pageName];
+        return array_flip($this->routes)[$view];
     }
 
     /**

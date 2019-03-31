@@ -29,7 +29,7 @@ class GithubBuilder
         $this->fs->remove($buildDir);
 
         foreach ($this->engine->routes() as $view) {
-            $_SERVER['REQUEST_URI'] = $this->engine->view($view);
+            $_SERVER['REQUEST_URI'] = $this->engine->action($view);
             ob_start();
             echo $this->engine->view($view);
             $content = ob_get_clean();

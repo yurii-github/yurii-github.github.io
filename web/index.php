@@ -19,12 +19,12 @@ $argv = $argv ?? [];
 
 if (in_array('--build', $argv)) {
     (new \App\GithubBuilder($app))->build();
-    return;
+    exit;
 }
 
 if(in_array('--deploy', $argv)) {
     (new \App\GithubBuilder($app))->deploy();
-    return;
+    exit;
 }
 
 
