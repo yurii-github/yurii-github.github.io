@@ -7,6 +7,8 @@
 
 namespace App\models;
 
+use App\Helper;
+
 class Framework implements ModelInterface
 {
     public $title;
@@ -52,5 +54,48 @@ class Framework implements ModelInterface
         return $items;
     }
 
+    public function popularity($asStar = true)
+    {
+        return $this->asStar('popularity', $asStar);
+    }
+
+    public function market_share($asStar = true)
+    {
+        return $this->asStar('market_share', $asStar);
+    }
+
+    public function curve($asStar = true)
+    {
+        return $this->asStar('curve', $asStar);
+    }
+
+    public function speed($asStar = true)
+    {
+        return $this->asStar('speed', $asStar);
+    }
+
+    public function code_structure($asStar = true)
+    {
+        return $this->asStar('code_structure', $asStar);
+    }
+
+    public function extensions($asStar = true)
+    {
+        return $this->asStar('extensions', $asStar);
+    }
+
+    protected function asStar($attribute, $asStar = true)
+    {
+        if (!$asStar) {
+            return $this->$attribute;
+        }
+
+        Helper::drawStars($this->$attribute, 5);
+    }
+
+    public function link()
+    {
+        return "<a target=\"_blank\" rel=\"nofollow\" href=\"{$this->link}\">{$this->title}</a>";
+    }
 
 }

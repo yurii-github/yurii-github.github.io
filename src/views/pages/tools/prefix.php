@@ -22,6 +22,7 @@ $title = 'Add Prefix';
 <article>
     <h1>Add Prefix/Suffix into Each Line</h1>
 
+    <h3>Used mostly for injecting samples into PHPDoc</h3>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <textarea id="input" style="width:100%; margin:7px 0px 4px 0px;" rows="10"></textarea>

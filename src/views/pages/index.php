@@ -39,10 +39,11 @@ $maxStars = 10;
         <p>But here are some more things to clarify: </p>
         <ol>
             <li>All info here is my subjective view on the field.</li>
-            <li>Those are my current skills I keep updated</li>
+            <li>On the left side are my current skills I keep updated. Grayed items are not interesting.</li>
             <li>I'm not fond of naming errors like 'bugs' etc. I do not follow human stupidity.</li>
             <li>Hypes and other nonsense don't work for me.</li>
             <li>I'm not able to read minds. Luckily.</li>
+            <li>You have some mental problems? Close this page. You were warned.</li>
         </ol>
 
         <h2>PHP Frameworks</h2>

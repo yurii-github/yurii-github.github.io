@@ -160,3 +160,7 @@ tr:hover{
     background-color: yellow;
 }
 
+/* -------- HELPERS --------------*/
+.ws {
+    white-space: nowrap;
+}

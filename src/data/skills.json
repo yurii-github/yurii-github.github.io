@@ -29,7 +29,6 @@
 
   {"title": "<b>PHP Frameworks</b>"},
   {"title": "Yii 2", "rating": 10, "interested": true},
-  {"title": "Symfony 2", "rating": 2},
   {"title": "Symfony 3", "rating": 4},
   {"title": "Symfony 4", "rating": 1},
   {"title": "Laravel 5", "rating": 10, "interested": true},
@@ -47,11 +46,16 @@
   {"title": "Github", "rating": 8, "interested": true},
   {"title": "Gitlab", "rating": 7, "interested": true},
   {"title": "Bitbucket", "rating": 7, "interested": true},
-  {"title": "TravisCI", "rating": 6, "interested": true},
+
   {"title": "<b>Technologies</b>"},
   {"title": "RabbitMQ", "rating": 3, "interested": true},
-
+  {"title": "TravisCI", "rating": 6, "interested": true},
   {"title": "Docker", "rating": 4},
   {"title": "Jenkins", "rating": 1},
-  {"title": "Gearman", "rating": 1}
+  {"title": "Gearman", "rating": 1},
+  {"title": "Kubernetes", "rating": 0},
+  {"title": "AmazonWS", "rating": 0},
+  {"title": "Azure", "rating": 0},
+  {"title": "Apache", "rating": 5},
+  {"title": "nginx", "rating": 3, "interested": true}
 ]
