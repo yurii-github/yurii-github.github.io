@@ -83,6 +83,11 @@ h3 {
     color: orangered;
     direction: ltr;
 }
+.mt-g {
+    font-family: 'Material Icons';
+    color: darkgrey;
+    direction: ltr;
+}
 
 dl#my-skills > dt {
     min-width: 6rem;

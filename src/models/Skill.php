@@ -7,10 +7,13 @@
 
 namespace App\models;
 
+use App\Helper;
+
 class Skill implements ModelInterface
 {
     public $title;
     public $rating;
+    public $interested = false;
 
     public function load($data)
     {
@@ -37,4 +40,12 @@ class Skill implements ModelInterface
     }
 
 
+    public function rating($asStar = true)
+    {
+        if (!$asStar) {
+            return $this->rating;
+        }
+
+        Helper::drawStars($this->rating, 10, $this->interested ? 'mt' : 'mt-g');
+    }
 }

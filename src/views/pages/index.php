@@ -28,7 +28,7 @@ $maxStars = 10;
         <dl id="my-skills">
             <?php foreach ($skills as $skill): ?>
                 <dt><?php echo $skill->title ?></dt>
-                <dd><?php \App\Helper::drawStars($skill->rating) ?></dd>
+                <dd><?php $skill->rating() ?></dd>
             <?php endforeach; ?>
         </dl>
         <div class="clear-both"></div>
