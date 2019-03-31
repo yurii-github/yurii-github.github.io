@@ -13,24 +13,28 @@
 $title = 'Patterns';
 
 ?>
-<article>
-    <h1>Patterns</h1>
-    <?php $this->mtime(__FILE__) ?>
-
-    <table id="main-table-patterns" summary="Contains comparison of Patterns">
-        <thead>
-        <tr>
-            <th scope="col" rowspan="2"><strong>Patterns</strong></th>
-            <th scope="col" colspan="2"><strong>General</strong></th>
-            <th scope="col" colspan="2"><strong>Mission</strong></th>
-        </tr>
-        <tr id="positions-tr"></tr>
-        </thead>
-        <tbody></tbody>
-        <tfoot></tfoot>
-    </table>
-</article>
-
+<div class="row">
+    <header class="col col-12">
+        <h1>Patterns</h1>
+        <?php $this->mtime(__FILE__) ?>
+    </header>
+</div>
+<div class="row">
+    <article class="col col-12">
+        <table id="main-table-patterns" summary="Contains comparison of Patterns">
+            <thead>
+            <tr>
+                <th scope="col" rowspan="2"><strong>Patterns</strong></th>
+                <th scope="col" colspan="2"><strong>General</strong></th>
+                <th scope="col" colspan="2"><strong>Mission</strong></th>
+            </tr>
+            <tr id="positions-tr"></tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+        </table>
+    </article>
+</div>
 <script>
     const patterns = [
         {

@@ -20,7 +20,7 @@ $title = 'Add Prefix';
 </style>
 
 <article>
-    <h1>Add Prefix/Suffix into Each Line></h1>
+    <h1>Add Prefix/Suffix into Each Line</h1>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
 

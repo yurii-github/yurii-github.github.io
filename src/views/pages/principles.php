@@ -13,11 +13,14 @@
 $title = 'Principles';
 
 ?>
-<div class="container">
-    <h1>Principles</h1>
-    <?php $this->mtime(__FILE__) ?>
-
-    <article>
+<div class="row">
+    <header class="col col-12">
+        <h1>Principles</h1>
+        <?php $this->mtime(__FILE__) ?>
+    </header>
+</div>
+<div class="row">
+    <article class="col col-12">
         <p>List of principles (or mostly retarded names that came from hipsters or just retards):</p>
         <p><b>SRP</b> (single responsibility principle)</p>
         <p><b>DIP</b> (dependency injection principle)</p>
@@ -36,6 +39,5 @@ $title = 'Principles';
         <p><b>Waterfall</b> (people should return to <a href="https://www.youtube.com/watch?v=DMZzGynP2OE"
                                                         target="_blank">waterfall</a>, relax and enjoy..)</p>
         <p>&nbsp;</p>
-
     </article>
 </div>

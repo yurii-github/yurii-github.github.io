@@ -70,7 +70,6 @@ class GithubBuilder
 //        }
 
         exec("git checkout $branch -- build");
-        // clearstatcache();
 
         echo "make build dir as root...\n";
         $finder = new Finder();
@@ -82,10 +81,7 @@ class GithubBuilder
 
         exec('git add .');
         exec('git commit -m "added build ' . $date . '"');
-
         exec("git checkout $branch");
-        //  clearstatcache();
-
         exec("git push origin $branch");
         exec("git push origin master");
     }

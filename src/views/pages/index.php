@@ -16,65 +16,46 @@ $skills = \App\models\Skill::all();
 $maxStars = 10;
 
 ?>
-<div>
-    <h1><img src="<?php $this->asset('elephant.png') ?>" alt="elephant emoji"/></h1>
-    <?php $this->mtime(__FILE__) ?>
-    <div class="container page-about">
-        <article>
-            <h2>About Me</h2>
-            <p>Hello. I'm Yurii. That's all you should really know about me.</p>
-            <p>But here are some more things to clarify:
-            <ol>
-                <li>All info here is my subjective view on the field.</li>
-                <li>Those are my current skills I keep updated</li>
-                <li>I'm not fond of naming errors like 'bugs' etc. I do not follow human stupidity.</li>
-                <li>Hypes and other nonsense don't work for me.</li>
-                <li>I'm not able to read minds. Luckily.</li>
-            </ol>
-            </p>
-            <p></p>
-
-            <h2>PHP Frameworks</h2>
-            <p>When I have time and will I do track some PHP frameworks and CMS.</p>
-            <h2>Patterns</h2>
-            <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of
-                useless names.</p>
-            <p>To simplify things I provide aliases for patterns like 'Wrapper', because most of those patterns are
-                simply basic or a bit complex wrappers over other objects or classes.</p>
-            <p>I've added to patterns so-called by hipsters 'antipatterns' because they still are patterns and are valid
-                in many cases.</p>
-
-            <h2>Principles</h2>
-            <p>Contains programming principles, at least, known as. For most part it is just another nonsense.</p>
-        </article>
-
-        <aside>
-            <dl id="skills">
-                <?php foreach ($skills as $skill): ?>
-                <dt><?php echo $skill->title ?></dt>
-                <dd><?php \App\Helper::drawStars($skill->rating) ?></dd>
-                <?php endforeach; ?>
-            </dl>
-            <div class="clear-both"></div>
-        </aside>
-        <div class="clear-both"></div>
-    </div>
+<div class="row">
+    <header class="col col-12">
+        <h1><img src="<?php $this->asset('elephant.png') ?>" alt="elephant emoji"/></h1>
+        <?php $this->mtime(__FILE__) ?>
+    </header>
 </div>
 
-<script>
-    window.addEventListener('resize', function (e) {
-        //TODO: cont width 80%
-        var articleEl = document.getElementsByTagName('article')[0];
-        var effectiveW = Math.round(window.innerWidth * 0.8) - 40;
-        var skillsW = 270;
+<div class="row">
+    <aside class="col col-4">
+        <dl id="my-skills">
+            <?php foreach ($skills as $skill): ?>
+                <dt><?php echo $skill->title ?></dt>
+                <dd><?php \App\Helper::drawStars($skill->rating) ?></dd>
+            <?php endforeach; ?>
+        </dl>
+        <div class="clear-both"></div>
+    </aside>
+    <article class="col col-8">
+        <h2>About Me</h2>
+        <p>Hello. I'm Yurii. That's all you should really know about me.</p>
+        <p>But here are some more things to clarify: </p>
+        <ol>
+            <li>All info here is my subjective view on the field.</li>
+            <li>Those are my current skills I keep updated</li>
+            <li>I'm not fond of naming errors like 'bugs' etc. I do not follow human stupidity.</li>
+            <li>Hypes and other nonsense don't work for me.</li>
+            <li>I'm not able to read minds. Luckily.</li>
+        </ol>
 
-        if (effectiveW >= 770) {
-            let articleW = effectiveW - skillsW;
-            articleEl.style['width'] = articleW + 'px';
-        } else {
-            articleEl.style['width'] = effectiveW + 'px';
-        }
-    });
+        <h2>PHP Frameworks</h2>
+        <p>When I have time and will I do track some PHP frameworks and CMS.</p>
+        <h2>Patterns</h2>
+        <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of
+            useless names.</p>
+        <p>To simplify things I provide aliases for patterns like 'Wrapper', because most of those patterns are
+            simply basic or a bit complex wrappers over other objects or classes.</p>
+        <p>I've added to patterns so-called by hipsters 'antipatterns' because they still are patterns and are valid
+            in many cases.</p>
 
-    window.dispatchEvent(new Event('resize'));
-</script>
+        <h2>Principles</h2>
+        <p>Contains programming principles, at least, known as. For most part it is just another nonsense.</p>
+    </article>
+</div>

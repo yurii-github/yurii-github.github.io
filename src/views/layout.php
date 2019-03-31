@@ -24,15 +24,16 @@
 </head>
 <body>
 
+<div class="container">
+    <nav>
+        <a class="mt" href="/">home</a>
+        <a href="<?php echo $this->action('pages/frameworks') ?>">Frameworks</a>
+        <a href="<?php echo $this->action('pages/patterns') ?>">Patterns</a>
+        <a href="<?php echo $this->action('pages/principles') ?>">Principles</a>
+        <a href="<?php echo $this->action('pages/tools/prefix') ?>">Prefix</a>
+    </nav>
 
-<nav>
-    <a class="mt" href="/">home</a>
-    <a href="<?php echo $this->action('pages/frameworks') ?>">Frameworks</a>
-    <a href="<?php echo $this->action('pages/patterns') ?>">Patterns</a>
-    <a href="<?php echo $this->action('pages/principles') ?>">Principles</a>
-    <a href="<?php echo $this->action('pages/tools/prefix') ?>">Prefix</a>
-</nav>
-
-<?php echo $content; ?>
+    <?php echo $content; ?>
+</div>
 
 </body>
