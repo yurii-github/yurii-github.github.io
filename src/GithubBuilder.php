@@ -75,7 +75,7 @@ class GithubBuilder
         $finder = new Finder();
         $finder->files()->in($this->buildDir);
         foreach ($finder as $file) {
-            $this->fs->copy($file->getPathname(), $baseDir . '/' . $file->getRelativePathname());
+            $this->fs->copy($file->getPathname(), $baseDir . '/' . $file->getRelativePathname(), true);
         }
         $this->fs->remove($this->buildDir);
 
