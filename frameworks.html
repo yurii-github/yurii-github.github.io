@@ -1,460 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
     <title>Comparison of PHP Frameworks and CMS</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="/style.css"/>
-    <link rel="icon" type="image/png" href="/elephant.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="1f418.png"/>
 </head>
 <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-<div class="container">
     <nav>
         <a class="mt" href="/">home</a>
-        <a href="/frameworks.html">Frameworks</a>
-        <a href="/patterns.html">Patterns</a>
-        <a href="/principles.html">Principles</a>
-        <a href="/tools/prefix.html">Prefix</a>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="patterns.html">Patterns</a>
+        <a href="principles.html">Principles</a>
+        <a href="tools.html">Tools</a>
     </nav>
 
-    <div class="row">
-    <header class="col col-12">
+        <article>
         <h1>Comparison of PHP Frameworks and CMS</h1>
-    </header>
-</div>
-<div class="row">
-    <article class="col col-12">
-        <table summary="Contains comparison of PHP Frameworks and CMS">
+        <h3>Last update:
+            <time>2019-10-13 04:04</time>
+            <p><b>Please note, these are my subjective views!</b></p>
+        </h3>
+        <table id="main-table" summary="Contains comparison of PHP Frameworks and CMS">
             <thead>
             <tr>
                 <th scope="col" rowspan="2"><strong>Projects</strong></th>
-                <th scope="col" colspan="3"><strong>General</strong></th>
+                <th scope="col" colspan="4"><strong>General</strong></th>
                 <th scope="col" colspan="4"><strong>Finances</strong></th>
-                <th scope="col" colspan="2"><strong>Development</strong></th>
+                <th scope="col" colspan="6"><strong>Development</strong></th>
                 <th scope="col" colspan="1"><strong>Comment</strong></th>
             </tr>
-            <tr id="positions-tr">
-                <th scope="col">Checked</th>
-                <th scope="col">Type</th>
-                <th scope="col">Ratings</th>
-                <th scope="col">License</th>
-                <th scope="col">Company behind</th>
-                <th scope="col">Total Value</th>
-                <th scope="col">Template</th>
-                <th scope="col">Architecture</th>
-                <th scope="col">Extension Type</th>
-                <th scope="col">Conclusion</th>
-            </tr>
+            <tr id="positions-tr"></tr>
             </thead>
-            <tbody>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="http://www.yiiframework.com/">Yii 2</a></th>
-                    <td class="ws">02-06-2018</td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">BSD</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="http://www.yiisoft.com/">Yii Software</a></td>
-                    <td class="ws">$10M</td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">monolith-like</td>
-                    <td class="ws">Component</td>
-                    <td class="ws">popular in Russia</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://laravel.com/">Laravel 5<br>(Symfony 3)</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">Blade</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">Package</td>
-                    <td class="ws">professionally hyped <br>artisan's nonsense</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://makoframework.com/">Mako</a></th>
-                    <td class="ws">02-06-2018</td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">BSD</td>
-                    <td class="ws"></td>
-                    <td class="ws">$0</td>
-                    <td class="ws">?</td>
-                    <td class="ws">monolith</td>
-                    <td class="ws">?</td>
-                    <td class="ws">active mix, but still useless</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://www.drupal.org/">Drupal 7</a></th>
-                    <td class="ws">02-06-2018</td>
-                    <td class="ws">CMS</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">GPL-2</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="https://www.acquia.com/">Acquia<br>Drupal Association</a></td>
-                    <td class="ws">$150M<br>$1M</td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">Procedures<br>Hooks</td>
-                    <td class="ws">Module</td>
-                    <td class="ws">almost dead</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://www.drupal.org/">Drupal 8<br>(Symfony 2)</a></th>
-                    <td class="ws">02-06-2018</td>
-                    <td class="ws">CMS</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">GPL-2</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="https://www.acquia.com/">Acquia<br>Drupal Association</a></td>
-                    <td class="ws">$150M<br>$1M</td>
-                    <td class="ws">Twig</td>
-                    <td class="ws">Procedures<br>Events<br>Hooks</td>
-                    <td class="ws">Module</td>
-                    <td class="ws">not finished<br>too much of legacy code<br></td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://backdropcms.org/">Backdrop<br>(Drupal 7)</a></th>
-                    <td class="ws">02-06-2018</td>
-                    <td class="ws">CMS</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">GPL-2</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">Procedures<br>Hooks</td>
-                    <td class="ws">Module</td>
-                    <td class="ws">for old Drupal 7 users</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="">Symfony 2</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="https://sensiolabs.com/">SensioLabs</a></td>
-                    <td class="ws">$7M</td>
-                    <td class="ws">Twig</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">Bundle</td>
-                    <td class="ws">almost dead<br>fuels other projects</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="">Symfony 3</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F/mF</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="https://sensiolabs.com/">SensioLabs</a></td>
-                    <td class="ws">$7M</td>
-                    <td class="ws">Twig</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">Bundle</td>
-                    <td class="ws">mid business<br>custom stuff<br>fuels other projects</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://framework.zend.com/">ZF 2</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">BSD-3</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="https://www.roguewave.com/">Rogue Wave Software</a></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">Module</td>
-                    <td class="ws">almost dead<br>never born</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://framework.zend.com/">ZF 3</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">BSD-3</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="https://www.roguewave.com/">Rogue Wave Software</a></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">Module</td>
-                    <td class="ws">enterprise only</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://wordpress.org/">Wordpress 4</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">CMS</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">GPL-2</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="https://automattic.com/">Automattic</a></td>
-                    <td class="ws">$1.6B</td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">monolith</td>
-                    <td class="ws">Plugin</td>
-                    <td class="ws">top in blog <br> small shops world</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://phalconphp.com">Phalcon</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">BSD-3</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">Volt</td>
-                    <td class="ws">pre-compiled<br>monolith</td>
-                    <td class="ws">-</td>
-                    <td class="ws">fast, but not enough</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://www.joomla.org">Joomla 3</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">BSD-3</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">monolith</td>
-                    <td class="ws">Module</td>
-                    <td class="ws">still alive</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://www.codeigniter.com/">CodeIgniter 3</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT</td>
-                    <td class="ws"><a target="_blank" rel="nofollow" href="http://bcit.ca/">BCIT</a></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">monolith</td>
-                    <td class="ws">-</td>
-                    <td class="ws">still need to try</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="http://kohanaframework.org/">Kohana<br>(CodeIgniter)</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">BSD</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">monolith</td>
-                    <td class="ws">-</td>
-                    <td class="ws">going to die 2017-07-01</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://www.fuelphp.com/">FuelPHP</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">GPL-like</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">monolith</td>
-                    <td class="ws">Module</td>
-                    <td class="ws">popular in Japan<br>feels dead</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://cakephp.org/">CakePHP 3<br>(Symfony 3)</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">-</td>
-                    <td class="ws">got new breath recently</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://www.slimframework.com/">Slim 3</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">mF</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">-</td>
-                    <td class="ws">REST API mostly</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="http://auraphp.com/">AuraPHP 2<br>(SolarPHP)</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT-like</td>
-                    <td class="ws"></td>
-                    <td class="ws"></td>
-                    <td class="ws">PHP</td>
-                    <td class="ws">packages</td>
-                    <td class="ws">-</td>
-                    <td class="ws">good for reading<br>components alive</td>
-                </tr>
-                            <tr>
-                    <th class="ws"><a target="_blank" rel="nofollow" href="https://getgrav.org">Grav<br>(Symfony 2)</a></th>
-                    <td class="ws"></td>
-                    <td class="ws">F</td>
-                    <td class="ws">
-                        <div title="Code Structure">C<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Learning Curve">L<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Extensions">E<span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Market Share">M<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Popularity">P<span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></div>
-                        <div title="Speed">S<span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span></div>
-                    </td>
-                    <td class="ws">MIT</td>
-                    <td class="ws"></td>
-                    <td class="ws">$2k</td>
-                    <td class="ws">Markdown</td>
-                    <td class="ws">monolith</td>
-                    <td class="ws">Plugin</td>
-                    <td class="ws">flat is flat</td>
-                </tr>
-                        </tbody>
+            <tbody></tbody>
             <tfoot></tfoot>
         </table>
     </article>
-</div></div>
+    <script>
+
+        const positions = [
+            {key: 'check', title: 'Checked'},
+            {key: 'type', title: 'Type'},
+            {key: 'popularity', title: 'popularity'},
+            {key: 'license', title: 'License'},
+            //
+            {key: 'company', title: 'Company behind'},
+            {key: 'market_share', title: 'Market Share'},
+            {key: 'total_value', title: 'Total Value'},
+            //
+            {key: 'curve', title: 'Learning Curve'},
+            {key: 'template', title: 'Template'},
+            {key: 'speed', title: 'Speed'},
+            {key: 'code_structure', title: 'Code Structure'},
+            {key: 'architecture', title: 'Architecture'},
+            {key: 'extensions', title: 'Extensions'},
+            {key: 'extension_type', title: 'Extension Type'},
+            //
+            {key: 'conclusion', title: 'Conclusion'}
+        ];
+
+        let frameworks = [
+            {
+                "title": "Yii 2",
+                "link": "http://www.yiiframework.com/",
+                "check": "02-06-2018",
+                "company": "Yii Software",
+                "company_link": "http://www.yiisoft.com/",
+                "type": "F",
+                "popularity": "4",
+                "curve": "3",
+                "template": "PHP",
+                "licence": "BSD",
+                "speed": "3",
+                "code_structure": "3",
+                "architecture": "monolith-like",
+                "extensions": "2",
+                "extension_type": "Component",
+                "market_share": "2",
+                "total_value": "$10M",
+                "conclusion": "popular in Russia"
+            },
+            {
+                "title": "Laravel 5<br>(Symfony 3)",
+                "link": "https://laravel.com/",
+                "type": "F",
+                "popularity": "4",
+                "curve": "3",
+                "template": "Blade",
+                "licence": "MIT",
+                "speed": "3",
+                "code_structure": "2",
+                "architecture": "packages",
+                "extensions": "1",
+                "extension_type": "Package",
+                "market_share": "3",
+                "conclusion": "professionally hyped <br>artisan's nonsense"
+            },
+            {
+                "title": "Mako",
+                "link": "https://makoframework.com/",
+                "check": "02-06-2018",
+                "type": "F",
+                "popularity": "0",
+                "curve": "3",
+                "template": "?",
+                "licence": "BSD",
+                "speed": "3",
+                "code_structure": "1",
+                "architecture": "monolith",
+                "extensions": "0",
+                "extension_type": "?",
+                "market_share": "0",
+                "total_value": "$0",
+                "conclusion": "active mix, but still useless"
+            },
+            {
+                "title": "Drupal 7",
+                "link": "https://www.drupal.org/",
+                "check": "02-06-2018",
+                "type": "CMS",
+                "company": "Acquia<br>Drupal Association",
+                "company_link": "https://www.acquia.com/",
+                "popularity": "3",
+                "curve": "2",
+                "template": "PHP",
+                "licence": "GPL-2",
+                "speed": "1",
+                "code_structure": "1",
+                "architecture": "Procedures<br>Hooks",
+                "extensions": "3",
+                "extension_type": "Module",
+                "market_share": "2",
+                "total_value": "$150M<br>$1M",
+                "conclusion": "almost dead"
+            },
+            {
+                "title": "Drupal 8<br>(Symfony 2)",
+                "link": "https://www.drupal.org/",
+                "check": "02-06-2018",
+                "type": "CMS",
+                "company": "Acquia<br>Drupal Association",
+                "company_link": "https://www.acquia.com/",
+                "popularity": "1",
+                "curve": "1",
+                "template": "Twig",
+                "licence": "GPL-2",
+                "speed": "3",
+                "code_structure": "2",
+                "architecture": "Procedures<br>Events<br>Hooks",
+                "extensions": "3",
+                "extension_type": "Module",
+                "total_value": "$150M<br>$1M",
+                "market_share": "1",
+                "conclusion": "not finished<br>too much of legacy code<br>"
+            },
+            {
+                "title": "Backdrop<br>(Drupal 7)",
+                "link": "https://backdropcms.org/",
+                "check": "02-06-2018",
+                "type": "CMS",
+                "popularity": "1",
+                "curve": "2",
+                "template": "PHP",
+                "licence": "GPL-2",
+                "speed": "2",
+                "code_structure": "1",
+                "architecture": "Procedures<br>Hooks",
+                "extensions": "1",
+                "extension_type": "Module",
+                "market_share": "0%",
+                "conclusion": "for old Drupal 7 users"
+            },
+            {
+                "title": "Symfony 2",
+                "type": "F",
+                "company": "SensioLabs",
+                "company_link": "https://sensiolabs.com/",
+                "total_value": "$7M",
+                "popularity": "4",
+                "curve": "1",
+                "template": "Twig",
+                "licence": "MIT",
+                "speed": "4",
+                "code_structure": "3",
+                "architecture": "packages",
+                "extensions": "2",
+                "extension_type": "Bundle",
+                "market_share": "2",
+                "conclusion": "almost dead<br>fuels other projects"
+            },
+            {
+                "title": "Symfony 3",
+                "type": "F/mF",
+                "company": "SensioLabs",
+                "company_link": "https://sensiolabs.com/",
+                "total_value": "$7M",
+                "popularity": "3",
+                "curve": "1",
+                "template": "Twig",
+                "licence": "MIT",
+                "speed": "4",
+                "code_structure": "4",
+                "architecture": "packages",
+                "extensions": "1",
+                "extension_type": "Bundle",
+                "market_share": "1",
+                "conclusion": "mid business<br>custom stuff<br>fuels other projects"
+            },
+            {
+                "title": "ZF 2",
+                "link": "https://framework.zend.com/",
+                "type": "F",
+                "company": "Rogue Wave Software",
+                "company_link": "https://www.roguewave.com/",
+                "popularity": "1",
+                "curve": "0",
+                "template": "PHP",
+                "licence": "BSD-3",
+                "speed": "3",
+                "code_structure": "2",
+                "architecture": "packages",
+                "extensions": "1",
+                "extension_type": "Module",
+                "market_share": "1",
+                "conclusion": "almost dead<br>never born"
+            },
+            {
+                "title": "ZF 3",
+                "link": "https://framework.zend.com/",
+                "type": "F",
+                "company": "Rogue Wave Software",
+                "company_link": "https://www.roguewave.com/",
+                "popularity": "2",
+                "curve": "0",
+                "template": "PHP",
+                "licence": "BSD-3",
+                "speed": "3",
+                "code_structure": "4",
+                "architecture": "packages",
+                "extensions": "1",
+                "extension_type": "Module",
+                "market_share": "1",
+                "conclusion": "enterprise only"
+            },
+            {
+                "title": "Wordpress 4",
+                "link": "https://wordpress.org/",
+                "type": "CMS",
+                "company": "Automattic",
+                "company_link": "https://automattic.com/",
+                "popularity": "5",
+                "curve": "5",
+                "total_value": "$1.6B",
+                "template": "PHP",
+                "licence": "GPL-2",
+                "speed": "3",
+                "code_structure": "1",
+                "architecture": "monolith",
+                "extensions": "5",
+                "extension_type": "Plugin",
+                "market_share": "4",
+                "conclusion": "top in blog <br> small shops world"
+            },
+            {
+                "title": "Phalcon",
+                "link": "https://phalconphp.com",
+                "type": "F",
+                "popularity": "0",
+                "curve": "1",
+                "template": "Volt",
+                "licence": "BSD-3",
+                "speed": "4",
+                "code_structure": "1",
+                "architecture": "pre-compiled<br>monolith",
+                "extensions": "-",
+                "extension_type": "-",
+                "market_share": "0",
+                "conclusion": "fast, but not enough"
+            },
+            {
+                "title": "Joomla 3",
+                "link": "https://www.joomla.org",
+                "type": "F",
+                "popularity": "2",
+                "curve": "3",
+                "template": "PHP",
+                "licence": "BSD-3",
+                "speed": "3",
+                "code_structure": "1",
+                "architecture": "monolith",
+                "extensions": "3",
+                "extension_type": "Module",
+                "market_share": "1",
+                "conclusion": "still alive"
+            },
+            {
+                "title": "CodeIgniter 3",
+                "link": "https://www.codeigniter.com/",
+                "company": "BCIT",
+                "company_link": "http://bcit.ca/",
+                "type": "F",
+                "popularity": "1",
+                "curve": "3",
+                "template": "PHP",
+                "licence": "MIT",
+                "speed": "4",
+                "code_structure": "2",
+                "architecture": "monolith",
+                "extensions": "-",
+                "extension_type": "-",
+                "market_share": "2",
+                "conclusion": "still need to try"
+            },
+            {
+                "title": "Kohana<br>(CodeIgniter)",
+                "link": "http://kohanaframework.org/",
+                "company": "",
+                "type": "F",
+                "popularity": "0",
+                "curve": "2",
+                "template": "PHP",
+                "licence": "BSD",
+                "speed": "2",
+                "code_structure": "1",
+                "architecture": "monolith",
+                "extensions": "-",
+                "extension_type": "-",
+                "market_share": "0",
+                "total_value": "",
+                "financial": "",
+                "conclusion": "going to die 2017-07-01"
+            },
+            {
+                "title": "FuelPHP",
+                "link": "https://www.fuelphp.com/",
+                "type": "F",
+                "popularity": "1",
+                "curve": "3",
+                "template": "PHP",
+                "licence": "GPL-like",
+                "speed": "2",
+                "code_structure": "3",
+                "architecture": "monolith",
+                "extensions": "2",
+                "extension_type": "Module",
+                "market_share": "0",
+                "conclusion": "popular in Japan<br>feels dead"
+            },
+            {
+                "title": "CakePHP 3<br>(Symfony 3)",
+                "link": "https://cakephp.org/",
+                "type": "F",
+                "popularity": "2",
+                "curve": "2",
+                "template": "PHP",
+                "licence": "MIT",
+                "speed": "2",
+                "code_structure": "3",
+                "architecture": "packages",
+                "extensions": "-",
+                "extension_type": "-",
+                "market_share": "0",
+                "conclusion": "got new breath recently"
+            },
+            {
+                "title": "Slim 3",
+                "link": "https://www.slimframework.com/",
+                "type": "mF",
+                "company": "",
+                "popularity": "3",
+                "curve": "3",
+                "template": "PHP",
+                "licence": "MIT",
+                "speed": "4",
+                "code_structure": "4",
+                "architecture": "packages",
+                "extensions": "-",
+                "extension_type": "-",
+                "market_share": "1",
+                "total_value": "",
+                "financial": "",
+                "conclusion": "REST API mostly"
+            },
+            {
+                "title": "AuraPHP 2<br>(SolarPHP)",
+                "link": "http://auraphp.com/",
+                "type": "F",
+                "company": "",
+                "popularity": "0",
+                "curve": "3",
+                "template": "PHP",
+                "licence": "MIT-like",
+                "speed": "4",
+                "code_structure": "2",
+                "architecture": "packages",
+                "extensions": "-",
+                "extension_type": "-",
+                "market_share": "0",
+                "conclusion": "good for reading<br>components alive"
+            },
+            {
+                "title": "Grav<br>(Symfony 2)",
+                "link": "https://getgrav.org",
+                "type": "F",
+                "company": "",
+                "total_value": "$2k",
+                "popularity": "0",
+                "curve": "3",
+                "template": "Markdown",
+                "licence": "MIT",
+                "speed": "4",
+                "code_structure": "2",
+                "architecture": "monolith",
+                "extensions": "2",
+                "extension_type": "Plugin",
+                "market_share": "0",
+                "conclusion": "flat is flat"
+            }
+        ];
+
+        function sorting(data, dir, key) {
+            return data.sort(function (a, b) {
+                var _dir = dir == 'ASC' ? 1 : -1; // eslint-disable-line
+                if (typeof a[key] == 'string') { // eslint-disable-line
+                    return _dir * a[key].localeCompare(b[key]);
+                }
+                return _dir * (a[key] - b[key]);
+            });
+        }
+
+        function bindSorting(position_tr, positions) {
+            var order = {key: null, dir: null};
+            var headers = position_tr.getElementsByTagName('th');
+
+            [].forEach.call(headers, (el, i) => {
+                el.addEventListener('click', (e) => {
+                    //console.log(positions[i]);
+                    var _key = positions[i]['key'];
+                    //console.log(_key);
+                    if (order.key == _key) { // eslint-disable-line
+                        order.dir = order.dir == 'ASC' ? 'DESC' : 'ASC'; // eslint-disable-line
+                    } else {
+                        order.key = _key;
+                        order.dir = 'DESC';
+                    }
+                    var _data = sorting(data, order.dir, order.key);
+                    renderData(mainTable, _data);
+                });
+            });
+        }
+
+        function renderPositions(position_tr, positions) {
+            positions.forEach(function (pos) {
+                var th = document.createElement('th');
+                th.innerHTML = pos.title;
+                th.setAttribute('scope', 'col');
+                position_tr.appendChild(th);
+            });
+        }
+
+
+        function renderData(mainTable, data) {
+            var mainTableBody = document.createElement('tbody');
+            mainTable.removeChild(mainTable.getElementsByTagName('tbody')[0]);
+            mainTable.appendChild(mainTableBody);
+            var fields = mainTable.getElementsByTagName('td');
+
+            var maxStarts = 5;
+
+            data.forEach(function (item, i) {
+                var tr = document.createElement('tr');
+                var th = document.createElement('th');
+                th.innerHTML = item.title;
+                if (item['link'] !== undefined) {
+                    th.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['link'] + '">' + th.innerHTML + '</a>';
+                }
+                tr.appendChild(th);
+
+                [
+                    'check', 'type', 'popularity', 'licence',
+                    'company', 'market_share', 'total_value',
+                    'curve', 'template', 'speed', 'code_structure', 'architecture', 'extensions',
+                    'extension_type', 'conclusion'
+                ].forEach(function (key) {
+                    var td = document.createElement('td');
+                    td.innerHTML = item[key] === undefined ? '?' : item[key];
+
+                    if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) { // eslint-disable-line
+                        td.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['company_link'] + '">' + td.innerHTML + '</a>';
+                    }
+                    tr.appendChild(td);
+                });
+
+                mainTableBody.appendChild(tr);
+            });
+
+            var _star = star;
+
+            // replace rating with stars
+            [].forEach.call(fields, function (el, i) {
+                var val = parseInt(el.innerHTML, 10);
+                if (Number.isInteger(val) && val == el.innerHTML) {
+                    var rating = '';
+                    for (let i = 1; i <= val; i++) {
+                        rating += _star.full;
+                    }
+                    for (let i = 0; i < maxStarts - val; i++) {
+                        rating += _star.empty;
+                    }
+                    el.innerHTML = rating;
+                }
+
+            });
+        }
+
+        //
+        // INIT
+        //
+        var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
+        var mainTable = document.getElementById('main-table');
+        var position_tr = document.getElementById('positions-tr');
+
+        // console.log(mainTable);
+        let data = frameworks;
+        data = sorting(data, 'ASC', 'type');
+        renderPositions(position_tr, positions);
+        renderData(mainTable, data);
+        bindSorting(position_tr, positions);
+    </script>
 
 </body>

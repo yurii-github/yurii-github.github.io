@@ -1,123 +1,37 @@
 
-/* --------- SIMPLE GRID -------------- */
+/* INDEX */
 
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 2rem;
-    padding: 0;
-    max-width: 980px;
-    min-width: 320px;
-}
-
-.row {
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.col {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-}
-.col-1  { max-width: calc(100% / 12 * 1); }
-.col-2  { max-width: calc(100% / 12 * 2); }
-.col-3  { max-width: calc(100% / 12 * 3); }
-.col-4  { max-width: calc(100% / 12 * 4); }
-.col-5  { max-width: calc(100% / 12 * 5); }
-.col-6  { max-width: calc(100% / 12 * 6); }
-.col-7  { max-width: calc(100% / 12 * 7); }
-.col-8  { max-width: calc(100% / 12 * 8); }
-.col-9  { max-width: calc(100% / 12 * 9); }
-.col-10 { max-width: calc(100% / 12 * 10); }
-.col-11 { max-width: calc(100% / 12 * 11); }
-.col-12 { max-width: calc(100% / 12 * 12); }
-
-@media screen and (max-width: 768px) {
-    .container {
-        overflow: auto;
-    }
-    .col {
-        min-width: 100%;
-        width: 100%;
-    }
-}
-
-/* --------- STYLE -------------- */
 body {
     font-size: 0.9rem;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
     background: #dddddd;
 }
 
-article {
-    text-align: left;
-}
-
-header {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-h1, h3 {
+h1 {
     text-align: center;
 }
-
 a {
     color: inherit;
     text-decoration: inherit;
 }
-
 a:hover {
     color: orangered;
-}
-
-h3 {
-    margin: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: normal;
 }
 
 .mt {
     font-family: 'Material Icons';
     color: orangered;
     direction: ltr;
-}
-.mt-g {
-    font-family: 'Material Icons';
-    color: darkgrey;
-    direction: ltr;
+    display: inline-block;
 }
 
-dl#my-skills > dt {
-    min-width: 6rem;
-    clear: both;
-}
-dl#my-skills > dt b {
-    display: block;
-    border: 1px dashed;
-    min-width: 17rem;
-    padding: 0.2rem;
-}
-dl#my-skills > dt, dl#my-skills > dd {
-    float: left;
-}
-
-/* ----------- NAVIGATION ----------- */
-nav {
+article {
     margin-right: auto;
     margin-left: auto;
-    text-align: center;
-    color: orangered;
+    width:95%;
 }
 
-nav a {
-    display: inline-block;
-    margin: 0.2rem;
-    vertical-align: middle;
-}
-
-/* ----------- TABLE ----------- */
+/* PIVOT TABLE */
 table {
     width: 100%;
     border-collapse:collapse;
@@ -129,9 +43,8 @@ th {
     font-weight: normal;
     background: #dddddd;
     padding: 0.5rem;
-    border-style: solid;
-    border-color: #ffff;
-    border-width: 0 1px 1px 0;
+    border: 1px solid #fff;
+    border-width:0 1px 1px 0;
 }
 
 tbody th {
@@ -160,7 +73,94 @@ tr:hover{
     background-color: yellow;
 }
 
-/* -------- HELPERS --------------*/
-.ws {
-    white-space: nowrap;
+#disclamer {
+    font-size: smaller;
+    margin-right: auto;
+    margin-left: auto;
+    width: 55%;
+    border: 1px  dashed;
+    padding: 0.5rem;
+    color: gray;
+    box-shadow: 0.2rem 0.2rem 0.5rem #888888;
+}
+#disclaimer-title {
+    float: left;
+    display: inline-block;
+    height: 100px;
+    line-height: 3.5rem;
+    padding-right: 1rem;
+    position: relative;
+    font-weight: bolder;
+}
+
+h3 {
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+nav {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: orangered;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0.2rem;
+    vertical-align: middle;
+}
+
+
+#positions-tr th {
+    cursor: pointer;
+    font-style: italic;
+    user-select: none;
+}
+#positions-tr th:hover {
+    background-color: orangered;
+}
+
+
+
+/*** ABOUT ***/
+.container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+@media screen and (min-width: 924px) {
+    .page-about article {
+        float: right;
+        width: 600px;
+    }
+
+    .page-about aside {
+        float: left;  width: 270px;
+    }
+}
+
+.page-about dt, dd {
+    float: left;
+}
+
+.page-about dt {
+    min-width: 5rem;
+    clear: both;
+}
+
+.page-about dt b {
+    display: block;
+    border: 1px dashed;
+    min-width: 16rem;
+    padding: 0.2rem;
+}
+
+.page-about .clear-both {
+    clear: both;
 }
