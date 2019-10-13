@@ -13,7 +13,7 @@ $title = 'Homepage';
             <p>But here are some more things to clarify:
             <ol>
                 <li>All info here is my subjective view on the field.</li>
-                <li>Those are my current skills I keep updated</li>
+                <li>Those are my current skills I keep updated. Grayed skills are those I'm not interested in.</li>
                 <li>I'm not fond of naming errors like 'bugs' etc. I do not follow human stupidity.</li>
                 <li>Hypes and other nonsense don't work for me.</li>
                 <li>I'm not able to read minds. Luckily.</li>
@@ -62,11 +62,15 @@ $title = 'Homepage';
     {
         console.log('Homepage: componentDidMount');
 
-        var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
         var maxStarts = 10;
         var dl = document.getElementById('skills');
 
         skills.forEach((skill) => {
+            if (skill.interest == 0) {
+                var star = {full: '<span class="mt x">star</span>', empty: '<span class="mt x">star_border</span>'};
+            } else {
+                var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
+            }
             var _dt = document.createElement('dt');
             _dt.innerHTML = skill.title;
             var _dd = document.createElement('dd');
