@@ -22,6 +22,7 @@ a:hover {
     font-family: 'Material Icons';
     color: orangered;
     direction: ltr;
+    display: inline-block;
 }
 
 article {
