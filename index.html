@@ -1,168 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
     <title>Homepage</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="1f418.png"/>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="icon" type="image/png" href="/elephant.png"/>
 </head>
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
 
+<div class="container">
     <nav>
         <a class="mt" href="/">home</a>
-        <a href="frameworks.html">Frameworks</a>
-        <a href="patterns.html">Patterns</a>
-        <a href="principles.html">Principles</a>
-        <a href="tools.html">Tools</a>
+        <a href="/frameworks.html">Frameworks</a>
+        <a href="/patterns.html">Patterns</a>
+        <a href="/principles.html">Principles</a>
+        <a href="/tools/prefix.html">Prefix</a>
     </nav>
 
-    <div>
-    <h1><img src="1f418.png" alt="elephant emoji"/></h1>
-    <h3>Last update: <time>2019-01-13 15:55</time></h3>
-    <div class="container page-about">
-        <article>
-            <h2>About Me</h2>
-            <p>Hello. I'm Yurii. That's all you should really know about me.</p>
-            <p>But here are some more things to clarify:
-            <ol>
-                <li>All info here is my subjective view on the field.</li>
-                <li>Those are my current skills I keep updated</li>
-                <li>I'm not fond of naming errors like 'bugs' etc. I do not follow human stupidity.</li>
-                <li>Hypes and other nonsense don't work for me.</li>
-                <li>I'm not able to read minds. Luckily.</li>
-            </ol>
-            </p>
-            <p></p>
-
-            <h2>PHP Frameworks</h2>
-            <p>When I have time and will I do track some PHP frameworks and CMS.</p>
-            <h2>Patterns</h2>
-            <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of useless names.</p>
-            <p>To simplify things I provide aliases for patterns like 'Wrapper', because most of those patterns are simply basic or a bit complex wrappers over other objects or classes.</p>
-            <p>I've added to patterns so-called by hipsters 'antipatterns' because they still are patterns and are valid in many cases.</p>
-
-            <h2>Principles</h2>
-            <p>Contains programming principles, at least, known as. For most part it is just another nonsense.</p>
-        </article>
-
-        <aside>
-            <dl id="skills"></dl>
-            <div class="clear-both"></div>
-        </aside>
-        <div class="clear-both"></div>
-    </div>
+    <div class="row">
+    <header class="col col-12">
+        <h1><img src="/elephant.png" alt="elephant emoji"/></h1>
+        <h3>Last update: <time>2019-03-31 18:31</time></h3>    </header>
 </div>
 
-<script>
-    let skills = [
-        {title: '<b>Storages</b>'},
-        {title: 'MySQL', rating: 8},
-        {title: 'mongoDB', rating: 1},
-        {title: 'Sqlite', rating: 4},
-        {title: 'Oracle ', rating: 0},
-        {title: 'postreSQL', rating: 1},
-        {title: 'MSSQL', rating: 1},
-        {title: 'Redis', rating: 1},
-        {title: '<b>Languages &amp; Markups</b>'},
-        {title: 'ASP .NET', rating: 2},
-        {title: 'Bash', rating: 5},
-        {title: 'C/C++/C#', rating: 2},
-        {title: 'CSS', rating: 7},
-        {title: 'Javascript', rating: 8},
-        {title: 'PHP', rating: 10},
-        {title: 'Python', rating: 1},
-        {title: 'SOAP/XML', rating: 5},
-        {title: 'React', rating: 2},
-        {title: 'RegExp', rating: 7},
-        {title: 'RESTful', rating: 7},
-        {title: 'Ruby Rails', rating: 0},
-        {title: 'Go', rating: 0},
-        
-        {title: '<b>PHP Frameworks</b>'},
-        {title: 'Yii 2', rating: 8},
-        {title: 'Symfony 2', rating: 2},
-        {title: 'Symfony 3', rating: 4},
-        {title: 'Symfony 4', rating: 1},
-        {title: 'Laravel 5', rating: 1},
-        {title: 'Joomla 3', rating: 1},
-        {title: 'PHPUnit', rating: 8},
-        {title: 'Codeception', rating: 6},
-        
-        {title: '<b>Collaboration</b>'},
-        {title: 'Mantis', rating: 1},
-        {title: 'JIRA', rating: 10},
-        {title: 'Redmine', rating: 2},
-        {title: 'Bugzilla', rating: 1},
-        {title: 'Git', rating: 10},
-        {title: 'SVN', rating: 5},
-        {title: 'Github', rating: 8},
-        {title: 'Gitlab', rating: 7},
-        {title: 'Bitbucket', rating: 7}, 
-        {title: 'TravisCI', rating: 6}, 
-        {title: '<b>Technologies</b>'},
-        {title: 'RabbitMQ', rating: 3},
-        {title: 'Bootstrap', rating: 7},
-        {title: 'Docker', rating: 6},        
-        {title: 'Jenkins', rating: 2},
-        {title: 'Gearman', rating: 0},
-    ];
+<div class="row">
+    <aside class="col col-4">
+        <dl id="my-skills">
+                            <dt><b>Storages</b></dt>
+                <dd></dd>
+                            <dt>MySQL</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>MongoDB</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>SQLite</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>Oracle </dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>PostreSQL</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>MSSQL</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Redis</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt><b>Languages &amp; Markups</b></dt>
+                <dd></dd>
+                            <dt>ASP .NET</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Bash</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>C/C++/C#</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>PHP</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></dd>
+                            <dt>Python</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>SOAP/XML</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>RegExp</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>RESTful</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>Ruby Rails</dt>
+                <dd><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Go</dt>
+                <dd><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>CSS 3</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>ECMAScript 6</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt><b>Front Frameworks</b></dt>
+                <dd></dd>
+                            <dt>Bootstrap</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>Vue</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>React</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt><b>PHP Frameworks</b></dt>
+                <dd></dd>
+                            <dt>Yii 2</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></dd>
+                            <dt>Symfony 3</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Symfony 4</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Laravel 5</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></dd>
+                            <dt>Joomla 3</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>PHPUnit</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>Codeception</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt><b>Collaboration</b></dt>
+                <dd></dd>
+                            <dt>Mantis</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>JIRA</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></dd>
+                            <dt>Redmine</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Bugzilla</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Git</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span></dd>
+                            <dt>SVN</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Github</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>Gitlab</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>Bitbucket</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt><b>Technologies</b></dt>
+                <dd></dd>
+                            <dt>RabbitMQ</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>TravisCI</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                            <dt>Docker</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Jenkins</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Gearman</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Kubernetes</dt>
+                <dd><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>AmazonWS</dt>
+                <dd><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Azure</dt>
+                <dd><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>Apache</dt>
+                <dd><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span><span class="mt-g">star_border</span></dd>
+                            <dt>nginx</dt>
+                <dd><span class="mt">star</span><span class="mt">star</span><span class="mt">star</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span><span class="mt">star_border</span></dd>
+                    </dl>
+        <div class="clear-both"></div>
+    </aside>
+    <article class="col col-8">
+        <h2>About Me</h2>
+        <p>Hello. I'm Yurii. That's all you should really know about me.</p>
+        <p>But here are some more things to clarify: </p>
+        <ol>
+            <li>All info here is my subjective view on the field.</li>
+            <li>On the left side are my current skills I keep updated. Grayed items are not interesting.</li>
+            <li>I'm not fond of naming errors like 'bugs' etc. I do not follow human stupidity.</li>
+            <li>Hypes and other nonsense don't work for me.</li>
+            <li>I'm not able to read minds. Luckily.</li>
+            <li>You have some mental problems? Close this page. You were warned.</li>
+        </ol>
 
-    function rating(star, rate, maxStarts)
-    {
-        var val = parseInt(rate, 10);
-        var rating = '';
-        if (!isNaN(val)) {
-            for (let i = 1; i <= val; i++) {
-                rating += star.full;
-            }
-            for (let i = 0; i < maxStarts - val; i++) {
-                rating += star.empty;
-            }
-        }
-        return rating;
-    }
+        <h2>PHP Frameworks</h2>
+        <p>When I have time and will I do track some PHP frameworks and CMS.</p>
+        <h2>Patterns</h2>
+        <p>Many of patterns are just regular OOP principles which people ignore to know. Instead, they create ton of
+            useless names.</p>
+        <p>To simplify things I provide aliases for patterns like 'Wrapper', because most of those patterns are
+            simply basic or a bit complex wrappers over other objects or classes.</p>
+        <p>I've added to patterns so-called by hipsters 'antipatterns' because they still are patterns and are valid
+            in many cases.</p>
 
-    function drawStars()
-    {
-        console.log('Homepage: componentDidMount');
-
-        var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
-        var maxStarts = 10;
-        var dl = document.getElementById('skills');
-
-        skills.forEach((skill) => {
-            var _dt = document.createElement('dt');
-            _dt.innerHTML = skill.title;
-            var _dd = document.createElement('dd');
-            _dd.innerHTML = rating(star, skill.rating, maxStarts);
-            dl.appendChild(_dt);
-            dl.appendChild(_dd);
-        });
-
-        // RESIZE
-        window.addEventListener('resize', function(e){
-            //TODO: cont width 80%
-            var articleEl = document.getElementsByTagName('article')[0];
-            var effectiveW = Math.round(window.innerWidth*0.8) - 40;
-            var skillsW = 270;
-
-            if(effectiveW >= 770) {
-                let articleW = effectiveW - skillsW;
-                articleEl.style['width'] = articleW+'px';
-            } else {
-                let articleW = effectiveW;
-                articleEl.style['width'] = articleW+'px';
-            }
-        });
-
-        window.dispatchEvent(new Event('resize'));
-    }
-    drawStars();
-</script>
+        <h2>Principles</h2>
+        <p>Contains programming principles, at least, known as. For most part it is just another nonsense.</p>
+    </article>
+</div></div>
 
 </body>
