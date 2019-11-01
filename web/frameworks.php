@@ -7,6 +7,7 @@ $title = 'Comparison of PHP Frameworks and CMS';
         <h1><?php echo $title; ?></h1>
         <h3>Last update:
             <time><?php echo date('Y-m-d H:i', filemtime(__FILE__)); ?></time>
+          <p>When I have time and will I do track some PHP frameworks and CMS.</p>
             <p><b>Please note, these are my subjective views!</b></p>
         </h3>
         <table id="main-table" summary="Contains comparison of PHP Frameworks and CMS">

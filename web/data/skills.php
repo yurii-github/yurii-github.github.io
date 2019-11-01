@@ -35,6 +35,7 @@ $skills = [
         ['Vue 2', 8],
         ['Prototype', 1, false],
         ['Angular', 1, false],
+        ['DevExtreme', 0, true],
     ],
     'PHP Frameworks' => [
         ['Yii 2', 8, false],
@@ -44,6 +45,7 @@ $skills = [
         ['Laravel 5', 10],
         ['Laravel 6', 8],
         ['LaravelNova', 8],
+        ['Slim 4', 8, true],
     ],
     'PHP Testing' => [
         ['PHPUnit', 5],
@@ -87,4 +89,4 @@ foreach ($skills as $group => $items) {
     }
 }
 
-return json_encode($flatSkills, JSON_UNESCAPED_UNICODE);
+return $flatSkills;
