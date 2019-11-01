@@ -4,7 +4,7 @@ $skills = [
     'Bureaucracy' => [
         ['GDPR', 4],
         ['SRS', 5],
-        ['ITIL', 0, false],
+        ['ITIL 4', 0],
         ['Agile', 7, false],
         ['RUP', 7],
         ['FMEA/FMECA', 1],
