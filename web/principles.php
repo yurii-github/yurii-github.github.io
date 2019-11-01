@@ -1,12 +1,11 @@
 <?php
 $title = 'Principles';
-
 ?>
 <?php ob_start(); ?>
     <div class="container">
         <h1><?php echo $title; ?></h1>
         <article>
-            <p>List of principles (or mostly retarded names that came from hipsters or just retards):</p>
+            <p>List of principles (hipster names):</p>
             <p><b>SRP</b> (single responsibility principle)</p>
             <p><b>DIP</b> (dependency injection principle)</p>
             <p><b>TDD</b> (test driven development)</p>
@@ -21,8 +20,6 @@ $title = 'Principles';
             <p><b>* Boy Scout Rule</b> (leave code more clean) - <i>one principle I think is good</i></p>
             <p><b>* RUP</b> (Rational Unified Process) - <i>true iterative development process created by professionals, not someone's project on milking money on useless certifications</i>
             <p><b>Waterfall</b> (people should return to <a href="https://www.youtube.com/watch?v=DMZzGynP2OE" target="_blank">waterfall</a>, relax and enjoy..)</p>
-            <p>&nbsp;</p>
-
         </article>
     </div>
 <?php

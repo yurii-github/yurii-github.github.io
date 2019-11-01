@@ -2,10 +2,10 @@
 $skills = [
     'Storages' => [
         // title | rating | interest
-        ['MySQL', 8],
+        ['MySQL8', 8],
         ['MSSQL', 1, false],
         ['mongoDB', 3, false],
-        ['Sqlite', 8],
+        ['Sqlite3', 8],
         ['Oracle', 0, false],
         ['PostgreSQL', 3, false],
         ['Redis', 2, false],
@@ -15,6 +15,7 @@ $skills = [
         ['C/C++/C#', 4, false],
         ['CSS', 5, false],
         ['Javascript', 8, false],
+        ['Javascript ES6', 8, true],
         ['PHP', 10],
         ['SOAP/XML', 5],
         ['RegExp', 5],
