@@ -11,8 +11,6 @@
     <link rel="icon" type="image/png" href="1f418.png"/>
 </head>
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-
     <nav>
         <a class="mt" href="/">home</a>
         <a href="frameworks.php">Frameworks</a>
@@ -20,7 +18,5 @@
         <a href="principles.php">Principles</a>
         <a href="tools.php">Tools</a>
     </nav>
-
     <?php echo $content; ?>
-
 </body>
