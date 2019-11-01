@@ -138,15 +138,9 @@ nav a {
     padding: 0;
 }
 
-@media screen and (min-width: 924px) {
-    .page-about article {
-        float: right;
-        width: 600px;
-    }
-
-    .page-about aside {
-        float: left;  width: 270px;
-    }
+.page-about article {
+    float: left;
+    width: 100%;
 }
 
 .page-about dt, dd {
@@ -154,15 +148,20 @@ nav a {
 }
 
 .page-about dt {
-    min-width: 5rem;
+    min-width: 6rem;
     clear: both;
 }
 
 .page-about dt b {
     display: block;
     border: 1px dashed;
-    min-width: 16rem;
+    min-width: 17rem;
     padding: 0.2rem;
+}
+
+.page-about dl {
+    float: left;
+    width: 300px;
 }
 
 .page-about .clear-both {
