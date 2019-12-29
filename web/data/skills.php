@@ -71,7 +71,7 @@ return [
         ['Codeception', 5, false],
     ],
     'PHP CMS' => [
-        ['Joomla 3', 1, false],
+        ['Joomla 3', 4, false],
         ['Wordpress', 1, false],
         ['Drupal 7', 6, false],
         ['Drupal 8', 3, false],
