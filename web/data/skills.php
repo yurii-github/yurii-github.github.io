@@ -1,6 +1,7 @@
 <?php
-$skills = [
-    // title | rating | interest
+return [
+    // group
+    // title | rating | interest (false)
     'Bureaucracy' => [
         ['GDPR', 4],
         ['SRS', 5],
@@ -95,18 +96,3 @@ $skills = [
         ['Telegram', 6, false],
     ],
 ];
-
-$flatSkills = [];
-
-foreach ($skills as $group => $items) {
-    $flatSkills[] = ['title' => '<b>' . $group . '</b>'];
-    foreach ($items as &$item) {
-        $flatSkills[] = [
-            'title' => $item[0],
-            'rating' => $item[1],
-            'interest' => isset($item[2]) ? (bool)$item[2] : true
-        ];
-    }
-}
-
-return $flatSkills;
