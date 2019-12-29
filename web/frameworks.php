@@ -1,7 +1,3 @@
-<?php
-$title = 'Comparison of PHP Frameworks and CMS';
-
-?>
 <?php ob_start(); ?>
     <article>
         <h1><?php echo $title; ?></h1>
@@ -160,5 +156,6 @@ $title = 'Comparison of PHP Frameworks and CMS';
         bindSorting(position_tr, positions);
     </script>
 <?php
+$title = 'Comparison of PHP Frameworks and CMS';
 $content = ob_get_clean();
 require '_layout.php';

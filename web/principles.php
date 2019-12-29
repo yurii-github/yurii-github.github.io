@@ -1,6 +1,3 @@
-<?php
-$title = 'Principles';
-?>
 <?php ob_start(); ?>
     <div class="container">
         <h1><?php echo $title; ?></h1>
@@ -23,5 +20,6 @@ $title = 'Principles';
         </article>
     </div>
 <?php
+$title = 'Principles';
 $content = ob_get_clean();
 require '_layout.php';

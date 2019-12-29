@@ -1,6 +1,4 @@
 <?php
-$title = 'Homepage';
-
 $skills = require 'data/skills.php';
 
 function rating($rating, $interest = true)
@@ -90,5 +88,6 @@ ob_start();
   </div>
 </div>
 <?php
+$title = 'Homepage';
 $content = ob_get_clean();
 require '_layout.php';

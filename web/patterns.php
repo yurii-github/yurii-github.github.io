@@ -1,7 +1,3 @@
-<?php
-$title = 'Patterns';
-
-?>
 <?php ob_start(); ?>
     <article>
         <h1><?php echo $title; ?></h1>
@@ -493,6 +489,6 @@ $title = 'Patterns';
         bindSorting(position_tr, positions);
     </script>
 <?php
+$title = 'Patterns';
 $content = ob_get_clean();
-
 require '_layout.php';
