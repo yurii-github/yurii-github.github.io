@@ -53,8 +53,6 @@ return [
         ['Prototype', 1, false],
         ['Angular', 1, false],
         ['DevExtreme', 0, true],
-        ['ZFramework 2', 2, false],
-        ['ZFramework 3', 0, false],
     ],
     'PHP Frameworks' => [
         ['Yii 2', 8, false],
@@ -65,6 +63,8 @@ return [
         ['Laravel 6', 8],
         ['Laravel Nova', 8],
         ['Slim 4', 8, true],
+        ['ZFramework 2', 2, false],
+        ['ZFramework 3', 0, false],
     ],
     'PHP Testing' => [
         ['PHPUnit', 5],
