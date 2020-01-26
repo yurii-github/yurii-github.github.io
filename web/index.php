@@ -77,9 +77,9 @@ ob_start();
       <?php foreach ($skills as $header => $rSkills): ?>
         <div class="group">
           <div class="header"><?php echo $header; ?></div>
-          <?php foreach ($rSkills as [$title, $rating, $interest]): ?>
+          <?php foreach ($rSkills as [$title, $rating, $interest, $url]): ?>
             <div class="skill">
-              <div class="title"><?= $title; ?></div>
+              <div class="title"><?= $url ? "<a href=\"$url\">$title</a>" : $title; ?></div>
               <div class="rating"><?= rating($rating, $interest); ?></div>
             </div>
           <?php endforeach; ?>

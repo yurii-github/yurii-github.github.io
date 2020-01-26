@@ -1,7 +1,7 @@
 <?php
 return [
     // group
-    // title | rating | interest (false)
+    // title | rating | interest (true) | url (none)
     'Bureaucracy' => [
         ['GDPR', 4],
         ['SRS', 5],
@@ -28,8 +28,7 @@ return [
         ['CSS 3', 5, false],
         ['Javascript', 8, false],
         ['Javascript ES6', 8, true],
-        ['PHP 5', 10],
-        ['PHP 7', 10],
+        ['PHP 5/7', 10, true, 'https://www.php.net/manual/en/langref.php'],
         ['SOAP/XML', 5],
         ['RegExp', 5],
         ['RESTful', 8],
@@ -52,23 +51,30 @@ return [
         ['Vue 2', 9],
         ['Prototype', 1, false],
         ['Angular', 1, false],
-        ['DevExtreme', 0, true],
+        ['DevExtreme', 0, true, 'https://js.devexpress.com/documentation'],
     ],
     'PHP Frameworks' => [
-        ['Yii 2', 8, false],
-        ['Symfony 2', 2, false],
-        ['Symfony 3', 5, false],
-        ['Symfony 4', 3, false],
-        ['Laravel 5', 10],
-        ['Laravel 6', 8],
-        ['Laravel Nova', 8],
-        ['Slim 4', 8, true],
-        ['ZFramework 2', 2, false],
-        ['ZFramework 3', 0, false],
+        ['Yii 2', 8, false, 'https://www.yiiframework.com/doc/guide/2.0'],
+        ['Symfony 2', 2, false, 'https://symfony.com/doc/2.8'],
+        ['Symfony 3', 5, false, 'https://symfony.com/doc/3.3'],
+        ['Symfony 4', 3, false, 'https://symfony.com/doc/4.3'],
+        ['Symfony 5', 3, false, 'https://symfony.com/doc/5.0'],
+        ['Laravel 5', 10, true, 'https://laravel.com/docs/5.8'],
+        ['Laravel 6', 8, true , 'https://laravel.com/docs/6.x'],
+        ['Laravel Nova 1', 8, true, 'https://nova.laravel.com/docs/1.0'],
+        ['Laravel Nova 2', 0, true, 'https://nova.laravel.com/docs/2.0'],
+        ['Slim 4', 8, true, 'http://www.slimframework.com/docs/v4'],
+        ['ZFramework 2', 2, false, 'https://framework.zend.com/manual/2.4'],
+        ['ZFramework 3', 0, false, 'https://framework.zend.com/learn'],
+        ['Laminas', 0, true, 'https://docs.laminas.dev']
     ],
     'PHP Testing' => [
-        ['PHPUnit', 5],
+        ['PHPUnit', 5, true, 'https://phpunit.readthedocs.io/en/8.5'],
         ['Codeception', 5, false],
+    ],
+    'PHP CRM' => [
+        ['Oro', 1, false],
+        ['SugarCRM', 1, false],
     ],
     'PHP CMS' => [
         ['Joomla 3', 4, false],
@@ -77,7 +83,6 @@ return [
         ['Drupal 8', 3, false],
         ['Magento 2', 0, false],
         ['Grav', 2, false],
-        ['Oro', 1, false],
     ],
     'Collaboration' => [
         ['Mantis', 2, false],
@@ -86,13 +91,13 @@ return [
         ['Bugzilla', 5, false],
         ['Git', 8],
         ['SVN', 8, false],
-        ['Github', 8, false],
-        ['Gitlab', 8],
+        ['Github', 8, false, 'https://github.com/yurii-github'],
+        ['Gitlab', 8, true, 'https://docs.gitlab.com'],
         ['Bitbucket', 8, false],
         ['TravisCI', 6],
         ['Jenkins', 4, false],
-        ['Slack', 8],
-        ['Skype', 6, false],
-        ['Telegram', 6, false],
+        ['Slack', 8, 'https://slack.com'],
+        ['Skype', 6, true, 'https://www.skype.com'],
+        ['Telegram', 6, false, 'https://telegram.org'],
     ],
 ];
