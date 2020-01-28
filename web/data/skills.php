@@ -5,10 +5,10 @@ return [
     'Bureaucracy' => [
         ['GDPR', 4, true, 'https://ec.europa.eu/info/law/law-topic/data-protection_en'],
         ['SRS', 5, true, ''],
-        ['ITIL 4', 0, true, '' ],
+        ['ITIL 4', 0, true, 'https://www.itil-docs.com'],
         ['Agile', 7, false, ''],
         ['RUP', 7, true, '' ],
-        ['FMEA/FMECA', 1, true, ''],
+        ['FMEA/FMECA', 1, true, 'https://www.en-standard.eu/new-aiag-vda-fmea-handbook-failure-mode-and-effects-analysis'],
         ['UML 2.4', 7, true, 'https://www.omg.org/spec/UML/2.4'],
     ],
     'Storages' => [
