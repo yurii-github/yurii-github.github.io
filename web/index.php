@@ -19,7 +19,6 @@ function rating($rating, $interest = true)
     return implode('', $stars);
 }
 ?>
-
 <?php ob_start(); ?>
 <style type="text/css">
   .container {
@@ -63,8 +62,9 @@ function rating($rating, $interest = true)
 $style = ob_get_clean();
 ob_start();
 ?>
-<h1><img src="1f418.png" alt="elephant emoji"/></h1>
-<h3>Last update: <time><?php echo date('Y-m-d H:i', filemtime(__FILE__)); ?></time></h3>
+<h1>
+  <a href="https://github.com/yurii-github" target="_blank"><img src="1f418.png" alt="elephant emoji"/></a>
+</h1>
 <div class="container page-about">
   <article style="margin-right: auto; margin-left: auto; max-width: 880px">
     <p>
