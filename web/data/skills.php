@@ -61,7 +61,7 @@ return [
         ['Push Pull', 0, false, '', ''],
     ],
     'JS Frameworks' => [
-        ['Jquery', 5, false, 'https://api.jquery.com', ''],
+        ['jQuery', 5, false, 'https://api.jquery.com', ''],
         ['React', 3, false, 'https://reactjs.org/docs', ''],
         ['Vue 2', 7, true, 'https://vuejs.org/v2/guide', ''],
         ['Prototype.js', 0, false, 'https://github.com/prototypejs/prototype', '2015'],
@@ -103,14 +103,14 @@ return [
     'PHP CMS' => [
         ['Joomla 3', 4, false, 'https://docs.joomla.org', ''],
         ['Wordpress', 1, false, 'https://developer.wordpress.org', ''],
-        ['Drupal 7', 6, false, 'https://www.drupal.org/docs/7', ''],
+        ['Drupal 7', 6, false, 'https://www.drupal.org/docs/7', '2019 (officially November 2021)'],
         ['Drupal 8', 3, false, 'https://www.drupal.org/docs/8', ''],
         ['Magento 2', 0, false, 'https://devdocs.magento.com', ''],
         ['Grav', 2, false, 'https://learn.getgrav.org', ''],
         ['DokuWiki', 5, true, 'https://www.dokuwiki.org/manual', ''],
     ],
     'Collaboration' => [
-        ['Mantis', 2, false, 'https://www.mantishub.com', ''],
+        ['Mantis 2', 2, false, 'https://www.mantisbt.org/documentation.php', ''],
         ['JIRA', 10, true, 'https://confluence.atlassian.com/jira', ''],
         ['Trello', 2, false, '', ''],
         ['Redmine', 5, false, 'https://www.redmine.org/guide', ''],
