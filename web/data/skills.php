@@ -54,7 +54,7 @@ return [
         ['Jquery', 7, false, 'https://api.jquery.com'],
         ['React', 3, false, 'https://reactjs.org/docs'],
         ['Vue 2', 9, true, 'https://vuejs.org/v2/guide'],
-        ['Prototype.js', 0, false, 'http://api.prototypejs.org'],
+        ['Prototype.js', 0, false, 'https://github.com/prototypejs/prototype', '2015'],
         ['Angular', 1, false, 'https://angular.io/docs'],
         ['DevExtreme', 0, true, 'https://js.devexpress.com/documentation'],
     ],

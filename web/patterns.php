@@ -24,7 +24,7 @@ $title = 'Patterns';
     </article>
 
     <script>
-        const patterns = <?php echo require 'data/patterns.php'; ?>
+        let patterns = <?php echo require 'data/patterns.php'; ?>
 
         const positions = [
             {key: 'type', title: 'Type'},

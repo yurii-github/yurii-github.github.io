@@ -8,7 +8,7 @@
     <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="1f418.png"/>
+    <link rel="icon" type="image/png" href="assets/1f418.png"/>
 
     <?php echo isset($style) ? $style : ''; ?>
 </head>

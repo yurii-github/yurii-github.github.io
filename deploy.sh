@@ -11,8 +11,8 @@ mkdir ./build
 
 cp ./.gitignore ./build/.gitignore
 cp ./web/style.css ./build
-cp ./web/1f418.png ./build
 cp -rf ./web/tools ./build
+cp -rf ./web/assets ./build
 
 php build-pages.php
 
