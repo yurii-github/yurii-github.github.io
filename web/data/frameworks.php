@@ -1,5 +1,6 @@
 <?php
-return <<<JSON
+
+return <<<'JSON'
 [
             {
                 "title": "Yii 2",

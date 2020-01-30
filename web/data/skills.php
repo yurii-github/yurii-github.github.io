@@ -1,4 +1,5 @@
 <?php
+
 return [
     // group
     // title | rating | interest (true) | url (none)
@@ -7,7 +8,7 @@ return [
         ['SRS', 5, true, ''],
         ['ITIL 4', 0, true, 'https://www.itil-docs.com'],
         ['Agile', 7, false, ''],
-        ['RUP', 7, true, '' ],
+        ['RUP', 7, true, ''],
         ['FMEA/FMECA', 1, true, 'https://www.en-standard.eu/new-aiag-vda-fmea-handbook-failure-mode-and-effects-analysis'],
         ['UML 2.4', 7, true, 'https://www.omg.org/spec/UML/2.4'],
     ],
@@ -64,13 +65,13 @@ return [
         ['Symfony 4', 3, false, 'https://symfony.com/doc/4.3'],
         ['Symfony 5', 3, false, 'https://symfony.com/doc/5.0'],
         ['Laravel 5', 10, true, 'https://laravel.com/docs/5.8'],
-        ['Laravel 6', 8, true , 'https://laravel.com/docs/6.x'],
+        ['Laravel 6', 8, true, 'https://laravel.com/docs/6.x'],
         ['Laravel Nova 1', 8, true, 'https://nova.laravel.com/docs/1.0'],
         ['Laravel Nova 2', 0, true, 'https://nova.laravel.com/docs/2.0'],
         ['Slim 4', 8, true, 'http://www.slimframework.com/docs/v4'],
         ['ZFramework 2', 2, false, 'https://framework.zend.com/manual/2.4'],
         ['ZFramework 3', 0, false, 'https://framework.zend.com/learn'],
-        ['Laminas', 0, true, 'https://docs.laminas.dev']
+        ['Laminas', 0, true, 'https://docs.laminas.dev'],
     ],
     'PHP Testing' => [
         ['PHPUnit', 5, true, 'https://phpunit.readthedocs.io/en/8.5'],
@@ -106,10 +107,9 @@ return [
         ['Telegram', 6, false, 'https://telegram.org'],
     ],
     'Cloudware' => [
-        ['Amazon AWS', 0, false,],
-        ['DigitalOcean', 0, false,],
+        ['Amazon AWS', 0, false],
+        ['DigitalOcean', 0, false],
         ['IBM Kubernetes', 0, false],
         ['Google KE', 0, false, 'https://cloud.google.com/kubernetes-engine'],
-
-    ]
+    ],
 ];

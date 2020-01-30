@@ -47,7 +47,7 @@ ob_start();
             {key: 'conclusion', title: 'Conclusion'}
         ];
 
-        let frameworks = <?php echo require 'data/frameworks.php';?>;
+        let frameworks = <?php echo require 'data/frameworks.php'; ?>;
 
         function sorting(data, dir, key) {
             return data.sort(function (a, b) {

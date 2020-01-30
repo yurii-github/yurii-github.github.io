@@ -2,16 +2,16 @@
 function rating($rating, $interest = true)
 {
     $maxStarts = 10;
-    $rating = is_null($rating) ? 0 : abs((int)$rating);
+    $rating = null === $rating ? 0 : abs((int) $rating);
     $rating = $rating > $maxStarts ? $maxStarts : $rating;
     $interest = !isset($interest) || $interest ? '' : 'x';
     $stars = [];
 
-    for ($i = 1; $i <= $rating; $i++) {
-        $stars[] = "<span class=\"mt $interest\">star</span>";
+    for ($i = 1; $i <= $rating; ++$i) {
+        $stars[] = "<span class=\"mt ${interest}\">star</span>";
     }
-    for ($i = 0; $i < $maxStarts - $rating; $i++) {
-        $stars[] = "<span class=\"mt $interest\">star_border</span>";
+    for ($i = 0; $i < $maxStarts - $rating; ++$i) {
+        $stars[] = "<span class=\"mt ${interest}\">star_border</span>";
     }
 
     return implode('', $stars);
@@ -72,17 +72,17 @@ ob_start();
     <hr />
   </article>
   <div class="skills">
-      <?php foreach (require_once 'data/skills.php' as $header => $rSkills): ?>
+      <?php foreach (require_once 'data/skills.php' as $header => $rSkills) { ?>
         <div class="group">
           <div class="header"><?php echo $header; ?></div>
-          <?php foreach ($rSkills as [$title, $rating, $interest, $url]): ?>
+          <?php foreach ($rSkills as [$title, $rating, $interest, $url]) { ?>
             <div class="skill">
-              <div class="title"><?= $url ? "<a href=\"$url\">$title</a>" : $title; ?></div>
-              <div class="rating"><?= rating($rating, $interest); ?></div>
+              <div class="title"><?php echo $url ? "<a href=\"${url}\">${title}</a>" : $title; ?></div>
+              <div class="rating"><?php echo rating($rating, $interest); ?></div>
             </div>
-          <?php endforeach; ?>
+          <?php } ?>
         </div>
-      <?php endforeach; ?>
+      <?php } ?>
   </div>
 </div>
 <?php
