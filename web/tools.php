@@ -1,4 +1,7 @@
-<?php ob_start(); ?>
+<?php
+ob_start();
+$title = 'Tools';
+?>
     <div class="container">
     <h1><?php echo $title; ?></h1>
     <article>
@@ -9,6 +12,5 @@
         </nav>
     </article>
 <?php
-$title = 'Tools';
 $content = ob_get_clean();
 require '_layout.php';

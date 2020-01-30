@@ -1,6 +1,4 @@
 <?php
-$skills = require 'data/skills.php';
-
 function rating($rating, $interest = true)
 {
     $maxStarts = 10;
@@ -74,7 +72,7 @@ ob_start();
     <hr />
   </article>
   <div class="skills">
-      <?php foreach ($skills as $header => $rSkills): ?>
+      <?php foreach (require_once 'data/skills.php' as $header => $rSkills): ?>
         <div class="group">
           <div class="header"><?php echo $header; ?></div>
           <?php foreach ($rSkills as [$title, $rating, $interest, $url]): ?>

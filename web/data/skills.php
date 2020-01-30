@@ -91,6 +91,7 @@ return [
     'Collaboration' => [
         ['Mantis', 2, false, 'https://www.mantishub.com'],
         ['JIRA', 10, true, 'https://confluence.atlassian.com/jira'],
+        ['Trello', 2, false, ''],
         ['Redmine', 5, false, 'https://www.redmine.org/guide'],
         ['Bugzilla', 5, false, 'https://www.bugzilla.org/docs'],
         ['Git', 8, true, 'https://git-scm.com/doc'],
@@ -104,4 +105,11 @@ return [
         ['Skype', 6, true, 'https://www.skype.com'],
         ['Telegram', 6, false, 'https://telegram.org'],
     ],
+    'Cloudware' => [
+        ['Amazon AWS', 0, false,],
+        ['DigitalOcean', 0, false,],
+        ['IBM Kubernetes', 0, false],
+        ['Google KE', 0, false, 'https://cloud.google.com/kubernetes-engine'],
+
+    ]
 ];

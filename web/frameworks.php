@@ -1,4 +1,7 @@
-<?php ob_start(); ?>
+<?php
+$title = 'Comparison of PHP Frameworks and CMS';
+ob_start();
+?>
     <article>
         <h1><?php echo $title; ?></h1>
         <h3>Last update:
@@ -156,6 +159,5 @@
         bindSorting(position_tr, positions);
     </script>
 <?php
-$title = 'Comparison of PHP Frameworks and CMS';
 $content = ob_get_clean();
 require '_layout.php';
