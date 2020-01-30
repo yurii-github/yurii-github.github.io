@@ -11,6 +11,9 @@
   \  )   /   \   (  /
    )/   /     \   \(
    '    `-`-'-'    `
+
+<?= 'Page build: ' . date('Y-m-d H:i:s T'); ?>
+
 -->
 <head>
     <meta charset="utf-8"/>
@@ -20,7 +23,7 @@
     <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="assets/1f418.png"/>
+    <link rel="icon" type="image/png" href="assets/Archangel.png"/>
 
     <?php echo isset($style) ? $style : ''; ?>
 </head>

@@ -29,7 +29,6 @@ function rating($rating, $interest, $dead = false)
         margin-left: auto;
         max-width: 880px;
     }
-
     .container {
         width: 80%;
         margin-right: auto;
@@ -37,7 +36,6 @@ function rating($rating, $interest, $dead = false)
         margin-bottom: 2rem;
         padding: 0;
     }
-
     .skills {
         margin-left: auto;
         margin-right: auto;
@@ -47,12 +45,10 @@ function rating($rating, $interest, $dead = false)
         flex-flow: column wrap;
         max-height: 900px; /* CHANGE HERE FOR COLUMNS! */
     }
-
     .skills .group {
         margin: 5px;
         padding: 0;
     }
-
     .skills .group .header {
         font-weight: bold;
         border: 1px dashed;
@@ -61,18 +57,29 @@ function rating($rating, $interest, $dead = false)
         margin-bottom: 0.3rem;
         margin-right:0.5rem;
     }
-
     .skill > .title {
         float: left;
         min-width: 7rem;
 
     }
-
     img.dead {
         height: 0.9rem;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+    img#logo {
+      height: 2rem;
+    }
+    #Archangel {
+      top: 5%;
+      z-index: -1;
+      opacity: 0.0666;
+      position: absolute;
+      height: 1000px;
+      width: 950px;
+      background: url('assets/Archangel.png') no-repeat center;
+      background-size: 850px 1000px;
     }
 </style>
 <?php
@@ -82,7 +89,7 @@ $style = ob_get_clean();
 ob_start();
 ?>
 <h1>
-  <a href="https://github.com/yurii-github" target="_blank"><img src="assets/1f418.png" alt="elephant emoji"/></a>
+  <a href="https://github.com/yurii-github" target="_blank"><img id="logo" title="go to my github account" src="assets/GitHub_Logo.png" alt="github logo"/></a>
 </h1>
 <div class="container">
     <article>
@@ -94,6 +101,7 @@ ob_start();
         <?= new SCPlayer(['url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
     </article>
   <div class="skills">
+      <code id="Archangel"></code>
       <?php foreach (require_once 'data/skills.php' as $header => $rSkills) { ?>
         <div class="group">
           <div class="header"><?php echo $header; ?></div>
