@@ -89,6 +89,8 @@ ob_start();
             Those are my current skills I keep updated. <br>
             <em>Grayed skills are those I'm not interested in.</em>
         </p>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/331965268&color=%23dddddd&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         <hr/>
     </article>
   <div class="skills">
