@@ -11,6 +11,8 @@
   \  )   /   \   (  /
    )/   /     \   \(
    '    `-`-'-'    `
+
+Page build: 2020-01-31 00:20:34 EET
 -->
 <head>
     <meta charset="utf-8"/>
@@ -20,7 +22,7 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="assets/1f418.png"/>
+    <link rel="icon" type="image/png" href="assets/Archangel.png"/>
 
     <style type="text/css">
     article {
@@ -28,7 +30,6 @@
         margin-left: auto;
         max-width: 880px;
     }
-
     .container {
         width: 80%;
         margin-right: auto;
@@ -36,7 +37,6 @@
         margin-bottom: 2rem;
         padding: 0;
     }
-
     .skills {
         margin-left: auto;
         margin-right: auto;
@@ -46,12 +46,10 @@
         flex-flow: column wrap;
         max-height: 900px; /* CHANGE HERE FOR COLUMNS! */
     }
-
     .skills .group {
         margin: 5px;
         padding: 0;
     }
-
     .skills .group .header {
         font-weight: bold;
         border: 1px dashed;
@@ -60,18 +58,29 @@
         margin-bottom: 0.3rem;
         margin-right:0.5rem;
     }
-
     .skill > .title {
         float: left;
         min-width: 7rem;
 
     }
-
     img.dead {
         height: 0.9rem;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+    img#logo {
+      height: 2rem;
+    }
+    #Archangel {
+      top: 5%;
+      z-index: -1;
+      opacity: 0.0666;
+      position: absolute;
+      height: 1000px;
+      width: 950px;
+      background: url('assets/Archangel.png') no-repeat center;
+      background-size: 850px 1000px;
     }
 </style>
 </head>
@@ -84,7 +93,7 @@
         <a href="tools.html">Tools</a>
     </nav>
     <h1>
-  <a href="https://github.com/yurii-github" target="_blank"><img src="assets/1f418.png" alt="elephant emoji"/></a>
+  <a href="https://github.com/yurii-github" target="_blank"><img id="logo" title="go to my github account" src="assets/GitHub_Logo.png" alt="github logo"/></a>
 </h1>
 <div class="container">
     <article>
@@ -103,6 +112,7 @@ iframe#sc-player {
 </style>
 <iframe id="sc-player" allow="autoplay" allowtransparency="true" src="https://w.soundcloud.com/player?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F331965268&color=%23dddddd&buying=false&download=false&following=false&visual=false&auto_play=true&hide_related=false&inverse=false&liking=false&sharing=false&show_artwork=false&show_comments=false&show_playcount=true&show_user=false&show_reposts=false&show_teaser=false&single_active=true&locale=en"></iframe>    </article>
   <div class="skills">
+      <code id="Archangel"></code>
               <div class="group">
           <div class="header">Bureaucracy</div>
                                   <div class="skill">
