@@ -15,7 +15,7 @@ function rating($rating, $interest, $dead = false)
     }
 
     if ($dead) {
-        $dead = 'Project is dead' . (is_string($dead) ? " since $dead" : '.');
+        $dead = 'Dead' . (is_string($dead) ? " since $dead" : '.');
         $stars[] = '<img src="assets/skull.svg" alt="dead" title="'.$dead.'" class="dead"/>';
     }
 
@@ -41,11 +41,11 @@ function rating($rating, $interest, $dead = false)
     .skills {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1000px;
+        max-width: 950px;
         min-width: 950px;
         display: flex;
         flex-flow: column wrap;
-        max-height: 900px;
+        max-height: 900px; /* CHANGE HERE FOR COLUMNS! */
     }
 
     .skills .group {
@@ -89,7 +89,7 @@ ob_start();
         <p>
             Hello. I'm Yurii. That's all you should really know about me.
             Those are my current skills I keep updated. <br>
-            <em>Grayed skills are those I'm not interested in.</em>
+            <em>Grayed skills are those I'm not interested in (good money can change that).</em>
         </p>
         <?= new SCPlayer(['url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
     </article>
