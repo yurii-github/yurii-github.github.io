@@ -45,7 +45,7 @@ function rating($rating, $interest, $dead = false)
         min-width: 950px;
         display: flex;
         flex-flow: column wrap;
-        max-height: 700px;
+        max-height: 900px;
     }
 
     .skills .group {
@@ -76,6 +76,8 @@ function rating($rating, $interest, $dead = false)
     }
 </style>
 <?php
+require_once '../src/SCPlayer.php';
+
 $style = ob_get_clean();
 ob_start();
 ?>
@@ -89,9 +91,7 @@ ob_start();
             Those are my current skills I keep updated. <br>
             <em>Grayed skills are those I'm not interested in.</em>
         </p>
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/331965268&color=%23dddddd&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-        <hr/>
+        <?= new SCPlayer(['url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
     </article>
   <div class="skills">
       <?php foreach (require_once 'data/skills.php' as $header => $rSkills) { ?>
