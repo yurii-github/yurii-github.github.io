@@ -17,11 +17,14 @@ return [
         ['MySQL 8', 8, true, 'https://dev.mysql.com/doc/refman/8.0/en', ''],
         ['MariaDB', 8, false, '', '2020 (I have no trust in this)'],
         ['MicrosoftSQL', 1, false, 'https://docs.microsoft.com/en-us/sql', ''],
-        ['MongoDB', 2, false, 'https://docs.mongodb.com', ''],
-        ['SQLite 3', 8, true, 'https://www.sqlite.org', ''],
         ['Oracle', 0, true, 'https://docs.oracle.com/en/database', ''],
         ['PostgreSQL', 2, false, 'https://www.postgresql.org/docs', ''],
+        ['SQLite 3', 8, true, 'https://www.sqlite.org', ''],
+        ['MongoDB', 2, false, 'https://docs.mongodb.com', ''],
         ['Redis', 2, false, 'https://redis.io/documentation', ''],
+        ['CouchDB 2', 0, false, 'https://docs.couchdb.org/en/stable/', ''],
+        ['LevelDB', 1, false, 'https://github.com/google/leveldb', ''],
+        ['ClickHouse', 0, false, 'https://clickhouse.yandex/docs/en', '2017 (Yandex ban, and that\'s good!)']
     ],
     'Markups' => [
         ['(X)HTML 4', 8, false, '', '2017'],
@@ -69,32 +72,43 @@ return [
     ],
     'JS Kits' => [
         ['DevExtreme', 1, true, 'https://js.devexpress.com/documentation', ''],
-        ['AdminLTE', 4, true, 'https://adminlte.io/docs', ''],
+        ['Admin LTE', 4, true, 'https://adminlte.io/docs', ''],
+        ['Webpack 4', 6, true, 'https://webpack.js.org/guides', ''],
+        ['Node.js 12', 4, false, 'https://nodejs.org/en/docs', ''],
     ],
     'PHP Frameworks' => [
         ['Yii 1.1', 0, false, 'https://www.yiiframework.com/doc/guide/1.0', '2020'],
         ['Yii 2', 8, false, 'https://www.yiiframework.com/doc/guide/2.0', ''], // https://www.yiiframework.com/release-cycle
         ['Yii 3', 0, false, 'https://github.com/yiisoft/docs', '2020 (I have no trust in this)'],
-        ['Symfony 2', 2, false, 'https://symfony.com/doc/2.8', ''],
-        ['Symfony 3', 5, false, 'https://symfony.com/doc/3.3', ''],
+        // https://symfony.com/doc/4.0/_images/release-process.jpg
+        ['Symfony 2', 2, false, 'https://symfony.com/doc/2.8', '2019'],
+        ['Symfony 3', 5, false, 'https://symfony.com/doc/3.4', '2020 (officially dead in 2021)'],
         ['Symfony 4', 3, false, 'https://symfony.com/doc/4.3', ''],
         ['Symfony 5', 3, false, 'https://symfony.com/doc/5.0', ''],
-        ['Laravel 4', 0, false, '', '2015', ''], // https://laravel-news.com/laravel-release-process
+        // https://laravel-news.com/laravel-release-process
+        ['Laravel 4', 0, false, '', '2015', ''],
         ['Laravel 5', 10, true, 'https://laravel.com/docs/5.8', ''],
         ['Laravel 6', 8, true, 'https://laravel.com/docs/6.x', ''],
         ['Slim 4', 8, true, 'http://www.slimframework.com/docs/v4', ''],
-        ['ZFramework 2', 2, false, 'https://framework.zend.com/manual/2.4', ''],
-        ['ZFramework 3', 0, false, 'https://framework.zend.com/learn', ''],
+        //https://framework.zend.com/long-term-support
+        ['ZFramework 1', 1, false, 'https://framework.zend.com/learn', '2016'],
+        ['ZFramework 2', 2, false, 'https://framework.zend.com/learn', '2018'],
+        ['ZFramework 3', 1, false, 'https://framework.zend.com/learn', '2020'],
         ['Laminas', 0, true, 'https://docs.laminas.dev', ''],
-        ['CakePHP', 0, false, '', ''],
+        ['CakePHP 3', 0, false, 'https://book.cakephp.org/3', '2020 (officially die in 2022)'],
+        ['CakePHP 4', 1, false, 'https://book.cakephp.org/4', ''],
+        ['Kohana 3', 3, false, 'https://kohanaframework.org', '2017'],
+        ['CodeIgniter 3', 0, false, 'https://codeigniter.com/docs', ''],
+        ['CodeIgniter 4', 0, false, 'https://codeigniter.com/docs', ''],
         ['PEAR', 3, false, 'https://pear.php.net/manual/en/', '2019 (no maintainers left)'],
     ],
     'PHP Kits' => [
-        ['Laravel Nova 1', 8, true, 'https://nova.laravel.com/docs/1.0', ''],
+        ['Laravel Nova 1', 8, false, 'https://nova.laravel.com/docs/1.0', '2020'],
         ['Laravel Nova 2', 6, true, 'https://nova.laravel.com/docs/2.0', ''],
-        ['ReactPHP', 5, false, '', ''],
+        ['ReactPHP', 5, true, 'https://reactphp.org', ''],
         ['PHPUnit', 5, true, 'https://phpunit.readthedocs.io/en/8.5', ''],
-        ['Codeception', 5, false, 'https://codeception.com/docs', ''],
+        ['Codeception', 6, true, 'https://codeception.com/docs', ''],
+        ['Composer', 5, true, 'https://getcomposer.org/doc/', ''],
     ],
     'PHP CRM' => [
         ['Oro', 1, false, 'https://doc.oroinc.com', ''],
@@ -108,6 +122,7 @@ return [
         ['Magento 2', 0, false, 'https://devdocs.magento.com', ''],
         ['Grav', 2, false, 'https://learn.getgrav.org', ''],
         ['DokuWiki', 5, true, 'https://www.dokuwiki.org/manual', ''],
+
     ],
     'Collaboration' => [
         ['Mantis 2', 2, false, 'https://www.mantisbt.org/documentation.php', ''],
