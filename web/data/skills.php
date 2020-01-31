@@ -100,6 +100,7 @@ return [
         ['Kohana 3', 3, false, 'https://kohanaframework.org', '2017'],
         ['CodeIgniter 3', 0, false, 'https://codeigniter.com/docs', ''],
         ['CodeIgniter 4', 0, false, 'https://codeigniter.com/docs', ''],
+        ['Mako 6', 1, false, 'https://makoframework.com/docs/6.3', ''],
         ['PEAR', 3, false, 'https://pear.php.net/manual/en/', '2019 (no maintainers left)'],
     ],
     'PHP Kits' => [
