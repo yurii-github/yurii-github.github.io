@@ -43,7 +43,7 @@ function rating($rating, $interest, $dead = false)
         min-width: 950px;
         display: flex;
         flex-flow: column wrap;
-        max-height: 900px; /* CHANGE HERE FOR COLUMNS! */
+        max-height: 1000px; /* CHANGE HERE FOR COLUMNS! */
     }
     .skills .group {
         margin: 5px;
