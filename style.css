@@ -127,5 +127,16 @@ nav a {
     background-color: orangered;
 }
 
-
+article.centered {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 880px;
+}
+.container.centered {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+    padding: 0;
+}
 
