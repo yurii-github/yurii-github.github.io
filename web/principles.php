@@ -2,9 +2,9 @@
 $title = 'Principles';
 ob_start();
 ?>
-<div class="container">
+<div class="container centered">
     <h1><?php echo $title; ?></h1>
-    <article>
+    <article class="centered">
         <p>List of principles (hipster names):</p>
         <p><b>SRP</b> (single responsibility principle)</p>
         <p><b>DIP</b> (dependency injection principle)</p>

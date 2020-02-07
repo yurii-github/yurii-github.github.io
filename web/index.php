@@ -24,18 +24,6 @@ function rating($rating, $interest, $dead = false)
 ?>
 <?php ob_start(); ?>
 <style type="text/css">
-    article {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 880px;
-    }
-    .container {
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 2rem;
-        padding: 0;
-    }
     .skills {
         margin-left: auto;
         margin-right: auto;
@@ -91,14 +79,14 @@ ob_start();
 <h1>
   <a href="https://github.com/yurii-github" target="_blank"><img id="logo" title="go to my github account" src="assets/GitHub_Logo.png" alt="github logo"/></a>
 </h1>
-<div class="container">
-    <article>
+<div class="container centered">
+    <article class="centered">
         <p>
             Hello. I'm Yurii. That's all you should really know about me.
             Those are my current skills I keep updated. <br>
             <em>Grayed skills are those I'm not interested in (good money can change that).</em>
         </p>
-        <?= new SCPlayer(['auto_play' => true, 'url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
+        <?php echo new SCPlayer(['auto_play' => true, 'url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
     </article>
   <div class="skills">
       <code id="Archangel"></code>

@@ -5,10 +5,6 @@ $title = 'Patterns';
     <article>
         <h1><?php echo $title; ?></h1>
 
-        <h3>Last update:
-            <time>2017-07-02</time>
-        </h3>
-
         <table id="main-table-patterns" summary="Contains comparison of Patterns">
             <thead>
             <tr>

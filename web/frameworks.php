@@ -4,8 +4,7 @@ ob_start();
 ?>
     <article>
         <h1><?php echo $title; ?></h1>
-        <h3>Last update:
-            <time><?php echo date('Y-m-d H:i', filemtime(__FILE__)); ?></time>
+        <h3>
           <p>When I have time and will I do track some PHP frameworks and CMS.</p>
             <p><b>Please note, these are my subjective views!</b></p>
         </h3>

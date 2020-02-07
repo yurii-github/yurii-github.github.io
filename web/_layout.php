@@ -30,6 +30,7 @@
 <body>
     <nav>
         <a class="mt" href="/">home</a>
+        <a href="bookmarks.php">Bookmarks</a>
         <a href="frameworks.php">Frameworks</a>
         <a href="patterns.php">Patterns</a>
         <a href="principles.php">Principles</a>
