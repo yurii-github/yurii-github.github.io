@@ -4,6 +4,7 @@ $buildDir = __DIR__ . '/build';
 
 $pages = [
     'index' => 'index.php',
+    'bookmarks' => 'bookmarks.php',
     'patterns' => 'patterns.php',
     'frameworks' => 'frameworks.php',
     'principles' => 'principles.php',

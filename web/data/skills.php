@@ -15,7 +15,7 @@ return [
     ],
     'Storages' => [
         ['MySQL 8', 8, true, 'https://dev.mysql.com/doc/refman/8.0/en', ''],
-        ['MariaDB', 8, false, '', '2020 (I have no trust in this)'],
+        ['MariaDB', 8, false, 'https://mariadb.com/kb/en/documentation', '2020 (I have no trust in this)'],
         ['MicrosoftSQL', 1, false, 'https://docs.microsoft.com/en-us/sql', ''],
         ['Oracle', 0, true, 'https://docs.oracle.com/en/database', ''],
         ['PostgreSQL', 2, false, 'https://www.postgresql.org/docs', ''],
@@ -33,10 +33,10 @@ return [
         ['XML 1.0', 5, true, '', ''],
         ['XML 1.1', 1, false, '', ''],
         ['XSLT', 1, true, '', ''],
-        ['SVG', 1, false, '', ''],
+        ['SVG', 1, false, 'https://www.w3.org/TR/SVG11', ''],
         ['XSD', 1, true, '', ''],
         ['SOAP/WSDL', 3, true, '', ''],
-        ['RegEx', 5, true, '', ''],
+        ['RegExp', 5, true, 'https://regexr.com', ''], // https://github.com/gskinner/regexr/
         ['RESTful', 8, true, 'https://standards.rest', ''],
     ],
     'Languages' => [
@@ -50,19 +50,19 @@ return [
         ['Solidity/Eth', 4, false, 'https://solidity.readthedocs.io', ''],
         ['Ruby', 0, false, 'https://ruby-doc.org', ''],
         ['Go', 0, false, 'https://golang.org/doc', ''],
+        ['Assembly', 1, true, 'http://asm.sourceforge.net', ''],
         ['Python', 0, false, 'https://docs.python.org/3', ''],
-        ['Java', 0, false, '', ''],
+        ['Java', 0, true, 'https://docs.oracle.com/javase/8/docs', ''],
         ['Lua', 2, false, 'https://www.lua.org/docs.html', ''],
         ['Clojure/Lisp', 0, false, 'https://clojure.org/guides/getting_started', ''],
     ],
     'CSS Frameworks' => [
         ['Bootstrap 4', 4, false, 'https://getbootstrap.com/docs/4.4', ''],
-        ['Flexbox Grid', 0, false, '', ''],
-        ['PureCSS', 0, false, '', ''],
-        ['Zimit', 0, false, '', ''],
-        ['HTML Kickstart', 0, false, '', ''],
+        ['Flexbox Grid', 0, false, 'http://flexboxgrid.com/', ''],
+        ['PureCSS', 0, false, 'https://purecss.io/', ''],
+        ['Zimit', 0, false, 'https://firezenk.github.io/zimit/started.html', ''],
+        ['HTML Kickstart', 0, false, 'https://github.com/joshuagatcke/HTML-KickStart', ''],
         ['Materialize', 2, true, 'https://materializecss.com', ''],
-        ['Push Pull', 0, false, '', ''],
     ],
     'JS Frameworks' => [
         ['jQuery', 5, false, 'https://api.jquery.com', ''],
@@ -123,8 +123,7 @@ return [
         ['Drupal 8', 3, false, 'https://www.drupal.org/docs/8', ''],
         ['Magento 2', 0, false, 'https://devdocs.magento.com', ''],
         ['Grav', 2, false, 'https://learn.getgrav.org', ''],
-        ['DokuWiki', 5, true, 'https://www.dokuwiki.org/manual', ''],
-
+        ['DokuWiki', 7, true, 'https://www.dokuwiki.org/manual', ''],
     ],
     'Collaboration' => [
         ['Mantis 2', 2, false, 'https://www.mantisbt.org/documentation.php', ''],
@@ -156,7 +155,7 @@ return [
         ['Debian', 8, true, '', ''],
         ['ArchLinux', 0, false, '', ''],
         ['Fedora', 5, false, '', ''],
-        ['RHEL', 5, false, '', 'https://www.redhat.com/','2019 after company purchase by IBM for $34 bln (officially still alive)'],
+        ['RHEL', 5, false, 'https://www.redhat.com/','2019 after company purchase by IBM for $34 bln (officially still alive)'],
         ['CentOS', 5, true, '', ''],
     ],
     'Cloudware' => [
