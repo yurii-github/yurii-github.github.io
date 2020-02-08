@@ -86,7 +86,7 @@ ob_start();
             Those are my current skills I keep updated. <br>
             <em>Grayed skills are those I'm not interested in (good money can change that).</em>
         </p>
-        <?php //echo new SCPlayer(['auto_play' => true, 'url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
+        <?php echo new SCPlayer(['auto_play' => true, 'url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
     </article>
   <div class="skills">
       <code id="Archangel"></code>
