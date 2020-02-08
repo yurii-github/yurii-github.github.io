@@ -111,6 +111,7 @@ return [
         ['PHPUnit', 5, true, 'https://phpunit.readthedocs.io/en/8.5', ''],
         ['Codeception', 6, true, 'https://codeception.com/docs', ''],
         ['Composer', 5, true, 'https://getcomposer.org/doc/', ''],
+        ['Inertia.js', 0, true, 'https://inertiajs.com/', ''],
     ],
     'PHP CRM' => [
         ['Oro', 1, false, 'https://doc.oroinc.com', ''],
