@@ -6,7 +6,7 @@
 $title = 'Principles';
 ?>
 @extends('_layout')
-@section('title', 'DUMMY')
+@section('title', $title)
 @section('style')
     @parent
 @endsection

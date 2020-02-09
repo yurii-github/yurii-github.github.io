@@ -6,14 +6,14 @@
 $title = 'Patterns';
 ?>
 @extends('_layout')
-@section('title', 'DUMMY')
+@section('title', $title)
 @section('style')
     @parent
 @endsection
 
 @section('content')
     <article>
-        <h1><?php echo $title; ?></h1>
+        <h1><?= $title; ?></h1>
         <table id="main-table-patterns" summary="Contains comparison of Patterns">
             <thead>
             <tr>

@@ -14,7 +14,7 @@ $title = 'Bookmarks';
 
 @section('content')
     <div class="container centered">
-        <h1><?php echo $title; ?></h1>
+        <h1><?= $title; ?></h1>
         <article class="centered">
             <?php foreach ($bookmarks as $bookmark): ?>
             <p><a href="<?= $bookmark[1];?>" target="_blank"><b><?= $bookmark[0];?></b> - <?= $bookmark[1];?></a></p>

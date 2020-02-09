@@ -1,8 +1,12 @@
 <?php
+/**
+ * @var array $frameworks
+ */
+
 $title = 'Comparison of PHP Frameworks and CMS';
 ?>
 @extends('_layout')
-@section('title', 'DUMMY')
+@section('title', $title)
 @section('style')
     @parent
 @endsection
@@ -51,7 +55,7 @@ $title = 'Comparison of PHP Frameworks and CMS';
         {key: 'conclusion', title: 'Conclusion'}
       ];
 
-      let frameworks = <?php echo require 'data/frameworks.php'; ?>;
+      let frameworks = <?= $frameworks; ?>;
 
       function sorting(data, dir, key) {
         return data.sort(function (a, b) {
