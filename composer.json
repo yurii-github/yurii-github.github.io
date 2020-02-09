@@ -2,6 +2,7 @@
     "require": {
         "php": "^7.4",
         "ext-json": "*",
-        "friendsofphp/php-cs-fixer": "^2.11"
+        "illuminate/view": "^6.14",
+        "friendsofphp/php-cs-fixer": "^2.16"
     }
 }
