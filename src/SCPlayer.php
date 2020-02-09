@@ -1,4 +1,6 @@
 <?php
+namespace app;
+
 /**
  * Dummy wrapper for SoundCloud Player
  */

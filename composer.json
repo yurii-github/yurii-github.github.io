@@ -3,6 +3,14 @@
         "php": "^7.4",
         "ext-json": "*",
         "illuminate/view": "^6.14",
-        "friendsofphp/php-cs-fixer": "^2.16"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "slim/slim": "^4.4",
+        "guzzlehttp/psr7": "^1.6",
+        "http-interop/http-factory-guzzle": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/"
+        }
     }
 }
