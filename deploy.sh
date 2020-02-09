@@ -6,15 +6,7 @@
 shopt -s extglob
 shopt -s dotglob
 
-rm -rf ./build
-mkdir ./build
-
-cp ./.gitignore ./build/.gitignore
-cp ./web/style.css ./build
-cp -rf ./web/tools ./build
-cp -rf ./web/assets ./build
-
-php build-pages.php
+php web/index.php
 
 git add .
 git commit -m "created build `date '+%Y-%m-%d %H:%M:%S'`"

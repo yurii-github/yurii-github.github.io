@@ -19,19 +19,10 @@ final class ViewFactory
      */
     static public function make(string $view, array $data = [])
     {
-        $path = __DIR__ . '/views';
-        $cacheDir = dirname(__DIR__) . '/cache';
-
-        $bc = new BladeCompiler(new Filesystem(), $cacheDir);
-        //$bc->include($path .'/_layout.blade.php', '_layout');
-        $engine = new CompilerEngine($bc);
-
         $er = new EngineResolver();
-        $er->register('blade', fn() => $engine);
-        $finder = new FileViewFinder(new Filesystem(), [$path]);
+        $er->register('blade', fn() => new CompilerEngine(new BladeCompiler(new Filesystem(), CACHE_DIR)));
 
-        $factory = new Factory($er, $finder, new Dispatcher());
-
-        return $factory->make($view, $data);
+        return (new Factory($er, new FileViewFinder(new Filesystem(), [VIEW_DIR]), new Dispatcher()))
+            ->make($view, $data);
     }
 }
