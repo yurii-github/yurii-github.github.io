@@ -11,9 +11,7 @@
   \  )   /   \   (  /
    )/   /     \   \(
    '    `-`-'-'    `
-
-Page build: 2020-02-08 22:11:31 EET
--->
+Page build: 2020-02-10 01:55:59 EET-->
 <head>
     <meta charset="utf-8"/>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -21,70 +19,23 @@ Page build: 2020-02-08 22:11:31 EET
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
     <title>Comparison of PHP Frameworks and CMS</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="assets/style.css"/>
     <link rel="icon" type="image/png" href="assets/Archangel.png"/>
-
-    <style type="text/css">
-    .skills {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 950px;
-        min-width: 950px;
-        display: flex;
-        flex-flow: column wrap;
-        max-height: 1000px; /* CHANGE HERE FOR COLUMNS! */
-    }
-    .skills .group {
-        margin: 5px;
-        padding: 0;
-    }
-    .skills .group .header {
-        font-weight: bold;
-        border: 1px dashed;
-        min-width: 17.2rem;
-        padding: 0.2rem;
-        margin-bottom: 0.3rem;
-        margin-right:0.5rem;
-    }
-    .skill > .title {
-        float: left;
-        min-width: 7rem;
-
-    }
-    img.dead {
-        height: 0.9rem;
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-    }
-    img#logo {
-      height: 2rem;
-    }
-    #Archangel {
-      top: 5%;
-      z-index: -1;
-      opacity: 0.0666;
-      position: absolute;
-      height: 1000px;
-      width: 950px;
-      background: url('assets/Archangel.png') no-repeat center;
-      background-size: 850px 1000px;
-    }
-</style>
+        
 </head>
 <body>
-    <nav>
-        <a class="mt" href="/">home</a>
-        <a href="bookmarks.html">Bookmarks</a>
-        <a href="frameworks.html">Frameworks</a>
-        <a href="patterns.html">Patterns</a>
-        <a href="principles.html">Principles</a>
-        <a href="tools.html">Tools</a>
-    </nav>
-        <article>
+<nav>
+    <a class="mt" href="/index.html">home</a>
+    <a href="/bookmarks.html">Bookmarks</a>
+    <a href="/frameworks.html">Frameworks</a>
+    <a href="/patterns.html">Patterns</a>
+    <a href="/principles.html">Principles</a>
+    <a href="/tools.html">Tools</a>
+</nav>
+    <article>
         <h1>Comparison of PHP Frameworks and CMS</h1>
         <h3>
-          <p>When I have time and will I do track some PHP frameworks and CMS.</p>
+            <p>When I have time and will I do track some PHP frameworks and CMS.</p>
             <p><b>Please note, these are my subjective views!</b></p>
         </h3>
         <table id="main-table" summary="Contains comparison of PHP Frameworks and CMS">
@@ -103,29 +54,28 @@ Page build: 2020-02-08 22:11:31 EET
         </table>
     </article>
     <script>
+      const positions = [
+        {key: 'check', title: 'Checked'},
+        {key: 'type', title: 'Type'},
+        {key: 'popularity', title: 'popularity'},
+        {key: 'license', title: 'License'},
+        //
+        {key: 'company', title: 'Company behind'},
+        {key: 'market_share', title: 'Market Share'},
+        {key: 'total_value', title: 'Total Value'},
+        //
+        {key: 'curve', title: 'Learning Curve'},
+        {key: 'template', title: 'Template'},
+        {key: 'speed', title: 'Speed'},
+        {key: 'code_structure', title: 'Code Structure'},
+        {key: 'architecture', title: 'Architecture'},
+        {key: 'extensions', title: 'Extensions'},
+        {key: 'extension_type', title: 'Extension Type'},
+        //
+        {key: 'conclusion', title: 'Conclusion'}
+      ];
 
-        const positions = [
-            {key: 'check', title: 'Checked'},
-            {key: 'type', title: 'Type'},
-            {key: 'popularity', title: 'popularity'},
-            {key: 'license', title: 'License'},
-            //
-            {key: 'company', title: 'Company behind'},
-            {key: 'market_share', title: 'Market Share'},
-            {key: 'total_value', title: 'Total Value'},
-            //
-            {key: 'curve', title: 'Learning Curve'},
-            {key: 'template', title: 'Template'},
-            {key: 'speed', title: 'Speed'},
-            {key: 'code_structure', title: 'Code Structure'},
-            {key: 'architecture', title: 'Architecture'},
-            {key: 'extensions', title: 'Extensions'},
-            {key: 'extension_type', title: 'Extension Type'},
-            //
-            {key: 'conclusion', title: 'Conclusion'}
-        ];
-
-        let frameworks = [
+      let frameworks = [
             {
                 "title": "Yii 2",
                 "link": "http://www.yiiframework.com/",
@@ -485,113 +435,114 @@ Page build: 2020-02-08 22:11:31 EET
             }
         ];
 
-        function sorting(data, dir, key) {
-            return data.sort(function (a, b) {
-                var _dir = dir == 'ASC' ? 1 : -1; // eslint-disable-line
-                if (typeof a[key] == 'string') { // eslint-disable-line
-                    return _dir * a[key].localeCompare(b[key]);
-                }
-                return _dir * (a[key] - b[key]);
-            });
-        }
+      function sorting(data, dir, key) {
+        return data.sort(function (a, b) {
+          var _dir = dir == 'ASC' ? 1 : -1; // eslint-disable-line
+          if (typeof a[key] == 'string') { // eslint-disable-line
+            return _dir * a[key].localeCompare(b[key]);
+          }
+          return _dir * (a[key] - b[key]);
+        });
+      }
 
-        function bindSorting(position_tr, positions) {
-            var order = {key: null, dir: null};
-            var headers = position_tr.getElementsByTagName('th');
+      function bindSorting(position_tr, positions) {
+        var order = {key: null, dir: null};
+        var headers = position_tr.getElementsByTagName('th');
 
-            [].forEach.call(headers, (el, i) => {
-                el.addEventListener('click', (e) => {
-                    //console.log(positions[i]);
-                    var _key = positions[i]['key'];
-                    //console.log(_key);
-                    if (order.key == _key) { // eslint-disable-line
-                        order.dir = order.dir == 'ASC' ? 'DESC' : 'ASC'; // eslint-disable-line
-                    } else {
-                        order.key = _key;
-                        order.dir = 'DESC';
-                    }
-                    var _data = sorting(data, order.dir, order.key);
-                    renderData(mainTable, _data);
-                });
-            });
-        }
+        [].forEach.call(headers, (el, i) => {
+          el.addEventListener('click', (e) => {
+            //console.log(positions[i]);
+            var _key = positions[i]['key'];
+            //console.log(_key);
+            if (order.key == _key) { // eslint-disable-line
+              order.dir = order.dir == 'ASC' ? 'DESC' : 'ASC'; // eslint-disable-line
+            } else {
+              order.key = _key;
+              order.dir = 'DESC';
+            }
+            var _data = sorting(data, order.dir, order.key);
+            renderData(mainTable, _data);
+          });
+        });
+      }
 
-        function renderPositions(position_tr, positions) {
-            positions.forEach(function (pos) {
-                var th = document.createElement('th');
-                th.innerHTML = pos.title;
-                th.setAttribute('scope', 'col');
-                position_tr.appendChild(th);
-            });
-        }
+      function renderPositions(position_tr, positions) {
+        positions.forEach(function (pos) {
+          var th = document.createElement('th');
+          th.innerHTML = pos.title;
+          th.setAttribute('scope', 'col');
+          position_tr.appendChild(th);
+        });
+      }
 
 
-        function renderData(mainTable, data) {
-            var mainTableBody = document.createElement('tbody');
-            mainTable.removeChild(mainTable.getElementsByTagName('tbody')[0]);
-            mainTable.appendChild(mainTableBody);
-            var fields = mainTable.getElementsByTagName('td');
+      function renderData(mainTable, data) {
+        var mainTableBody = document.createElement('tbody');
+        mainTable.removeChild(mainTable.getElementsByTagName('tbody')[0]);
+        mainTable.appendChild(mainTableBody);
+        var fields = mainTable.getElementsByTagName('td');
 
-            var maxStarts = 5;
+        var maxStarts = 5;
 
-            data.forEach(function (item, i) {
-                var tr = document.createElement('tr');
-                var th = document.createElement('th');
-                th.innerHTML = item.title;
-                if (item['link'] !== undefined) {
-                    th.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['link'] + '">' + th.innerHTML + '</a>';
-                }
-                tr.appendChild(th);
+        data.forEach(function (item, i) {
+          var tr = document.createElement('tr');
+          var th = document.createElement('th');
+          th.innerHTML = item.title;
+          if (item['link'] !== undefined) {
+            th.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['link'] + '">' + th.innerHTML + '</a>';
+          }
+          tr.appendChild(th);
 
-                [
-                    'check', 'type', 'popularity', 'licence',
-                    'company', 'market_share', 'total_value',
-                    'curve', 'template', 'speed', 'code_structure', 'architecture', 'extensions',
-                    'extension_type', 'conclusion'
-                ].forEach(function (key) {
-                    var td = document.createElement('td');
-                    td.innerHTML = item[key] === undefined ? '?' : item[key];
+          [
+            'check', 'type', 'popularity', 'licence',
+            'company', 'market_share', 'total_value',
+            'curve', 'template', 'speed', 'code_structure', 'architecture', 'extensions',
+            'extension_type', 'conclusion'
+          ].forEach(function (key) {
+            var td = document.createElement('td');
+            td.innerHTML = item[key] === undefined ? '?' : item[key];
 
-                    if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) { // eslint-disable-line
-                        td.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['company_link'] + '">' + td.innerHTML + '</a>';
-                    }
-                    tr.appendChild(td);
-                });
+            if (key == 'company' && item['company_link'] !== undefined && item['company_link'].length > 0) { // eslint-disable-line
+              td.innerHTML = '<a target="_blank" rel="nofollow" href="' + item['company_link'] + '">' + td.innerHTML + '</a>';
+            }
+            tr.appendChild(td);
+          });
 
-                mainTableBody.appendChild(tr);
-            });
+          mainTableBody.appendChild(tr);
+        });
 
-            var _star = star;
+        var _star = star;
 
-            // replace rating with stars
-            [].forEach.call(fields, function (el, i) {
-                var val = parseInt(el.innerHTML, 10);
-                if (Number.isInteger(val) && val == el.innerHTML) {
-                    var rating = '';
-                    for (let i = 1; i <= val; i++) {
-                        rating += _star.full;
-                    }
-                    for (let i = 0; i < maxStarts - val; i++) {
-                        rating += _star.empty;
-                    }
-                    el.innerHTML = rating;
-                }
+        // replace rating with stars
+        [].forEach.call(fields, function (el, i) {
+          var val = parseInt(el.innerHTML, 10);
+          if (Number.isInteger(val) && val == el.innerHTML) {
+            var rating = '';
+            for (let i = 1; i <= val; i++) {
+              rating += _star.full;
+            }
+            for (let i = 0; i < maxStarts - val; i++) {
+              rating += _star.empty;
+            }
+            el.innerHTML = rating;
+          }
 
-            });
-        }
+        });
+      }
 
-        //
-        // INIT
-        //
-        var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
-        var mainTable = document.getElementById('main-table');
-        var position_tr = document.getElementById('positions-tr');
+      //
+      // INIT
+      //
+      var star = {full: '<span class="mt">star</span>', empty: '<span class="mt">star_border</span>'};
+      var mainTable = document.getElementById('main-table');
+      var position_tr = document.getElementById('positions-tr');
 
-        // console.log(mainTable);
-        let data = frameworks;
-        data = sorting(data, 'ASC', 'type');
-        renderPositions(position_tr, positions);
-        renderData(mainTable, data);
-        bindSorting(position_tr, positions);
+      // console.log(mainTable);
+      let data = frameworks;
+      data = sorting(data, 'ASC', 'type');
+      renderPositions(position_tr, positions);
+      renderData(mainTable, data);
+      bindSorting(position_tr, positions);
     </script>
 </body>
+</html>
