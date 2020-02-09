@@ -1,5 +1,7 @@
 <?php
 
+use \app\SCPlayer;
+
 /**
  * @var array $skills
  */
@@ -106,7 +108,7 @@ function rating($rating, $interest, $dead = false)
                 Those are my current skills I keep updated. <br>
                 <em>Grayed skills are those I'm not interested in (good money can change that).</em>
             </p>
-            <?php //echo new SCPlayer(['auto_play' => true, 'url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
+            <?= new SCPlayer(['url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
         </article>
         <div class="skills">
             <code id="Archangel"></code>
@@ -114,7 +116,6 @@ function rating($rating, $interest, $dead = false)
             <div class="group">
                 <div class="header"><?php echo $header; ?></div>
                 <?php foreach ($rSkills as [$title, $rating, $interest, $url, $dead]) { ?>
-                <?php // if(!isset($dead)) { file_put_contents('empty.txt', $title."\n", FILE_APPEND); }?>
                 <div class="skill">
                     <div class="title"><?php echo $url ? "<a href=\"${url}\">${title}</a>" : $title; ?></div>
                     <div class="rating"><?php echo rating($rating, $interest, $dead); ?></div>
