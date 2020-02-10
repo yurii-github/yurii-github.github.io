@@ -58,10 +58,10 @@ return [
     ],
     'CSS Frameworks' => [
         ['Bootstrap 4', 4, false, 'https://getbootstrap.com/docs/4.4', ''],
-        ['Flexbox Grid', 0, false, 'http://flexboxgrid.com/', ''],
-        ['PureCSS', 0, false, 'https://purecss.io/', ''],
-        ['Zimit', 0, false, 'https://firezenk.github.io/zimit/started.html', ''],
-        ['HTML Kickstart', 0, false, 'https://github.com/joshuagatcke/HTML-KickStart', ''],
+        ['Flexbox Grid', 0, false, 'http://flexboxgrid.com/', '2019'],
+        ['PureCSS', 0, false, 'https://purecss.io/', '2019'],
+        ['Zimit', 0, false, 'https://firezenk.github.io/zimit/started.html', '2013'],
+        ['HTML Kickstart', 0, false, 'https://github.com/joshuagatcke/HTML-KickStart', '2015'],
         ['Materialize', 2, false, 'https://materializecss.com', '2018'],
     ],
     'JS Frameworks' => [

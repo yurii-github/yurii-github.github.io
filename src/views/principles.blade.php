@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var array
+ * @var array $principles
  */
 $title = 'Principles';
 ?>
