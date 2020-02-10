@@ -7,7 +7,7 @@ return [
         ['GDPR', 4, true, 'https://ec.europa.eu/info/law/law-topic/data-protection_en', ''],
         ['SRS', 5, true, 'https://www.perforce.com/blog/alm/how-write-software-requirements-specification-srs-document', ''],
         ['ITIL 4', 0, true, 'https://www.itil-docs.com', ''],
-        ['Agile', 7, false, '', ''],
+        ['Agile', 7, true, '', ''],
         ['RUP', 7, true, 'https://sceweb.uhcl.edu/helm/RationalUnifiedProcess', ''],
         ['PHP-FIG', 10, true, 'https://www.php-fig.org/psr', ''],
         ['FMEA/FMECA', 1, true, 'https://www.en-standard.eu/new-aiag-vda-fmea-handbook-failure-mode-and-effects-analysis', ''],
@@ -62,7 +62,7 @@ return [
         ['PureCSS', 0, false, 'https://purecss.io/', '2019'],
         ['Zimit', 0, false, 'https://firezenk.github.io/zimit/started.html', '2013'],
         ['HTML Kickstart', 0, false, 'https://github.com/joshuagatcke/HTML-KickStart', '2015'],
-        ['Materialize', 2, false, 'https://materializecss.com', '2018'],
+        ['Materialize', 2, false, 'https://materializecss.com', '2018 (also bugged, use v0.97.5)'],
     ],
     'JS Frameworks' => [
         ['jQuery', 5, false, 'https://api.jquery.com', ''],
@@ -127,9 +127,9 @@ return [
         ['DokuWiki', 7, true, 'https://www.dokuwiki.org/manual', ''],
     ],
     'Collaboration' => [
-        ['Mantis 2', 2, false, 'https://www.mantisbt.org/documentation.php', ''],
+        ['Mantis', 2, false, 'https://www.mantisbt.org/documentation.php', ''],
         ['JIRA', 10, true, 'https://confluence.atlassian.com/jira', ''],
-        ['Trello', 2, false, '', ''],
+        ['Trello', 2, false, 'https://trello.com/', ''],
         ['Redmine', 5, false, 'https://www.redmine.org/guide', ''],
         ['Bugzilla', 5, false, 'https://www.bugzilla.org/docs', ''],
         ['Git', 8, true, 'https://git-scm.com/doc', ''],
@@ -160,7 +160,7 @@ return [
         ['CentOS', 5, true, '', ''],
     ],
     'Cloudware' => [
-        ['Amazon AWS', 0, false, '', ''],
+        ['Amazon AWS', 0, true, 'https://aws.amazon.com/', ''],
         ['Digital Ocean', 0, false, '', ''],
         ['IBM Kubernetes', 0, false, '', ''],
         ['Google KE', 0, false, 'https://cloud.google.com/kubernetes-engine', ''],
