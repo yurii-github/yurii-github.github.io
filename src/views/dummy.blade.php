@@ -1,9 +1,8 @@
 <?php
 
 /**
- * @var array $skills
+ * @var array
  */
-
 ?>
 @extends('_layout')
 @section('title', 'DUMMY')

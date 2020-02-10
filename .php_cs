@@ -55,4 +55,4 @@ return PhpCsFixer\Config::create()
         'string_line_ending' => true,
         'yoda_style' => true,
     ])
-    ->setFinder(PhpCsFixer\Finder::create()->in(__DIR__.'/web'));
+    ->setFinder(PhpCsFixer\Finder::create()->in(__DIR__.'/src'));

@@ -10,7 +10,7 @@ $title = 'Tools';
 
 @section('content')
     <div class="container">
-        <h1><?= $title; ?></h1>
+        <h1><?php echo $title; ?></h1>
         <article>
             <nav style="display: block; float: none">
                 <a href="/tools/prefix">Prefix</a>

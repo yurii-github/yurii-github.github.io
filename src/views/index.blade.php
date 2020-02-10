@@ -1,21 +1,26 @@
 <?php
 
-use \app\SCPlayer;
+use app\SCPlayer;
 
 /**
- * @var array $skills
+ * @var array
+ *
+ * @param mixed $rating
+ * @param mixed $interest
+ * @param mixed $dead
  */
 
 /**
  * @param $rating
  * @param $interest
  * @param bool $dead
+ *
  * @return string
  */
 function rating($rating, $interest, $dead = false)
 {
     $maxStarts = 10;
-    $rating = null === $rating ? 0 : abs((int)$rating);
+    $rating = null === $rating ? 0 : abs((int) $rating);
     $rating = $rating > $maxStarts ? $maxStarts : $rating;
     $interest = !isset($interest) || $interest ? '' : 'x';
     $stars = [];
@@ -28,8 +33,8 @@ function rating($rating, $interest, $dead = false)
     }
 
     if ($dead) {
-        $dead = 'Dead' . (is_string($dead) ? " since $dead" : '.');
-        $stars[] = '<img src="assets/skull.svg" alt="dead" title="' . $dead . '" class="dead"/>';
+        $dead = 'Dead'.(is_string($dead) ? " since ${dead}" : '.');
+        $stars[] = '<img src="assets/skull.svg" alt="dead" title="'.$dead.'" class="dead"/>';
     }
 
     return implode('', $stars);
@@ -108,7 +113,7 @@ function rating($rating, $interest, $dead = false)
                 Those are my current skills I keep updated. <br>
                 <em>Grayed skills are those I'm not interested in (good money can change that).</em>
             </p>
-            <?= new SCPlayer(['url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
+            <?php echo new SCPlayer(['url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
         </article>
         <div class="skills">
             <code id="Archangel"></code>

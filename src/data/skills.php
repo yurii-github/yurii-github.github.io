@@ -24,7 +24,7 @@ return [
         ['Redis', 2, false, 'https://redis.io/documentation', ''],
         ['CouchDB 2', 0, false, 'https://docs.couchdb.org/en/stable/', ''],
         ['LevelDB', 1, false, 'https://github.com/google/leveldb', ''],
-        ['ClickHouse', 0, false, 'https://clickhouse.yandex/docs/en', '2017 (Yandex ban, and that\'s good!)']
+        ['ClickHouse', 0, false, 'https://clickhouse.yandex/docs/en', '2017 (Yandex ban, and that\'s good!)'],
     ],
     'Markups' => [
         ['(X)HTML 4', 8, false, '', '2017'],
@@ -156,7 +156,7 @@ return [
         ['Debian', 8, true, '', ''],
         ['ArchLinux', 0, false, '', ''],
         ['Fedora', 5, false, '', ''],
-        ['RHEL', 5, false, 'https://www.redhat.com/','2019 after company purchase by IBM for $34 bln (officially still alive)'],
+        ['RHEL', 5, false, 'https://www.redhat.com/', '2019 after company purchase by IBM for $34 bln (officially still alive)'],
         ['CentOS', 5, true, '', ''],
     ],
     'Cloudware' => [

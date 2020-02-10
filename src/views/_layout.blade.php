@@ -11,7 +11,7 @@
   \  )   /   \   (  /
    )/   /     \   \(
    '    `-`-'-'    `
-<?= 'Page build: ' . date('Y-m-d H:i:s T'); ?>
+<?php echo 'Page build: '.date('Y-m-d H:i:s T'); ?>
 -->
 <head>
     <meta charset="utf-8"/>

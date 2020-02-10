@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var string $patterns
+ * @var string
  */
 $title = 'Patterns';
 ?>
@@ -13,7 +13,7 @@ $title = 'Patterns';
 
 @section('content')
     <article>
-        <h1><?= $title; ?></h1>
+        <h1><?php echo $title; ?></h1>
         <table id="main-table-patterns" summary="Contains comparison of Patterns">
             <thead>
             <tr>
@@ -29,7 +29,7 @@ $title = 'Patterns';
     </article>
 
     <script>
-      let patterns = <?= $patterns; ?>
+      let patterns = <?php echo $patterns; ?>
 
       const positions = [
           {key: 'type', title: 'Type'},
