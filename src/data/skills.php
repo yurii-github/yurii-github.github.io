@@ -62,7 +62,7 @@ return [
         ['PureCSS', 0, false, 'https://purecss.io/', ''],
         ['Zimit', 0, false, 'https://firezenk.github.io/zimit/started.html', ''],
         ['HTML Kickstart', 0, false, 'https://github.com/joshuagatcke/HTML-KickStart', ''],
-        ['Materialize', 2, true, 'https://materializecss.com', ''],
+        ['Materialize', 2, false, 'https://materializecss.com', '2018'],
     ],
     'JS Frameworks' => [
         ['jQuery', 5, false, 'https://api.jquery.com', ''],
