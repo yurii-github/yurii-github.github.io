@@ -107,6 +107,7 @@ return [
     'PHP Kits' => [
         ['Laravel Nova 1', 8, false, 'https://nova.laravel.com/docs/1.0', '2020'],
         ['Laravel Nova 2', 6, true, 'https://nova.laravel.com/docs/2.0', ''],
+        ['Backpack 4', 1, true, 'https://backpackforlaravel.com/docs/4.0', ''],
         ['ReactPHP', 5, true, 'https://reactphp.org', ''],
         ['PHPUnit', 5, true, 'https://phpunit.readthedocs.io/en/8.5', ''],
         ['Codeception', 6, true, 'https://codeception.com/docs', ''],
