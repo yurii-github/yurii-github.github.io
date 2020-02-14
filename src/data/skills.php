@@ -78,6 +78,7 @@ return [
         ['Node.js 12', 4, false, 'https://nodejs.org/en/docs', ''],
     ],
     'PHP Frameworks' => [
+        ['Swoft', 0, false, 'https://github.com/swoft-cloud/swoft', ''],
         ['Yii 1.1', 0, false, 'https://www.yiiframework.com/doc/guide/1.0', '2020'],
         ['Yii 2', 8, false, 'https://www.yiiframework.com/doc/guide/2.0', ''], // https://www.yiiframework.com/release-cycle
         ['Yii 3', 0, false, 'https://github.com/yiisoft/docs', '2020 (I have no trust in this)'],
@@ -124,6 +125,7 @@ return [
         ['Drupal 7', 6, false, 'https://www.drupal.org/docs/7', '2019 (officially November 2021)'],
         ['Drupal 8', 3, false, 'https://www.drupal.org/docs/8', ''],
         ['Magento 2', 0, false, 'https://devdocs.magento.com', ''],
+        ['Shopware 6', 0, false, 'https://www.shopware.com', ''],
         ['Grav', 2, false, 'https://learn.getgrav.org', ''],
         ['DokuWiki', 7, true, 'https://www.dokuwiki.org/manual', ''],
     ],
