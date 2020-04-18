@@ -6,7 +6,7 @@
 shopt -s extglob
 shopt -s dotglob
 
-php web/index.php
+/usr/bin/php7.4 web/index.php
 
 git add .
 git commit -m "created build `date '+%Y-%m-%d %H:%M:%S'`"
