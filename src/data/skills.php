@@ -107,8 +107,9 @@ return [
     ],
     'PHP Kits' => [
         ['Laravel Nova 1', 8, false, 'https://nova.laravel.com/docs/1.0', '2020'],
-        ['Laravel Nova 2', 6, true, 'https://nova.laravel.com/docs/2.0', ''],
-        ['Backpack 4', 1, true, 'https://backpackforlaravel.com/docs/4.0', ''],
+        ['Laravel Nova 2', 6, false, 'https://nova.laravel.com/docs/2.0', '2020'],
+        ['Laravel Nova 3', 0, false, 'https://nova.laravel.com/docs/3.0', ''],
+        ['Backpack 4', 1, false, 'https://backpackforlaravel.com/docs/4.0', ''],
         ['ReactPHP', 5, true, 'https://reactphp.org', ''],
         ['PHPUnit', 5, true, 'https://phpunit.readthedocs.io/en/8.5', ''],
         ['Codeception', 6, true, 'https://codeception.com/docs', ''],
@@ -151,6 +152,7 @@ return [
         ['Gearman', 2, false, 'http://gearman.org/documentation', ''],
         ['Jenkins', 2, false, 'https://jenkins.io/doc', ''],
         ['TravisCI', 5, true, 'https://docs.travis-ci.com', ''],
+        ['Rollbar', 3, 'https://rollbar.com', ''],
     ],
     'Operating Systems' => [
         ['Windows', 9, false, '', ''],
@@ -163,7 +165,7 @@ return [
         ['CentOS', 5, true, 'https://docs.centos.org/en-US/docs', ''],
     ],
     'Cloudware' => [
-        ['Amazon AWS', 0, true, 'https://aws.amazon.com/', ''],
+        ['Amazon AWS', 1, true, 'https://aws.amazon.com/', ''],
         ['Digital Ocean', 0, false, '', ''],
         ['IBM Kubernetes', 0, false, '', ''],
         ['Google KE', 0, false, 'https://cloud.google.com/kubernetes-engine', ''],
