@@ -109,8 +109,8 @@ function getLastTouch(): string
     <div class="container centered">
         <article class="centered">
             <p>
-                Hello. I'm Yurii. That's all you should really know about me.
-                Those are my current skills I keep updated. <br>
+                Hello, I'm Yurii.<br>
+                That's all you should really know about me. Below are my current skills I keep updated. <br>
                 <em>Grayed skills are those I'm not interested in (good money may change that).</em>
             </p>
             <?php echo new SCPlayer(['url' => 'https://api.soundcloud.com/tracks/331965268'], true); ?>
