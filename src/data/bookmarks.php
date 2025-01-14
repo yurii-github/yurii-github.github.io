@@ -1,6 +1,7 @@
 <?php
 
 return [
+    // title, url
     ['OMG (UML)', 'https://www.omg.org/'],
     ['IETF', 'https://www.ietf.org/'],
     ['IETF Documents (HTTP, IP..)', 'https://tools.ietf.org/html/'],

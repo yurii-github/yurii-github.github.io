@@ -1,17 +1,21 @@
 <?php
 
 return [
-    // group
-    // title | rating | interest (true) | url (none)
+    // group => [
+    //   [ skill title, rating (0..10), interest (true|false), url ],
+    //   ...
+    // ],
     'Bureaucracy' => [
         ['GDPR', 4, true, 'https://ec.europa.eu/info/law/law-topic/data-protection_en', ''],
         ['SRS', 5, true, 'https://www.perforce.com/blog/alm/how-write-software-requirements-specification-srs-document', ''],
         ['ITIL 4', 0, true, 'https://www.itil-docs.com', ''],
+        ['Scrum', 9, false, 'https://en.wikipedia.org/wiki/Scrum_(software_development)', ''],
         ['Agile', 7, true, 'https://reqtest.com/agile-blog/agile-methodology-tutorial', ''],
-        ['RUP', 7, true, 'https://sceweb.uhcl.edu/helm/RationalUnifiedProcess', ''],
+        ['XP', 10, true, 'https://en.wikipedia.org/wiki/Extreme_programming'],
+        ['RUP', 7, true, 'https://en.wikipedia.org/wiki/Rational_Unified_Process', ''],
         ['PHP-FIG', 10, true, 'https://www.php-fig.org/psr', ''],
         ['FMEA/FMECA', 1, true, 'https://www.en-standard.eu/new-aiag-vda-fmea-handbook-failure-mode-and-effects-analysis', ''],
-        ['UML 2.4', 7, true, 'https://www.omg.org/spec/UML/2.4', ''],
+        ['UML 2.4', 8, true, 'https://www.omg.org/spec/UML/2.4', ''],
     ],
     'Storages' => [
         ['MySQL 5/8', 8, true, 'https://dev.mysql.com/doc/refman/8.0/en', ''],
@@ -24,7 +28,8 @@ return [
         ['Redis', 2, false, 'https://redis.io/documentation', ''],
         ['CouchDB 2', 0, false, 'https://docs.couchdb.org/en/stable/', ''],
         ['LevelDB', 1, false, 'https://github.com/google/leveldb', ''],
-        ['ClickHouse', 0, false, 'https://clickhouse.yandex/docs/en', '2017 (Yandex ban, and that\'s good!)'],
+        ['ClickHouse', 0, false, 'https://clickhouse.yandex/docs/en', '2017 (Yandex ban)'],
+        ['AWS Athena', 2, false, 'https://docs.aws.amazon.com/athena/latest/ug/what-is.html'],
     ],
     'Markups' => [
         ['(X)HTML 4', 8, false, '', '2017'],
@@ -40,12 +45,11 @@ return [
         ['RESTful', 9, true, 'https://standards.rest', ''],
     ],
     'Languages' => [
-        ['ASP.NET/C#', 2, false, 'https://docs.microsoft.com/en-us/aspnet', ''],
+        ['ASP.NET/C#', 4, false, 'https://docs.microsoft.com/en-us/aspnet', ''],
         ['bash', 4, true, 'https://devdocs.io/bash', ''],
         ['C/C++', 4, false, 'https://cppreference.com', ''],
         ['Qt/C++', 1, true, 'https://doc.qt.io', ''],
-        ['Javascript', 8, false, '', ''],
-        ['Javascript ES6', 8, false, '', ''],
+        ['Javascript ES6', 8, false, 'https://www.w3schools.com/Js/js_versions.asp'],
         ['PHP 5', 10, false, 'https://www.php.net', '2020'],
         ['PHP 7/8', 10, true, 'https://www.php.net', ''],
         ['Solidity/Eth', 4, false, 'https://solidity.readthedocs.io', ''],
@@ -56,6 +60,7 @@ return [
         ['Java', 0, false, 'https://docs.oracle.com/javase/8/docs', ''],
         ['Lua', 2, false, 'https://www.lua.org/docs.html', ''],
         ['Clojure/Lisp', 0, false, 'https://clojure.org/guides/getting_started', ''],
+        ['Kotlin', 0, false, 'https://kotlinlang.org/'],
     ],
     'CSS Frameworks' => [
         ['Bootstrap 4', 4, false, 'https://getbootstrap.com/docs/4.4', ''],
@@ -64,11 +69,13 @@ return [
         ['Zimit', 0, false, 'https://firezenk.github.io/zimit/started.html', '2013'],
         ['HTML Kickstart', 0, false, 'https://github.com/joshuagatcke/HTML-KickStart', '2015'],
         ['Materialize', 2, false, 'https://materializecss.com', '2018 (also bugged, use v0.97.5)'],
+        ['Tailwind 2/3', 6, true, 'https://tailwindcss.com/'],
     ],
     'JS Frameworks' => [
         ['jQuery', 5, false, 'https://api.jquery.com', ''],
         ['React', 3, false, 'https://reactjs.org/docs', ''],
-        ['Vue 2', 7, false, 'https://vuejs.org/v2/guide', ''],
+        ['Vue 2', 9, false, 'https://v2.vuejs.org/v2/guide/', 'December 31st, 2023'],
+        ['Vue 3', 7, true, 'https://vuejs.org/guide', ''],
         ['Prototype.js', 0, false, 'https://github.com/prototypejs/prototype', '2015'],
         ['Angular', 1, false, 'https://angular.io/docs', ''],
     ],
@@ -89,9 +96,8 @@ return [
         ['Symfony 4', 3, false, 'https://symfony.com/doc/4.3', ''],
         ['Symfony 5', 3, false, 'https://symfony.com/doc/5.0', ''],
         // https://laravel-news.com/laravel-release-process
-        ['Laravel 4', 0, false, '', '2015', ''],
-        ['Laravel 5', 10, false, 'https://laravel.com/docs/5.8', ''],
-        ['Laravel 6', 8, true, 'https://laravel.com/docs/6.x', ''],
+        ['Laravel 4..10', 10, false, 'https://laravel.com'],
+        ['Laravel 11', 9, true, 'https://laravel.com/docs/11.x', ''],
         ['Slim 4', 8, true, 'http://www.slimframework.com/docs/v4', ''],
         // https://framework.zend.com/long-term-support
         ['ZFramework 1', 1, false, 'https://framework.zend.com/learn', '2016'],
@@ -101,7 +107,7 @@ return [
         ['CakePHP 3', 0, false, 'https://book.cakephp.org/3', '2020 (officially die in 2022)'],
         ['CakePHP 4', 1, false, 'https://book.cakephp.org/4', ''],
         ['Kohana 3', 3, false, 'https://kohanaframework.org', '2017'],
-        ['CodeIgniter 3', 0, false, 'https://codeigniter.com/docs', ''],
+        ['CodeIgniter 3', 2, false, 'https://codeigniter.com/docs', ''],
         ['CodeIgniter 4', 0, false, 'https://codeigniter.com/docs', ''],
         ['Mako 6', 1, false, 'https://makoframework.com/docs/6.3', ''],
         ['PEAR', 3, false, 'https://pear.php.net/manual/en/', '2019 (no maintainers left)'],
@@ -133,7 +139,8 @@ return [
     ],
     'Collaboration' => [
         ['Mantis', 2, false, 'https://www.mantisbt.org/documentation.php', ''],
-        ['JIRA', 10, true, 'https://confluence.atlassian.com/jira', ''],
+        ['JIRA', 7, true, 'https://confluence.atlassian.com/jira', ''],
+        ['Shortcut', 6, true, 'https://www.shortcut.com/'],
         ['Trello', 2, false, 'https://trello.com/', ''],
         ['Redmine', 5, false, 'https://www.redmine.org/guide', ''],
         ['Bugzilla', 5, false, 'https://www.bugzilla.org/docs', ''],
@@ -143,7 +150,7 @@ return [
         ['Gitlab', 8, true, 'https://docs.gitlab.com', ''],
         ['Bitbucket', 8, false, 'https://confluence.atlassian.com/bitbucket', ''],
         ['Slack', 8, true, 'https://slack.com', ''],
-        ['Skype', 9, true, 'https://www.skype.com', ''],
+        ['Skype', 9, false, 'https://www.skype.com', ''],
         ['Telegram', 6, false, 'https://telegram.org', ''],
         ['Google Docs', 7, true, 'https://www.google.com/docs/about', ''],
     ],
@@ -152,8 +159,9 @@ return [
         ['Docker', 5, false, 'https://docs.docker.com', ''],
         ['Gearman', 2, false, 'http://gearman.org/documentation', ''],
         ['Jenkins', 2, false, 'https://jenkins.io/doc', ''],
-        ['TravisCI', 7, true, 'https://docs.travis-ci.com', ''],
-        ['Rollbar', 3, true, 'https://rollbar.com', ''],
+        ['TravisCI', 7, false, 'https://docs.travis-ci.com', ''],
+        ['Rollbar', 4, false, 'https://rollbar.com', ''],
+        ['Sentry', 8, true, 'https://sentry.io/vs/logging/', ''],
     ],
     'Operating Systems' => [
         ['Windows', 9, false, '', ''],
@@ -170,5 +178,6 @@ return [
         ['Digital Ocean', 0, false, 'https://www.digitalocean.com/', ''],
         ['IBM Kubernetes', 0, false, 'https://www.ibm.com/cloud/container-service/', ''],
         ['Google KE', 0, false, 'https://cloud.google.com/kubernetes-engine', ''],
+        ['ChatGPT', 0, false, 'https://chatgpt.com/', ''],
     ],
 ];

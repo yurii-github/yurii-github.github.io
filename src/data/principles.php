@@ -12,6 +12,7 @@ return [
     ['XP', 'extreme programing'],
     ['Agile', 'stolen RUP with faster cycles'],
     ['Scrum', 'stolen RUP with faster cycles and process names created specifically for kids'],
+    ['SaFe', 'advanced Scrum, advised to be used when you want to burn all your developers into ashes'],
     ['SOLID', <<<'HTML'
         another nonsense from people without OOP background
         <br><b>S</b>ingle responsibility principle - A class should only have a single responsibility
