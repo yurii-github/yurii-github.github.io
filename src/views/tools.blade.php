@@ -5,7 +5,7 @@ $title = 'Tools';
 @extends('_layout')
 @section('title', $title)
 @section('style')
-    @parent
+@parent
 @endsection
 
 @section('content')

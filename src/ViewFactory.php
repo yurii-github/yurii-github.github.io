@@ -2,6 +2,7 @@
 
 namespace app;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\View\Compilers\BladeCompiler;
@@ -12,10 +13,7 @@ use Illuminate\View\FileViewFinder;
 
 final class ViewFactory
 {
-    /**
-     * @return \Illuminate\Contracts\View\View
-     */
-    public static function make(string $view, array $data = [])
+    public static function make(string $view, array $data = []): View
     {
         $er = new EngineResolver();
         $er->register('blade', fn () => new CompilerEngine(new BladeCompiler(new Filesystem(), CACHE_DIR)));

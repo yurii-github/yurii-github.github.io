@@ -11,5 +11,5 @@ return [
     ['Stack Exchange', 'https://stackexchange.com/sites'],
     // OTHERS
     ['The rise and fall of the Dungeon Master', 'https://medium.com/@ziobrando/the-rise-and-fall-of-the-dungeon-master-c2d511eed12f'],
-    ['MDN', 'https://developer.mozilla.org/en-US/docs/Learn']
+    ['MDN', 'https://developer.mozilla.org/en-US/docs/Learn'],
 ];

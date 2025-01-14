@@ -93,7 +93,7 @@ return [
         ['Laravel 5', 10, false, 'https://laravel.com/docs/5.8', ''],
         ['Laravel 6', 8, true, 'https://laravel.com/docs/6.x', ''],
         ['Slim 4', 8, true, 'http://www.slimframework.com/docs/v4', ''],
-        //https://framework.zend.com/long-term-support
+        // https://framework.zend.com/long-term-support
         ['ZFramework 1', 1, false, 'https://framework.zend.com/learn', '2016'],
         ['ZFramework 2', 2, false, 'https://framework.zend.com/learn', '2018'],
         ['ZFramework 3', 1, false, 'https://framework.zend.com/learn', '2020'],

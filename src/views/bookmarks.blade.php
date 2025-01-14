@@ -1,16 +1,13 @@
 <?php
 
-/**
- * @var array
- */
+/** @var array $bookmarks */
 $title = 'Bookmarks';
 ?>
 @extends('_layout')
 @section('title', $title)
 @section('style')
-    @parent
+@parent
 @endsection
-
 @section('content')
     <div class="container centered">
         <h1><?php echo $title; ?></h1>

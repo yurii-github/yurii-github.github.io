@@ -1,5 +1,7 @@
 <?php
 
+global $app;
+
 use app\ViewFactory;
 use Http\Factory\Guzzle\ServerRequestFactory;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -7,68 +9,68 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 $app->get('/', function (Request $request, Response $response, array $args) {
     $data = ViewFactory::make('index', ['skills' => require_once DATA_DIR.'/skills.php']);
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/bookmarks', function (Request $request, Response $response, array $args) {
     $data = ViewFactory::make('bookmarks', ['bookmarks' => require_once DATA_DIR.'/bookmarks.php']);
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/frameworks', function (Request $request, Response $response, array $args) {
     $data = ViewFactory::make('frameworks', ['frameworks' => require_once DATA_DIR.'/frameworks.php']);
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/patterns', function (Request $request, Response $response, array $args) {
     $data = ViewFactory::make('patterns', ['patterns' => require_once DATA_DIR.'/patterns.php']);
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/principles', function (Request $request, Response $response, array $args) {
     $data = ViewFactory::make('principles', ['principles' => require_once DATA_DIR.'/principles.php']);
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/tools', function (Request $request, Response $response, array $args) {
     $data = ViewFactory::make('tools', []);
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/tools/cloth-size', function (Request $request, Response $response, array $args) {
     $data = file_get_contents(VIEW_DIR.'/tools/cloth-size.html');
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/tools/decode', function (Request $request, Response $response, array $args) {
     $data = file_get_contents(VIEW_DIR.'/tools/decode.html');
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
 $app->get('/tools/prefix', function (Request $request, Response $response, array $args) {
     $data = file_get_contents(VIEW_DIR.'/tools/prefix.html');
-    $response->getBody()->write($data);
+    $response->getBody()->write((string) $data);
 
     return $response;
 });
 
-if (PHP_SAPI === 'cli') {
+if (\PHP_SAPI === 'cli') {
     $app->get('/build', function (Request $request, Response $response, array $args) use ($app) {
         $pages = [
             '/' => '/index.html',
@@ -100,15 +102,15 @@ if (PHP_SAPI === 'cli') {
             }
 
             $filename = BUILD_DIR.$pages[$uri];
-            $output->write("${uri}:${filename} ... ");
+            $output->write("{$uri}:{$filename} ... ");
             $request = (new ServerRequestFactory())->createServerRequest('GET', $uri, [
                 'REQUEST_URI' => $uri, 'PATH_INFO' => $uri,
             ]);
 
             $html = (string) $route->run($request)->getBody();
             $html = str_replace(
-                array_map(fn ($v) => "href=\"${v}\"", array_keys($pages)),
-                array_map(fn ($v) => "href=\"${v}\"", array_values($pages)),
+                array_map(fn ($v) => "href=\"{$v}\"", array_keys($pages)),
+                array_map(fn ($v) => "href=\"{$v}\"", array_values($pages)),
                 $html
             );
 

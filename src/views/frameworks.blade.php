@@ -7,9 +7,8 @@ $title = 'Comparison of PHP Frameworks and CMS';
 @extends('_layout')
 @section('title', $title)
 @section('style')
-    @parent
+@parent
 @endsection
-
 @section('content')
     <article>
         <h1><?php echo $title; ?></h1>

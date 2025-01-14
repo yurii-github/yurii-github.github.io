@@ -9,7 +9,6 @@
 @section('style')
     @parent
 @endsection
-
 @section('content')
  CONTENT
 @endsection

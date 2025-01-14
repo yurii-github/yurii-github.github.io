@@ -4,15 +4,9 @@ use app\SCPlayer;
 
 /**
  * @var array
- *
- * @param mixed $rating
- * @param mixed $interest
- * @param mixed $dead
  */
 
 /**
- * @param $rating
- * @param $interest
  * @param bool $dead
  *
  * @return string
@@ -26,14 +20,14 @@ function rating($rating, $interest, $dead = false)
     $stars = [];
 
     for ($i = 1; $i <= $rating; ++$i) {
-        $stars[] = "<span class=\"mt ${interest}\">star</span>";
+        $stars[] = "<span class=\"mt {$interest}\">star</span>";
     }
     for ($i = 0; $i < $maxStarts - $rating; ++$i) {
-        $stars[] = "<span class=\"mt ${interest}\">star_border</span>";
+        $stars[] = "<span class=\"mt {$interest}\">star_border</span>";
     }
 
     if ($dead) {
-        $dead = 'Dead'.(is_string($dead) ? " since ${dead}" : '.');
+        $dead = 'Dead'.(is_string($dead) ? " since {$dead}" : '.');
         $stars[] = '<img src="assets/skull.svg" alt="dead" title="'.$dead.'" class="dead"/>';
     }
 
@@ -41,11 +35,9 @@ function rating($rating, $interest, $dead = false)
 }
 ?>
 @extends('_layout')
-
 @section('title', 'Homepage')
-
 @section('style')
-    @parent
+@parent
     <style type="text/css">
         .skills {
             margin-left: auto;
@@ -100,7 +92,6 @@ function rating($rating, $interest, $dead = false)
         }
     </style>
 @endsection
-
 @section('content')
     <h1>
         <a href="https://github.com/yurii-github" target="_blank"><img id="logo" title="go to my github account"
@@ -120,9 +111,9 @@ function rating($rating, $interest, $dead = false)
             <?php foreach ($skills as $header => $rSkills) { ?>
             <div class="group">
                 <div class="header"><?php echo $header; ?></div>
-                <?php foreach ($rSkills as [$title, $rating, $interest, $url, $dead]) { ?>
+                <?php foreach ($rSkills as list($title, $rating, $interest, $url, $dead)) { ?>
                 <div class="skill">
-                    <div class="title"><?php echo $url ? "<a href=\"${url}\">${title}</a>" : $title; ?></div>
+                    <div class="title"><?php echo $url ? "<a href=\"{$url}\">{$title}</a>" : $title; ?></div>
                     <div class="rating"><?php echo rating($rating, $interest, $dead); ?></div>
                 </div>
                 <?php } ?>
@@ -130,5 +121,4 @@ function rating($rating, $interest, $dead = false)
             <?php } ?>
         </div>
     </div>
-
 @endsection

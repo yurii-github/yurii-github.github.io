@@ -47,17 +47,18 @@ class SCPlayer
     public function render()
     {
         $miniStyle = $this->isMini ? 'height: 20px;' : ''; // hax
+
         return <<<HTML
-<style>
-iframe#{$this->id} {
-    border: none;
-    width: 100%;
-    margin-bottom: 1rem;
-    ${miniStyle}
-}
-</style>
-<iframe id="{$this->id}" allow="autoplay" allowtransparency="true" src="{$this->buildPlayerUrl()}"></iframe>
-HTML;
+            <style>
+            iframe#{$this->id} {
+                border: none;
+                width: 100%;
+                margin-bottom: 1rem;
+                {$miniStyle}
+            }
+            </style>
+            <iframe id="{$this->id}" allow="autoplay" allowtransparency="true" src="{$this->buildPlayerUrl()}"></iframe>
+            HTML;
     }
 
     protected function buildPlayerUrl()

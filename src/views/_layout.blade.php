@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="assets/style.css"/>
     <link rel="icon" type="image/png" href="assets/Archangel.png"/>
-    @yield('style')
+@yield('style')
 </head>
 <body>
 <nav>
