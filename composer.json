@@ -1,6 +1,6 @@
 {
     "require": {
-        "php": "~8.3",
+        "php": "~8.4.0",
         "ext-json": "*",
         "friendsofphp/php-cs-fixer": "^3.68",
         "slim/slim": "^4.14",
