@@ -2,7 +2,7 @@
 
 return [
     // group => [
-    //   [ skill title, rating (0..10), interest (true|false), url ],
+    //   [ skill title, rating (0..10), interest (true|false), url, dead? ],
     //   ...
     // ],
     'Bureaucracy' => [
@@ -15,7 +15,7 @@ return [
         ['RUP', 7, true, 'https://en.wikipedia.org/wiki/Rational_Unified_Process', ''],
         ['PHP-FIG', 10, true, 'https://www.php-fig.org/psr', ''],
         ['FMEA/FMECA', 1, true, 'https://www.en-standard.eu/new-aiag-vda-fmea-handbook-failure-mode-and-effects-analysis', ''],
-        ['UML 2.4', 8, true, 'https://www.omg.org/spec/UML/2.4', ''],
+        ['UML 2.4', 9, true, 'https://www.omg.org/spec/UML/2.4', ''],
     ],
     'Storages' => [
         ['MySQL 5/8', 8, true, 'https://dev.mysql.com/doc/refman/8.0/en', ''],
@@ -39,7 +39,7 @@ return [
         ['XML 1.1', 1, false, '', ''],
         ['XSLT', 1, false, '', ''],
         ['SVG', 1, false, 'https://www.w3.org/TR/SVG11', ''],
-        ['XSD', 1, false, '', ''],
+        ['XSD', 1, false, 'https://www.w3.org/TR/xmlschema11-1', ''],
         ['SOAP/WSDL', 4, true, 'https://www.w3.org/TR/wsdl.html', ''],
         ['RegExp', 5, true, 'https://regexr.com', ''], // https://github.com/gskinner/regexr/
         ['RESTful', 9, true, 'https://standards.rest', ''],
@@ -48,10 +48,11 @@ return [
         ['ASP.NET/C#', 4, false, 'https://docs.microsoft.com/en-us/aspnet', ''],
         ['bash', 4, true, 'https://devdocs.io/bash', ''],
         ['C/C++', 4, false, 'https://cppreference.com', ''],
-        ['Qt/C++', 1, true, 'https://doc.qt.io', ''],
+        ['Qt', 1, true, 'https://doc.qt.io', ''],
         ['Javascript ES6', 8, false, 'https://www.w3schools.com/Js/js_versions.asp'],
         ['PHP 5', 10, false, 'https://www.php.net', '2020'],
-        ['PHP 7/8', 10, true, 'https://www.php.net', ''],
+        ['PHP 7', 10, false, 'https://www.php.net', '2024'],
+        ['PHP 8', 10, true, 'https://www.php.net', ''],
         ['Solidity/Eth', 4, false, 'https://solidity.readthedocs.io', ''],
         ['Ruby', 0, false, 'https://ruby-doc.org', ''],
         ['Go', 0, false, 'https://golang.org/doc', ''],
@@ -61,6 +62,8 @@ return [
         ['Lua', 2, false, 'https://www.lua.org/docs.html', ''],
         ['Clojure/Lisp', 0, false, 'https://clojure.org/guides/getting_started', ''],
         ['Kotlin', 0, false, 'https://kotlinlang.org/'],
+        ['Python', 1, false, '', ''],
+        ['Rust', 0, false, '', ''],
     ],
     'CSS Frameworks' => [
         ['Bootstrap 4', 4, false, 'https://getbootstrap.com/docs/4.4', ''],
@@ -69,7 +72,7 @@ return [
         ['Zimit', 0, false, 'https://firezenk.github.io/zimit/started.html', '2013'],
         ['HTML Kickstart', 0, false, 'https://github.com/joshuagatcke/HTML-KickStart', '2015'],
         ['Materialize', 2, false, 'https://materializecss.com', '2018 (also bugged, use v0.97.5)'],
-        ['Tailwind 2/3', 6, true, 'https://tailwindcss.com/'],
+        ['Tailwind 2/3', 6, false, 'https://tailwindcss.com/'],
     ],
     'JS Frameworks' => [
         ['jQuery', 5, false, 'https://api.jquery.com', ''],
@@ -98,6 +101,7 @@ return [
         // https://laravel-news.com/laravel-release-process
         ['Laravel 4..10', 10, false, 'https://laravel.com'],
         ['Laravel 11', 9, true, 'https://laravel.com/docs/11.x', ''],
+        ['Laravel 12', 9, true, 'https://laravel.com/docs/12.x', ''],
         ['Slim 4', 8, true, 'http://www.slimframework.com/docs/v4', ''],
         // https://framework.zend.com/long-term-support
         ['ZFramework 1', 1, false, 'https://framework.zend.com/learn', '2016'],
@@ -174,10 +178,11 @@ return [
         ['CentOS', 5, false, 'https://docs.centos.org/en-US/docs', ''],
     ],
     'Cloudware' => [
-        ['Amazon AWS', 2, true, 'https://aws.amazon.com/', ''],
+        ['Amazon AWS', 3, false, 'https://aws.amazon.com/', ''],
         ['Digital Ocean', 0, false, 'https://www.digitalocean.com/', ''],
         ['IBM Kubernetes', 0, false, 'https://www.ibm.com/cloud/container-service/', ''],
         ['Google KE', 0, false, 'https://cloud.google.com/kubernetes-engine', ''],
         ['ChatGPT', 0, false, 'https://chatgpt.com/', ''],
+        ['Claude', 0, false, 'https://claude.ai/', ''],
     ],
 ];
