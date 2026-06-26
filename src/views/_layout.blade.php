@@ -25,6 +25,7 @@
 @yield('style')
 </head>
 <body>
+<script src="https://keepandroidopen.org/banner.js"></script>
 <nav>
     <a class="mt" href="/">home</a>
     <a href="/bookmarks">Bookmarks</a>
